@@ -1,0 +1,33 @@
+Rooms Table
+ID  room name              move    ID  move   ID   move   ID
+1 | Small cave entrance  | south | 2 | west  | 3 | up    | 4 | down | 5
+2 | Small cave north     | north | 1 | down  | 1
+3 | Small cave south     | north | 2 | east  | 1 | west  | 5
+4 | 
+5 |
+
+Room Descriptions Table
+ID  Long Description                                        Short Description
+1 | You are standing outside the entrance to a small cave | Outside small cave entrance
+2 | You are at the north end of the small cave            | North end of small cave
+3 | You are at the south end of the small cave            | South end of small cave
+
+
+Example game play based on above (1,2) -> room #, (s,n,e) -> move abbreviation
+Game: You are standing outside the entrance to a small cave (1)
+Player: south (s)
+Game: You are at the north end of the small cave (2)
+Player: north (n)
+Game: Outside small cave entrance (1)
+Player: south (s)
+Game: North end of small cave (2)
+Player: east (e)
+Game: There is no where to go in that direction (2)
+
+
+
+Dialog question choices
+1 | Question1  | 2 | Choice1 ID | choice2 ID
+2 | Question2  | 2 | Choice3 ID | choice4 ID
+3 | Terminal 3
+4 | Terminal 4
