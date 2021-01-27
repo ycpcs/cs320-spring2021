@@ -12,7 +12,7 @@ All information about the course will be posted here.
 
 * [Syllabus](syllabus.html)
 * [Schedule](schedule.html)
-* [Calendar](CS320-Spring2021Calendar.pdf)
+* [Calendar](CS320-Spring-2021-Calendar.pdf)
 * [Project Teams and Rosters](teams-and-rosters/index.html)
 * [Assignments](assign/index.html)
 * [Labs](labs/index.html)
