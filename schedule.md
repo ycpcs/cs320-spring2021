@@ -29,10 +29,6 @@ Mar 3  | Unified Modeling Language (UML) and <br> Object-Oriented Analysis (OOA)
 Mar 05 | Team Project Session: Textual Analysis  | 
 Mar 08 | Team Project Session: Project Analysis Model - UML 
 Mar 10 | Object-Oriented Design (OOD) | [Lecture 11: OO Design, OCP, LSP](lectures/lecture11.html)<br> [Design Principles and Design Patterns](lectures/lecture11/Principles_and_Patterns.pdf), Robert Martin, pages 1-12
-<!--Mar 2  | **Winter Break, no class**
-Mar 4  | **Winter Break, no class**
-Mar 6  | **Winter Break, no class**
--->
 Mar 12 | Individual Project Milestone 2:<br> **50% Progress** | [Assignment 4: Individual Project Milestones](assign/assign04.html)
 Mar 15 | Relational Databases<br> SQL Lab Assigned | [Lecture 13: Relational Databases](lectures/lecture13.html)<br> [Lab 4: SQL Lab](./labs/lab04.html)
 Mar 17 | Database Applications - JDBC<br> JDBC Lab Assigned | [Lecture 14: Database Applications, JDBC](lectures/lecture14.html)<br> [Lab 5: JDBC Lab](./labs/lab05.html)
