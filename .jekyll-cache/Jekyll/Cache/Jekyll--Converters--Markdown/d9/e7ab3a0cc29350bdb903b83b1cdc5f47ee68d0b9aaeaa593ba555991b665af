@@ -1,0 +1,71 @@
+I"s<p>In <a href="../labs/lab04.html">Lab 4</a> we experimented with <a href="https://db.apache.org/derby/">Derby</a> by typing queries interactively (using a simple front-end program).</p>
+
+<p>Another very useful way to interact with a database is from a program that you write. Programs which communicate with a database are often referred to as <em>database applications</em>.</p>
+
+<p>JDBC is the standard Java API for writing database applications. It provides a common set of functions for accessing and modifying data in SQL databases.</p>
+
+<h1 id="jdbc-concepts">JDBC Concepts</h1>
+
+<p>Here are some of the basic JDBC concepts you will employ.</p>
+
+<h2 id="drivers">Drivers</h2>
+
+<p>A JDBC <em>driver</em> is a code library which implements the JDBC API for a particular back-end database. Most popular relational databases include a JDBC driver.</p>
+
+<p>Generally, to add support for a particular database implementation to your application, you will include its JDBC driver in your project. Your application will need to <em>load</em> the driver by instantiating its main class.</p>
+
+<h2 id="connections">Connections</h2>
+
+<p>A JDBC <em>connection</em> is an object that allows your application to communicate with a particular instance of the database.</p>
+
+<p>Connections are specified as URL strings. The URL string encodes both the driver to be used and also the location of the database.</p>
+
+<p>The JDBC <strong>DriverManager</strong> class creates connection objects.</p>
+
+<h2 id="preparedstatement">PreparedStatement</h2>
+
+<p>A <em>prepared statement</em> object represents a particular query or insert/update/delete statement to be executed.</p>
+
+<p>A prepared statement may contain <em>placeholders</em> for information that will be “filled in” when the statement is executed. This allows the same statement to be executed many times, supplying different data each time.</p>
+
+<p>For example: here is a query that searches for books matching a particular title:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select authors.lastname, authors.firstname, books.title, books.isbn, books.published
+    from authors, books
+    where authors.author_id = books.author_id and
+          books.title = ?
+</code></pre></div></div>
+
+<p>The question mark (<strong>?</strong>) is a placeholder for a particular book title. So, this query is a general “template” for finding books given a title. If we make this query a prepared statement, we can use it as many times as desired to find books matching various titles. Each time we execute the prepared statement, we will substitute a specific title for the placeholder.</p>
+
+<h2 id="resultset">ResultSet</h2>
+
+<p>A <em>result set</em> is returned as the result of executing a prepared statement. The result set is essentially an iterator for the tuples returned as the result of the query.</p>
+
+<p>The data types of the returned attribute values are mapped onto Java data types. Typical mappings include:</p>
+
+<blockquote>
+  <table>
+    <thead>
+      <tr>
+        <th>SQL type</th>
+        <th>Java type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>VARCHAR</td>
+        <td>java.lang.String</td>
+      </tr>
+      <tr>
+        <td>INTEGER</td>
+        <td>java.lang.Integer</td>
+      </tr>
+      <tr>
+        <td>DATE</td>
+        <td>java.sql.Date</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+:ET

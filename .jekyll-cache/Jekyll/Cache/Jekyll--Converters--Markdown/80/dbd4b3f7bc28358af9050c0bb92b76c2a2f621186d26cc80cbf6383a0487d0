@@ -1,0 +1,60 @@
+I"i<h1 id="your-task">Your Task</h1>
+
+<p>This lab builds upon the <strong>AddNumbers</strong> and <strong>GuessingGame</strong> examples from <a href="lab02.html">CS320_Lab02</a>.  It will “force” you to investigate, explore, and learn the structure of a WebApp, from the server (<strong>main()</strong>), through <strong>Web.xml</strong>, the servlets, the controllers, the model, and the JSPs, as well as how to refactor an entire project space.  You will need to have this kind of familiarity with the WebApp architecture in order to get started on your team project, as well as to be able to make significant technical contributions to any and all aspects of your team project.</p>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to full comprehend, design, implement, toubleshoot, and debug the complete architecture of a standard client-server application.  This <strong>WILL</strong> come up on the exam.</p>
+
+<p><strong>NOTE: This lab will require a significant effort, and you should start on it as soon as possible.</strong></p>
+
+<p>You have six tasks:</p>
+
+<ul>
+  <li>First, make a copy of the <strong>CS320_Lab02_username</strong> project, and then refactor that copy to <strong>CS320_Lab02a_username</strong>.  YOU MUST DO THIS BEFORE YOU EXPORT YOUR SOLUTION AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.**</li>
+</ul>
+
+<p>Example: I would refactor the copy of my <strong>CS320_Lab02_djhake2</strong> project to <strong>CS320_Lab02a_djhake2</strong> as soon as I imported the project into Eclipse.</p>
+
+<p>After you refactor the project name, refactor the package names, change the locations specified in <strong>Web.xml</strong> and the JSP’s, as well as the context folder specified in <strong>main()</strong> so that they all refer to <strong>lab02a_username</strong>. Verify that both of the <strong>AddNumbers</strong> and <strong>GuessingGame</strong> WebApps still work - you will no longer be able to use the URL links included on the <strong>CS320_Lab02</strong> page, you will need to modify those URLs to replace <strong>lab02</strong> with <strong>lab02a_username</strong>.  You should save those new URLs as bookmarks in your browser.</p>
+
+<ul>
+  <li>
+    <p>Add a third number to the <strong>AddNumbers</strong> example, such that a third number field shows up on the <strong>AddNumbers</strong> web page, and the returned result is the sum of all three numbers.  Your code should check for the same errors as the existing <strong>AddNumbers</strong> example does.  This problem will require changes to the <strong>AddNumbers</strong> servlet, controller, and JSP.</p>
+  </li>
+  <li>
+    <p>Create a new WebApp based on the <strong>AddNumbers</strong> example, called <strong>MultiplyNumbers</strong>.  This WebApp should accept two numbers from the user and return the product of those numbers.  It should check for all of the same errors that the existing <strong>AddNumbers</strong> example does.  This problem will require changes to <strong>Web.xml</strong>, and the controller (modify the existing <strong>AddNumbersController</strong> and rename it <strong>NumbersController</strong>, rather than creating a new controller).  You will also need to create a new <strong>MultiplyNumbers</strong> servlet and new <strong>MultiplyNumbers</strong> JSP file, both of which can be based off the <strong>AddNumbers</strong> versions of those files.</p>
+  </li>
+  <li>
+    <p>After you have modified <strong>AddNumbers</strong> and created <strong>MultiplyNumbers</strong> and have them both completely working, modify the existing <strong>Index</strong> JSP file so that you can access all three of the servlets (<strong>AddNumbers</strong>, <strong>MultiplyNumbers</strong>, and <strong>GuessingGame</strong>) from the <strong>Index</strong> page.  Implement this is a collection of three “submit” buttons, each labelled with one of the three functions.  Each button will result in <strong>IndexServlet</strong> issuing a <strong>doGet</strong> to the appropriate JSP.</p>
+  </li>
+  <li>
+    <p>After all of the above are working, create a common model class (<strong>Numbers.java</strong>) for <strong>AddNumbers</strong> and <strong>MultiplyNumbers</strong>, such that the numbers submitted through the HTTP request are stored in the model, along with the result.  You will need <strong>get</strong> and <strong>set</strong> accessor methods for all model fields, along with a constructor for the model class.  Look at the model for the <strong>GuessingGame</strong> WebApp as a template - and how that model is instantiated, initialized, and accessed.  The corresponding JSP’s should pull the data directly from the <strong>Numbers</strong> model, rather than from the HTTP request.  Again you can look at the <strong>GuessingGame</strong> implementation to see how this is done.</p>
+  </li>
+  <li>
+    <p>As part of this exercise, implement a complete set of test cases for the controller and model classes.  Implement those test cases as you develop each of the above tasks.  A significant portion of the effort on your team project will be creating an extensive and comprehensive set of JUnit test cases - <strong>WHILE YOU ARE DEVELOPING YOUR TEAM PROJECT</strong>.</p>
+  </li>
+  <li>
+    <p><strong>NOTE: I HIGHLY recommend that you save your work after each step.  Archive the project at each stage, and submit it to Marmoset.  That will provide a back-up in case you lose your work, or if you need to revert to a previous version of your work. In a few weeks, we will cover version control, and you will set up your own “Git” accounts and repositories.  For the time being, Marmoset can serve as your version archive.</strong></p>
+  </li>
+</ul>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to fully comprehend, design, implement, toubleshoot, and debug the complete architecture of a standard client-server application.  This <strong>WILL</strong> come up on the exam.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>When you are done, submit the lab to the Marmoset server using the method below.</p>
+
+<h2 id="from-a-web-browser">From a web browser</h2>
+
+<p>Save your project (<strong>CS320_Lab02a_username</strong>) to a zip file by right-clicking it and choosing</p>
+
+<blockquote>
+  <p><strong>Export…→Archive File</strong></p>
+</blockquote>
+
+<p>Upload the saved zip file to the <strong>Lab02a</strong> project on the Marmoset server. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+
+:ET

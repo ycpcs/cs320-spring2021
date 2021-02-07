@@ -1,0 +1,53 @@
+I"�<p><strong>Due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>This is a <strong>team</strong> assignment</p>
+
+<h1 id="problem-domain-analysis">Problem Domain Analysis</h1>
+
+<p>In this assignment, your team will conduct an analysis of the problem domain of your team project, and build an analysis model of the problem domain.</p>
+
+<h2 id="step-1-textual-analysis">Step 1: Textual Analysis</h2>
+
+<p>Go through the requirements and use cases you wrote in <a href="assign05.html">Assignment 5</a>. Identify the important noun and verb phrases which describe entities and concepts in your problem domain.  Save these in a document.</p>
+
+<h2 id="step-2-build-an-analysis-model">Step 2: Build an Analysis Model</h2>
+
+<p>Based on your textual analysis, construct a UML class diagram modeling your project’s problem domain.</p>
+
+<p>You will probably want to work with your group using a whiteboard, since problem domain analysis is a <em>process</em>.  Your group will undoubtedly make a number of changes to the model as you explore possible ways of modeling the problem domain.</p>
+
+<p>Once your group is satisfied with your model, create an electronic version of the model using <a href="http://alexdp.free.fr/violetumleditor/page.php">Violet UML</a>.  Note that you can download the Violet UML jar file from the course <a href="../resources/index.html">Resources</a> page.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: If you would like to use a different UML modeling tool, please see me.</p>
+</blockquote>
+
+<p>Use associations (plain, aggregation, composition) and generalizations (Is-A / inheritance) to show the relationships between the classes (noun phrases) in your model. Give each association a name to indicate the roles of the two classes involved in the association. Add the important methods (verb phrases) to the classes to which they are most likely to belong. Don’t worry about specifying parameters and return types for the methods.</p>
+
+<blockquote>
+  <p><strong>Note</strong>: Because you are building an analysis model, avoid modeling any “implementation” classes such as those involved in the user interface, data storage, etc., unless there are important requirements which would not otherwise be addressed by the model.</p>
+</blockquote>
+
+<h2 id="step-3-explain-the-model">Step 3: Explain the Model</h2>
+
+<p>In a text document of 1 page, <em>briefly</em> explain your analysis model. Discuss why you felt the classes you modeled are the most important ones. Is there a class or classes that seem to be “central” to the model? How did you determine where to put the important methods?</p>
+
+<h2 id="example">Example:</h2>
+
+<p>Here is an <a href="assign06-csperbec-asmit147-awalsh6.pdf">example submission</a> for this assignment from the Distributed Whiteboard Project completed in 2016 by Cara Sperbeck, Alex Smith, and Aaron Walsh.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>Create an Analysis document for your project in Google Docs that includes your group’s Textual Analysis, Violet UML Model, and an explanation of your Analysis Model.  Name the Analysis document <strong>assign06-www-xxx-yyy-zzz</strong>, substituting the YCP user names of your project team members,<strong>in alphabetical order</strong>.</p>
+
+<p>Place your Analysis document under your shared Google Drive Group Project folder.  Also post your Violet UML (.class.violet) file of your Analysis Model to the Group Project folder.</p>
+
+<div class="callout">
+<b>Important</b>: Your submission <i>must</i> be a Google Doc, shared via your Group Project folder.
+Do not submit a document in any other format.
+</div>
+
+<!-- vim:set wrap: ­-->
+<!-- vim:set linebreak: -->
+<!-- vim:set nolist: -->
+:ET

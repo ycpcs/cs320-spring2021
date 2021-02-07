@@ -1,0 +1,116 @@
+I";)<p>This page links to useful resources.</p>
+
+<h1 id="hypertext-mark-up-language-html-and-cascading-style-sheets-css">Hypertext Mark-Up Language (HTML) and Cascading Style Sheets (CSS)</h1>
+
+<p><a href="http://www.w3schools.com">w3Schools.com</a>: <strong>Go here first for HTML/CSS, SQL, JavaScript, PHP tutorials</strong></p>
+
+<p><a href="https://www.freecodecamp.org">Free Code Camp</a>: Covers HTML/CSS (you need to create a free account)</p>
+
+<p><a href="http://www.htmliseasy.com/html_tutor/index.html">Basic HTML Tutorial</a>: Tutorial site for Basic HTML</p>
+
+<p><a href="http://www.htmliseasy.com/form_tutor/lesson01.html">HTML Forms Tutprial</a>: Tutorial site for creating HTML Forms</p>
+
+<p><a href="http://www.htmliseasy.com/table_tutor/index.html">HTML Tables Tutorial</a>: Tutorial site for creating HTML tables</p>
+
+<p><a href="http://www.htmliseasy.com/css_tutor/index.html">Basic CSS Tutorial</a>: Tutorial site for using CSS</p>
+
+<p><a href="http://www.htmliseasy.com/wdgcss/index.html">CSS Reference</a>: CSS reference guide from Web Design Group</p>
+
+<p><a href="http://www.w3schools.com/bootstrap/default.asp">Bootstrap</a>: A visual editor for creating web front-ends</p>
+
+<p><a href="http://brackets.io/">Brackets</a>: A visual editor for working on HTML/CSS</p>
+
+<h1 id="java-server-pages-jsp-and-java-standard-tag-library-jstl">Java Server Pages (JSP) and Java Standard Tag Library (JSTL)</h1>
+
+<p><a href="http://www.tutorialspoint.com/jsp/index.htm">JSP Tutorial</a>: Tutorial site for working with JSPs (note that this references Apache Tomcat, but much of it should apply to Eclipse Jetty)</p>
+
+<p><a href="http://www.tutorialspoint.com/jsp/jsp_standard_tag_library.htm">JSTL Tutorial</a>: Tutorial site for working with JSTL (linked from above site)</p>
+
+<p><a href="http://www.tutorialspoint.com/jsp/jsp_session_tracking.htm">Session Information</a>: Creating and using session information (linked from above site)</p>
+
+<h1 id="javascript-js">JavaScript (JS)</h1>
+
+<p><a href="https://www.w3schools.com/js/default.asp">JavaScript Tutorial - w3schools</a>: JavaScript tutorial w/sandbox from <strong>w3shools.com</strong></p>
+
+<p><a href="http://www.htmliseasy.com/javascript/index.html">JavaScript Tutorial</a>: Basic JavaScript tutorial</p>
+
+<p><a href="https://www.freecodecamp.org">Free Code Camp</a>: Covers various JavaScript versions (you need to create a free account)</p>
+
+<h1 id="unified-modeling-language-uml">Unified Modeling Language (UML)</h1>
+
+<p><a href="http://usna86-techbits.blogspot.de/2012/11/uml-class-diagram-relationships.html">UML Diagrams</a>: A concise explanation of UML relationships and diagrams</p>
+
+<p><a href="violetumleditor-2.1.0.jar">Violet UML Download</a>: Use Violet UML for your project UML diagrams</p>
+
+<h1 id="git-github-and-egit">Git, GitHub, and eGit</h1>
+<p><a href="https://learngitbranching.js.org/">Git Branching Demo</a>: Great JavaScript-based demo for using branches in Git</p>
+
+<p><a href="https://www.freecodecamp.org">Free Code Camp</a>: Covers Git and GitHub (you need to create a free account)</p>
+
+<p><a href="https://git-scm.com">Git Website</a>: Everything you ever wanted to know about Git, but were afraid to ask</p>
+
+<p><a href="https://git-scm.com/book/en/v2">Git eBook: ProGit v2</a>: Available free in PDF form</p>
+
+<p><a href="https://git-scm.com/docs">Git Reference Manual</a>: Git command-line reference</p>
+
+<p><a href="https://git-scm.com/videos">Git Videos</a>: Tutorials on getting started with Git</p>
+
+<p><a href="https://git-scm.com/downloads">Git Downloads</a>: Git Clients and Tools</p>
+
+<p><a href="https://github.com/">GitHub - Remote Repository Host</a>: Teams will create their remote repositories on GitHub</p>
+
+<p><a href="https://www.eclipse.org/egit/">eGit Home Page</a>: Documentation and tutorials on setting up and using eGit</p>
+
+<p><a href="fetchMerge.html">eGit: Fetching and merging changes from within Eclipse</a></p>
+
+<h1 id="relational-databases-and-structured-query-language-sql">Relational Databases and Structured Query Language (SQL)</h1>
+
+<p><a href="https://www.w3schools.com/sql/default.asp">SQL Tutorial - w3schools</a>: <strong>Go here first for SQL tutorials w/sandbox from w3schools.com</strong></p>
+
+<p><a href="https://www.freecodecamp.org">Free Code Camp</a>: Covers SQL Databases (you need to creaate a free account)</p>
+
+<p><a href="CS320_Derby.zip">CS320_Derby.zip</a>: Eclipse project with jarfiles for Apache Derby (relational database)</p>
+
+<blockquote>
+  <div class="callout"><b>When you implement the persistence layer using Derby for your team project</b>: when specifying the JDBC URL in the code where you connect to the database, you should use an absolute file name for the database name. For example, <code>jdbc:derby:H:/mydatabase.db;create=true</code> (this will create the database as <code>H:/mydatabase.db</code>).  If you use a relative file name, your web application will probably not find the database (because it runs in the <code>war</code> directory rather than the root directory of the project).</div>
+</blockquote>
+
+<h1 id="email-address-validation">Email address validation</h1>
+
+<p><a href="https://www.mkyong.com/regular-expressions/how-to-validate-email-address-with-regular-expression/">A Java email validator class using regex (regular expressions)</a></p>
+
+<h1 id="cs320-lab05-jdbc-solution">CS320 Lab05 (JDBC) Solution</h1>
+
+<p><a href="CS320_Lab05_Solution-2020.zip">CS320_Lab05_Solution-2020.zip</a>: A solution for the JDBC lab (Lab05).  You can import this into the same workspace as your Lab05 solution, as the solution project is named <strong>CS320_Lab05_Solution-2020</strong>.  Please compare your solution to this code, and make any necessary changes in your code, as an exercise to further understand the material.  There are plenty of comments included in the solution to describe what is happening and why it is being done.</p>
+
+<h1 id="cs320-library-example-project">CS320 Library Example Project</h1>
+
+<p><a href="CS320_LibraryExample-2020.zip">CS320_LibraryExample-2020.zip</a>: Eclipse project that ties the <a href="../labs/lab02.html">Web Applications Lab</a> together with the <a href="../labs/lab06.html">ORM Lab</a>.  This application places a web front-end on the SQL transactions from Lab06, as well as provides examples for creating a Derby database from CSV files, how to use session information after login, and how to use JSTL to display a list of complex objects in a JSP.  It has been updated to incorporate a many-to-many (M2M) relationship between <strong>Books</strong> and <strong>Authors</strong>, using a junction table (<strong>booksAuthors</strong>) that cross-references <strong>book_id</strong>’s with <strong>author_id</strong>’s.  It also contains some basic (non-exhaustive) JUnit Tests for testing the Derby database queries.</p>
+
+<blockquote>
+  <div class="callout"><b>NOTE: You are free to incorporate any of this code into your team project(s) - as long as you cite the source in your code, and refactor the names from **Lab02** and **Lab06** to something that pertains to your project.</b></div>
+</blockquote>
+
+<p>After you download the ZIP file, extract it into a new Java workspace separate from the others that you have used in the past.  This project is composed of 4 separate Java projects (<strong>CS320_Jetty</strong>, <strong>CS320_Derby</strong>, <strong>CS320_LibraryExample_Lab02</strong>, and <strong>CS320_LibraryExample_Lab06</strong>).</p>
+
+<p>Before running the project, open up <strong>DerbyDatabase.java</strong> under <strong>CS320_LibraryExample_Lab06-&gt;src-&gt;edu.ycp.cs320.booksdb.persist</strong> and edit the Derby database location in the <strong>connect()</strong> method so that it has the absolute path where you want your database to be located.  Do the same thing in <strong>SQLDemo.java</strong> in the <strong>main()</strong> method.  If you don’t change it, the default database location will be <strong>C:/CS320-2020-LibraryExample-DB/</strong>.</p>
+
+<p><strong>DO NOT LOCATE YOUR DATABASE WITHIN THE LibraryExample PROJECT.</strong>  You will likely be using the LibraryExample as the basis for your team project, and placing the database within the project will eventually result in numerous <strong>Git</strong> conflicts when you start working as a team from a common <strong>Git</strong> repository.</p>
+
+<p>Run <strong>DerbyDatabase.java</strong> as an application to create the Library database from the <strong>authors.csv</strong>, <strong>books.csv</strong>, and <strong>bookAuthors.csv</strong> files. It might take a few seconds for the application to create the DB - you will see it in the console.  Afterwards, <strong>library.db</strong> will show up as a folder under the <strong>C:/CS320-2020-LibraryExample-DB/</strong> folder.  If you changed the LibraryExample database location, you will find <strong>library.db</strong> at that location.</p>
+
+<p>Run <strong>SQLDemo.java</strong> as an application so that you can issue SQL queries to the LibraryExample DB.  If this step works - if you can issue queries and SQLDemo can locate the DB - then you have correctly updated the two Java source files from above.</p>
+
+<p>To run the web application, first stop <strong>SQLDemo</strong>, then run <strong>CS320_LibraryExample_Lab02-&gt;Main.java</strong> as a Java application, followed by entering the following URL in your web browser:</p>
+
+<blockquote>
+  <p><a href="http://localhost:8081/lab02/login">http://localhost:8081/lab02/login</a></p>
+</blockquote>
+
+<p>There are currently two sets of login credentials hard-coded into the application: User name: <strong>student</strong> with PW: <strong>ycp</strong> and User name: <strong>faculty</strong> with PW: <strong>E&amp;CS</strong>.  After you have successfully logged in, the user name will be passed around as part of the Session information, and each subsequent servlet checks for a valid <strong>Session</strong> (a non-null “user” attribute) before responding to the request.  Note that this is <strong>NOT</strong> a secure method for handling credentials, but is used as an example for passing around and checking <strong>Session</strong> information.</p>
+
+<p><strong>WARNING: You will receive an Academic Integrity Violation, as well as automatically fail the course, if you submit code as part of your Lab06 solution that was taken from any version of the LibraryExample Project that has ever been provided as part of this course.</strong></p>
+
+<!-- Commenting out Library Example until it's needed
+-->
+:ET

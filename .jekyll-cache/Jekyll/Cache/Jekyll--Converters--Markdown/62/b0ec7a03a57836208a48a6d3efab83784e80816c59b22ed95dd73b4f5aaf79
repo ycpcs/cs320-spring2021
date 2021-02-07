@@ -1,0 +1,66 @@
+I"�<p>This page lists the lab activities.  We <em>might</em> get started on these labs in class, but you will not be able to finish them in class.  All of the labs will be graded on a <strong>Pass / Fail</strong> basis, as required assignments.  Failure to submit a sufficiently complete lab by the due date will result in up to a 10% penalty off your course grade.</p>
+
+<p>The labs provide extremely important concepts and techniques that will be essential for completing your team project.  The given due dates are the enforced dates, but I <strong>HIGHLY</strong> encourage you to work on the SQL-related labs (Lab04, Lab05, and Lab06) ahead of time, as they are essential for getting a good start on your persistent database design and implementation.</p>
+
+<p>In fact, your team will likely be using Lab06 as the basis for your team project’s database.  If you ask any of the teams from previous years, they will all tell you that the database portion of their project implementation was the most time-consuming and difficult of their various project’s tasks.</p>
+
+<p><strong>NOTE: For Lab02a, Lab05, and Lab06 (the labs that require programming submissions), you MUST also refactor the name of the project to include your username - BEFORE YOU EXPORT IT AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.</strong></p>
+
+<p>Example: If I was submitting Lab02, I would refactor the <strong>CS320_Lab02</strong> project to <strong>CS320_Lab02_djhake2</strong> as soon as I imported the project into Eclipse.  You should do the same with your user name for the three projects that are listed above.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Due Date</th>
+      <th>Lab</th>
+      <th>File</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Monday, 2-08-21, by 7:00pm</td>
+      <td><a href="lab01.html">Lab 1: HTML and CSS</a></td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Monday, 2-08-21 (by 7:00pm</td>
+      <td><a href="lab03.html">Lab 3: Git Part I</a></td>
+      <td>n/a</td>
+    </tr>
+    <tr>
+      <td>Monday, 2-22-21, by 7:00pm</td>
+      <td><a href="lab02a.html">Lab 2a: Web Applications II</a></td>
+      <td><a href="CS320_Lab02.zip">CS320_Lab02.zip</a>, <a href="CS320_Jetty9.zip">CS320_Jetty9.zip</a></td>
+    </tr>
+    <tr>
+      <td>Wednesday, 3-17-21, by 7:00pm</td>
+      <td><a href="lab04.html">Lab 4: SQL, Queries, Joins</a></td>
+      <td><a href="CS320_Lab04.zip">CS320_Lab04.zip</a>, <a href="CS320_Derby.zip">CS320_Derby.zip</a></td>
+    </tr>
+    <tr>
+      <td>Tuesday, 3-23-20, by 7:00pm</td>
+      <td><a href="lab05.html">Lab 5: JDBC</a></td>
+      <td><a href="CS320_Lab05.zip">CS320_Lab05.zip</a></td>
+    </tr>
+    <tr>
+      <td>Tuesday, 3-30-21, by 7:00pm</td>
+      <td><a href="lab06.html">Lab 6: ORM</a></td>
+      <td><a href="CS320_Lab06.zip">CS320_Lab06.zip</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>All of the above labs, with the exception of Lab03 (Git Lab) are to be completed individually. I encourage you to discuss high level concepts and strategies with other students, but any work you submit <strong>must be yours alone</strong>.</p>
+
+<p>Because these labs are essential for working towards and demonstrating the capability to provide a significant technical contribution to your team project, as well the achievement of the course outcomes, you must solve them on your own.  You may discuss the problem and high-level (pseudo-code) approaches to solving the problem with other students.  You may <em>not</em>, under any circumstances, discuss or share concrete implementation techniques or code.  Examples of forbidden types of collaboration include, but are not limited to: looking at another student’s code, allowing another student to see your code, viewing and/or using code from an external source such as a web page, discussing the use of specific API functions to solve a problem, giving or receiving help debugging specific code.</p>
+
+<p>Direct copying of code or other work from other students, web sites, or other sources <strong>is absolutely forbidden under any circumstances</strong>.</p>
+
+<p>Any sources (books, websites, articles, fellow students, etc.) that you consult in completing an assignment <strong>must be properly acknowledged</strong>. In general, I strongly discourage you from using any resource not explicitly listed in the course syllabus or on the course web page. When you work on a programming assignment, it must be <strong>your</strong> program, not your adaptation of someone else’s program.</p>
+
+<p>Any violation of the course’s academic integrity policy will be referred to the Dean of Academic Affairs, and could have consequences ranging from a 0 on an assignment to dismissal from the college.</p>
+
+<p>Labs will be graded on a <strong>Pass / Fail</strong> basis.  Late labs will be graded as <strong>FAIL</strong>.  Failing a lab, submitting a lab late, or not submitting it all will result in a course grade penalty of up to 10%.</p>
+
+<p><strong>With regards to Lab06 (ORM) - it is the most important lab in this course.  Each year, I provide a basic website example built from Lab02a (Web Applications II) and Lab06 (ORM) called **The LibraryExample Solution</strong>.  I will do this again this year on Friday, 3-27-20.  You will receive an Academic Integrity Violation, as well as automatically fail the course, if you submit any code as part of your Lab06 solution that was taken from any version of <strong>The LibraryExample Solution</strong> that has ever been provided as part of this course.**</p>
+:ET

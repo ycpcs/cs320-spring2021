@@ -1,0 +1,55 @@
+I"�<h1 id="getting-started">Getting Started</h1>
+
+<p>Import <a href="CS320_Jetty9.zip">CS320_Jetty9.zip</a> and <a href="CS320_Lab02.zip">CS320_Lab02.zip</a> into Eclipse (<strong>Import → General → Existing Projects into Workspace → Archive File</strong>).</p>
+
+<p>You should see two new projects in your workspace, <strong>CS320_Jetty9</strong> and <strong>CS320_Lab02</strong>.</p>
+
+<p><strong>NOTE:</strong> Now refactor the name of the <strong>CS320_Lab02</strong> project to include your username - YOU MUST DO THIS BEFORE YOU EXPORT YOUR SOLUTION AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.</p>
+
+<p>Example: If I was submitting this project, I would refactor the <strong>CS320_Lab02</strong> project to <strong>CS320_Lab02_djhake2</strong> as soon as I imported the project into Eclipse.</p>
+
+<p>See <strong>AddNumbers.java</strong>, <strong>_view/addNumbers.jsp</strong>, and <strong>AddNumbersServlet.java</strong> to understand how the model, view, and servlet classes work for the AddNumbers example.</p>
+
+<p>To run the AddNumbers webapp, run <strong>Main.java</strong> as a Java application and enter the following URL in your web browser:</p>
+
+<blockquote>
+  <p><a href="http://localhost:8081/lab02/addNumbers">http://localhost:8081/lab02/addNumbers</a></p>
+</blockquote>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to full comprehend, design, implement, toubleshoot, and debug the complete architecture of a standard client-server application.  This <strong>WILL</strong> come up on the exam.</p>
+
+<p><strong>NOTE:</strong> If you start the server and then run AddNumbers from your browser and get a mass of Java JSP compiler errors returned from the local host, go to the <a href="lab02_notes.html">Notes for Lab 2 Page</a> for instructions on solving the problem.  There are also some additional notes at the bottom of that page for other problems that you might encounter.</p>
+
+<h1 id="your-task">Your Task</h1>
+
+<p>Implement the <strong>GuessingGameController</strong> class so that it implements a guessing game where the user thinks of a number between 1 and 100 and the web application tries to guess it.</p>
+
+<p>See <strong>GuessingGame.java</strong>, <strong>_view/guessingGame.jsp</strong>, and <strong>GuessingGameServlet.java</strong> to understand how the model, view, and servlet classes work.</p>
+
+<p>To run the webapp, run <strong>Main.java</strong> as a Java application and enter the following URL in your web browser:</p>
+
+<blockquote>
+  <p><a href="http://localhost:8081/lab02/guessingGame">http://localhost:8081/lab02/guessingGame</a></p>
+</blockquote>
+
+<p>Lastly, implement JUnit tests to test the <strong>GuessingGame</strong> and <strong>GuessingGameController</strong> classes.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>When you are done, submit the lab to the Marmoset server using the method below.</p>
+
+<h2 id="from-a-web-browser">From a web browser</h2>
+
+<p>Save the project (<strong>CS320_Lab02_username</strong>) to a zip file by right-clicking it and choosing</p>
+
+<blockquote>
+  <p><strong>Export…→Archive File</strong></p>
+</blockquote>
+
+<p>Upload the saved zip file to the <strong>Lab02</strong> project on the Marmoset server. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+
+:ET

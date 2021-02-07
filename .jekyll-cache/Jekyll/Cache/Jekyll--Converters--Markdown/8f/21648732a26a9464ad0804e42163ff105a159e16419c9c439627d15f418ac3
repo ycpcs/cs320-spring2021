@@ -1,0 +1,72 @@
+I"C<p><strong>Report due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>**Presentations: During Final Exam Time</p>
+
+<ul>
+  <li>Section 101 (9:00): Wednesday, 5-12-21, 9:00am – 10:00am <!--(moved to 9:00am since there are only 2 teams)--></li>
+  <li>Section 103 (2:00): Monday, May 5-10-21, 3:00pm – 5:00pm</li>
+</ul>
+
+<p>This is a <strong>team</strong> assignment</p>
+
+<p>Important: late submissions will <strong>not</strong> be accepted</p>
+
+<h1 id="team-project-deliverables">Team Project Deliverables</h1>
+
+<p>These are the deliverables for the team project.</p>
+
+<h2 id="the-code">The Code</h2>
+
+<p>The final version of your code should be in your “main” repository.</p>
+
+<p><strong>Important</strong>: In your report (see next section), include the URL of this repository.</p>
+
+<h2 id="the-report">The Report</h2>
+
+<p>Submit a 3-5 page report describing:</p>
+
+<ul>
+  <li>Of the requirements you proposed initially, which you completed and which you did not complete</li>
+  <li>The most important technical challenges your team faced, and how you overcame them</li>
+  <li>What development practices your team used, how well they worked, and what you might do differently for future projects</li>
+  <li>How you might continue to develop and enhance the system in the future</li>
+</ul>
+
+<p>Feel free to ere on the side of more content, rather than less.  Also, don’t forget to include the “main” repository URL as mentioned above.</p>
+
+<p>Submit the report to Marmoset as <strong>assign08report</strong>.  Use <em>only</em> PDF: do <em>not</em> upload a Microsoft Word or rich text document.</p>
+
+<div class="callout">
+Your report <em>must</em> be submitted in PDF format.  Submissions in any other format may receive a grade of 0.
+</div>
+
+<h2 id="the-presentation">The Presentation</h2>
+
+<p>At the conclusion of your team project, your group will give a 20-25 minute presentation.</p>
+
+<p>Here is a suggested structure for your presentation, with approximate times to spend on each part:</p>
+
+<blockquote>
+  <p><strong>1.</strong> Background: (2 minutes) What problem were you trying to solve? Discuss the system requirements.</p>
+
+  <p><strong>2.</strong> Analysis and design: (3-4 minutes) Discuss your design model. In this part of the presentation, you must show a UML class diagram illustrating the <em>most important</em> classes and methods in your system, and how they relate/interact with each other. Use <a href="../resources/index.html">Violet UML</a> to create the diagram. In order for the diagram to be legible during the presentation, it should contain at most 8 or so classes, and each class should show at most 1-3 methods. You can use multiple diagrams if you want to show more classes than would fit in a single diagram.</p>
+
+  <p>This is also a good opportunity to discuss how the design of the system changed as you worked on the implementation.</p>
+
+  <p><strong>3.</strong> Database Schema: (2-3 minutes) Present the Schema for your SQL database.  The DB Schema should include all tables with their attribute names (columns) and their respective data types, as well as how the tables are related to each other.</p>
+
+  <p><strong>4.</strong> Implementation: (4-5 minutes) What were the most interesting things you learned when you implemented the system? If you used any interesting programming techniques, this is a good opportunity to discuss them.</p>
+
+  <p><strong>5.</strong> Demonstration: (6-8 minutes) Show your system working. Demonstrate the most important/interesting features, and run your JUnit test cases.</p>
+
+  <p><strong>6.</strong> Conclusions: (3 minutes) Sum up what you learned. If there are aspects of the project you would do differently if you started again from scratch, mention them. You can also talk about how you might want to extend the system in the future.</p>
+</blockquote>
+
+<p>Your presentation should include between 7-10 slides.</p>
+
+<p>Please rehearse your presentation! <strong>Do a dry run of the demonstration before the presentation.</strong>  Make absolutely sure everything is working and ready to go before you present.</p>
+
+<p>This is a formal presentation, including appropriate dress.  All of the members of your team <em>must</em> participate in the presentation.</p>
+
+<p>Please make sure that your presentation is ready to go immediately when it is your group’s turn, including have your demo ready to run.</p>
+:ET

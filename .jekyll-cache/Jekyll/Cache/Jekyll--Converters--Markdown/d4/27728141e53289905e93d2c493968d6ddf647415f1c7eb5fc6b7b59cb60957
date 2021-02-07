@@ -1,0 +1,119 @@
+I"�<h1 id="uml-class-diagrams">UML Class Diagrams</h1>
+
+<p>UML class diagrams show the important characteristics of several classes, and the relationships between classes.</p>
+
+<h2 id="classes">Classes</h2>
+
+<p>A class is a rectangle. The name of the class is shown; optionally, fields and methods may be shown.</p>
+
+<blockquote>
+  <p><img src="figures/umlClass.png" alt="image" /></p>
+</blockquote>
+
+<p>Here is an example: the PlayerShip class (from a video game):</p>
+
+<blockquote>
+  <p><img src="figures/umlClassExample.png" alt="image" /></p>
+</blockquote>
+
+<p>There are two fields, <strong>x</strong> and <strong>y</strong>, both with type <strong>int</strong>.</p>
+
+<p>There are four methods: <strong>move</strong>, <strong>getX</strong>, <strong>getY</strong>, and <strong>fireMissile</strong>. Method parameters (e.g., the <strong>dx</strong> parameter to the move method) and return types (e.g., the <strong>int</strong> return type for the <strong>getX</strong> and <strong>getY</strong>) may be shown.</p>
+
+<p>As a contrast, here is what the <strong>PlayerShip</strong> class might look like in Java:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class PlayerShip {
+    private int x;
+    private int y;
+
+    public PlayerShip(int initX, int initY) {
+        ...
+    }
+
+    public void move(int dx) {
+        ...
+    }
+
+    public int getX() {
+        ...
+    }
+
+    public int getY() {
+        ...
+    }
+
+    public void fireMissile() {
+        ...
+    }
+}
+</code></pre></div></div>
+
+<p>Notice that even though we’ve omitted the method code, the class diagram does a much better job of summarizing the essential characteristics of the class.</p>
+
+<p>What is the point of a UML class diagram? It gives us the ability to talk about a program (a program being a collection of classes) at a high level: talking about the DESIGN rather than the IMPLEMENTATION. Because the purpose is to foster a high level discussion, many details about classes are ommitted from UML class diagrams.</p>
+
+<h1 id="relationships-between-classes">Relationships between classes</h1>
+
+<p>An object-oriented program is a collection of objects which interact with each other. Since objects are instances of classes, deciding how different classes relate to each other is a fundamental part of designing an object-oriented program.</p>
+
+<h2 id="associations-aggregation-and-composition">Associations, Aggregation, and Composition</h2>
+
+<p>A common relationship between classes is when one class is used by or part of another class.</p>
+
+<p>Example:</p>
+
+<blockquote>
+  <p><img src="figures/umlAssociation.png" alt="image" /></p>
+</blockquote>
+
+<p>This class diagram shows that a Car object has 4 wheels, 1 Engine, and at least 1 seat. The arrows show that there is an Association between Car and Wheel, Car and Engine, and Car and Seat. The arrow head on the association indicates that the association is one-way: a Car “knows about” its Wheels, but a Wheel object does not know what Car it is part of.</p>
+
+<p>A stronger kind of association is an Aggregation or Composition. These indicate a “whole to parts” relationship between the classes involved. Since a Car is made up of its parts, we are justified in making the associations into aggregations:</p>
+
+<blockquote>
+  <p><img src="figures/umlAggregation.png" alt="image" /></p>
+</blockquote>
+
+<p>The open diamond symbol connected to the “owner” indicates Aggregation.</p>
+
+<p>A Composition relationship indicates that the “owned” object ceases to exist when the “owner” object ceases to exist. Since the Wheels, Engine, and Seats of a Car could exist after the Car is destroyed, we probably don’t want to make these associations into Compositions.</p>
+
+<p>Here is a possible example of a Composition relationship:</p>
+
+<blockquote>
+  <p><img src="figures/umlComposition.png" alt="image" /></p>
+</blockquote>
+
+<p>If a Bank ceases to exist, then any Accounts existing at the Bank also cease to exist. Composition is shown by a filled diamond symbol connected to the “owner”.</p>
+
+<h2 id="inheritance">Inheritance</h2>
+
+<p>Inheritance is an IS-A relationship between classes. For example:</p>
+
+<blockquote>
+  <p><img src="figures/umlInheritance.png" alt="image" /></p>
+</blockquote>
+
+<p>In this example, Sedan, Wagon, and FormulaOneRacer are all kinds of Cars.</p>
+
+<p>Inheritance is shown by an outlined triangle arrowhead symbol attached to the superclass.</p>
+
+<p>Inheritance is useful when the are important common characteristics between classes, but there are important behavioral differences between the classes. The superclass embodies the common characteristics. The subclasses embody the behavioral differences between different kinds of objects.</p>
+
+<p>Question: what are some behavioral differences between Sedans, Wagons, and FomulaOneRacers?</p>
+
+<h1 id="designing-classes">Designing Classes</h1>
+
+<p>How do we know what classes we need? Formally, we find out by gathering requirements and performing an analysis of the problem domain.</p>
+
+<p>Textual analysis: brainstorm words and phrases associated with the problem. The noun phrases are candidates for classes or fields, and the verb phrases are candidates to become methods (or possibly classes).</p>
+
+<p>Exercise: TicTacToe game. The requirements are:</p>
+
+<ul>
+  <li>implement game logic</li>
+  <li>show the progress of the game in a GUI window</li>
+  <li>support any combination of human and AI (computer) players</li>
+</ul>
+
+:ET

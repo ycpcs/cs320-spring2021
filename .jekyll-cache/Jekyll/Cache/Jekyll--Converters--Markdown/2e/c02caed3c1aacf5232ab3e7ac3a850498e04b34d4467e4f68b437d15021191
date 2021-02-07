@@ -1,0 +1,40 @@
+I"�<p>Analysis is the development activity where we try to fully understand the problem domain, and build a model of the problem domain that will help us create a system that solves the problem we want to solve.</p>
+
+<p>The input to analysis is the requirements. Requirements can be specified as high-level requirements, detailed use cases, etc.</p>
+
+<p>Basic idea:</p>
+
+<blockquote>
+  <p><em>Textual analysis</em>: mine the input for the important terms and concepts in the problem domain</p>
+
+  <p>Model the problem domain: using a UML class diagram</p>
+
+  <blockquote>
+    <p>classes</p>
+
+    <p><em>relationships</em> between classes [question: what kinds of relationships are there?]</p>
+
+    <p>important methods - those showing the important <em>behavior</em> of the classes</p>
+  </blockquote>
+</blockquote>
+
+<p>That’s really all there is to analysis.</p>
+
+<p>Analysis acts as a bridge between requirements and design. The analysis model will serve as a starting point for the design model.</p>
+
+<p>Note that there is an important conceptual difference between the analysis and design models:</p>
+
+<blockquote>
+  <p>the analysis model models the problem domain</p>
+
+  <p>the design model models the solution domain</p>
+</blockquote>
+
+<p>For example: a GUI is necessary to allow the user to play TicTacToe, but it is not part of the problem of playing TicTacToe. For this reason, the GUI classes will be part of the design model for TicTacToe, but not part of the analysis model.</p>
+
+<p>The classes which are part of the analysis model are often referred to as the “object model”.</p>
+
+<h1 id="in-class-activity">In-class activity</h1>
+
+<p>Analysis model for Uber (ride-sharing app and system).  We will work from a common set of scenarios, requirements, and use cases.</p>
+:ET

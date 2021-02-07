@@ -1,0 +1,88 @@
+I"Ï
+<p>This page lists the assignments.</p>
+
+<p><strong>Note</strong>: For team assignments, only <strong>one</strong> team member should submit the assignment.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Assignment</th>
+      <th>Type</th>
+      <th>Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="assign01.html">Assignment 1: Team Project Proposal</a></td>
+      <td>Team</td>
+      <td>Friday, 2-12-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign02.html">Assignment 2: Individual Project Proposal</a></td>
+      <td>Individual</td>
+      <td>Sunday, 2-14-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign03.html">Assignment 3: Team Project Milestones</a></td>
+      <td>Team</td>
+      <td>Multiple (see description)</td>
+    </tr>
+    <tr>
+      <td><a href="assign04.html">Assignment 4: Individual Project Milestones</a></td>
+      <td>Individual</td>
+      <td>Multiple (see description)</td>
+    </tr>
+    <tr>
+      <td><a href="assign05.html">Assignment 5: Use Cases</a></td>
+      <td>Team</td>
+      <td>Friday, 3-05-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign06.html">Assignment 6: Problem Domain Analysis</a></td>
+      <td>Team</td>
+      <td>Saturday, 3-13-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign11.html">Assignment 11: Team Project Midterm Self / Peer Evaluation</a></td>
+      <td>Individual</td>
+      <td>Sunday, 4-4-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign04.html">Assignment 4: Individual Project Final Demo</a></td>
+      <td>Individual</td>
+      <td>Friday, 4-9-21 (during class)</td>
+    </tr>
+    <tr>
+      <td><a href="assign09.html">Assignment 9: Individual Project Report</a></td>
+      <td>Individual</td>
+      <td>Tuesday, 4-13-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign08.html">Assignment 8: Team Project Technical Report</a></td>
+      <td>Team</td>
+      <td>Friday, 5-7-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign10.html">Assignment 10: Team Project Reflection</a></td>
+      <td>Individual</td>
+      <td>Sunday, 5-09-21, by 7:00pm</td>
+    </tr>
+    <tr>
+      <td><a href="assign11.html">Assignment 11: Final Team Project Self / Peer Evaluation</a></td>
+      <td>Individual</td>
+      <td>Sunday, 5-10-20, by 7:00am</td>
+    </tr>
+    <tr>
+      <td><a href="assign08.html">Assignment 8: Team Project Final Presentation and Demo (Section 103)</a></td>
+      <td>Team</td>
+      <td>Monday, 5-10-21 (during Final Exam Period)</td>
+    </tr>
+    <tr>
+      <td><a href="assign08.html">Assignment 8: Team Project Final Presentation and Demo (Sections 101)</a></td>
+      <td>Team</td>
+      <td>Wednesday, 5-12-21 (during Final Exam Period)</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

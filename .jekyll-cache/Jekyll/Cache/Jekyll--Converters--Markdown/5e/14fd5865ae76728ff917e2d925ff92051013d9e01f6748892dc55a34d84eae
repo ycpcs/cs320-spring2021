@@ -1,0 +1,199 @@
+I"*3<h1 id="cs-320---software-engineering-and-design">CS 320 - Software Engineering and Design</h1>
+
+<p><strong>Spring 2021</strong></p>
+
+<p>Class times (All Online):</p>
+
+<ul>
+  <li>Section 101: M-W-F	 9:00 -  9:50 AM</li>
+  <li>Section 103: M-W-F	 2:00 -  2:50 PM</li>
+</ul>
+
+<p>Instructor:</p>
+
+<ul>
+  <li>[Krishna Kambhampaty], <a href="mailto:kkambhampaty@ycp.edu">kkambhampaty@ycp.edu</a>, <br /> Office Hours: M-W-F 10:00-11:30 and by appointment</li>
+</ul>
+
+<h2 id="course-description">Course Description</h2>
+
+<p>This course describes the software development process in detail, including the software life cycle and models of software development; requirements analysis and software design techniques, such as Textual Analysis, UML, and Jackson Design Methodology; techniques for software quality assurance, including design reviews, automated testing, metrics, and an introduction to program verification; and software project planning, organization, and management. Students will be expected to participate in a semester-long team-programming project.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<p>CS 201 with a grade of 2.0 or higher</p>
+
+<h2 id="textbooks">Textbooks</h2>
+
+<p>Martin Fowler, <a href="http://www.informit.com/store/product.aspx?isbn=0321193687">UML Distilled</a>, 3rd ed.</p>
+
+<h2 id="course-structure-and-expectations">Course Structure and Expectations</h2>
+
+<p>The overall goals of this course are to explore the issues surrounding “real world” software development, and to learn how to work effectively with the people involved in a software project.</p>
+
+<p>The course will heavily emphasize discussion and participation. As such, I expect you to attend class and participate fully in the in-class activities. Repeated absences or failure to participate will negatively affect your grade.</p>
+
+<p>Throughout the semester, you will be working in a team to design and implement a substantial software system. This project will allow you to apply the concepts you are learning about in the readings and the in-class activities.</p>
+
+<h2 id="learning-outcomes">Learning Outcomes</h2>
+
+<p>By the end of the course, you will be able to:</p>
+
+<ul>
+  <li>Collect software requirements and develop use cases</li>
+  <li>Develop analysis and design models</li>
+  <li>Critique analysis and design models to suggest possible improvements</li>
+  <li>Use analysis/design models to guide implementation</li>
+  <li>Assess and ensure software quality using unit tests, system tests, metrics, and static analysis</li>
+  <li>Understand the software lifecycle</li>
+  <li>Understand the issues involved in planning and estimation for a software project</li>
+</ul>
+
+<h2 id="policies">Policies</h2>
+
+<h3 id="grades">Grades</h3>
+
+<p>Grades are assigned on a 100-point scale:</p>
+
+<blockquote>
+  <table>
+    <thead>
+      <tr>
+        <th>Numeric Range</th>
+        <th>Letter Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>90-100</td>
+        <td>A (4.0)</td>
+      </tr>
+      <tr>
+        <td>85-90</td>
+        <td>B+ (3.5)</td>
+      </tr>
+      <tr>
+        <td>80-85</td>
+        <td>B (3.0)</td>
+      </tr>
+      <tr>
+        <td>75-80</td>
+        <td>C+ (2.5)</td>
+      </tr>
+      <tr>
+        <td>70-75</td>
+        <td>C (2.0)</td>
+      </tr>
+      <tr>
+        <td>60-70</td>
+        <td>D (1.0)</td>
+      </tr>
+      <tr>
+        <td>0-60</td>
+        <td>F (0.0)</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>Your overall grade for the course will be determined as follows:</p>
+
+<ul>
+  <li>Individual project, labs, and assignments: 30% <strong>(†)</strong></li>
+  <li>Contributions to team project: 50% <strong>(*)</strong></li>
+  <li>Midterm exam: 15%</li>
+  <li>Attendance and participation: 5%</li>
+</ul>
+
+<p><strong>(†) You must make a good faith effort to complete all of the labs and assignments.  Failure to submit a good faith attempt for any assignment or lab is grounds for receiving a reduced grade for the course.  Labs will be graded on a <em>Pass / Fail</em> basis.  In order to receive a passing grade on a lab, your submission must have a substantial portion of the lab implemented and correctly working.  You will be penalized up to 10% points off your course grade for each lab for which you do not receive a passing grade.</strong></p>
+
+<p><strong>(*) You must make a substantial <em>technical</em> contribution to your team software project. Although the non-technical contributions you make to your project, such as planning, communication, and organization, are important, you must also make a substantial contribution to the design and implementation of the software. I reserve the right to assign a reduced or failing grade for the course to any student who does not do this.</strong></p>
+
+<h3 id="course-website">Course website</h3>
+
+<p>Please check the course web page, <a href="http://ycpcs.github.io/cs320-spring2021/">http://ycpcs.github.io/cs320-spring2021/</a>, regularly for important announcements.</p>
+
+<h3 id="attendance">Attendance</h3>
+
+<p>Class time will be devoted to activities, project work, demos, and status reports. As such, it is essential that you attend class.</p>
+
+<p>If you have more than two unexcused absences, then your course grade could be reduced by as much as the number of points equal to</p>
+
+<blockquote>
+  <p>2<sup>(<i>absences</i> - 2)</sup></p>
+</blockquote>
+
+<p>For example, if you have 5 unexcused absences, then your course grade could be reduced by as much as 2<sup>(5-2)</sup> = 8 points.</p>
+
+<p>At a minimum, you attendance grade will be reduced by 1 percentage point for every unexcused absence over 2, and your attednace grade could even be negative if you have more than 5 unexcused absences.</p>
+
+<h3 id="reading-assignments">Reading Assignments</h3>
+
+<p>Reading assignments are posted on the <a href="schedule.html">Schedule</a> page.</p>
+
+<p>Because we will be using class time primarily for discussion and activities, rather than lecture, it is important that you do the reading.</p>
+
+<h3 id="posting-and-submission-of-assignments-and-labs">Posting and submission of assignments and labs</h3>
+
+<p>Assignments and labs will be posted as zip files on the course web page, <a href="http://ycpcs.github.io/cs320-spring2021/">http://ycpcs.github.io/cs320-spring2021/</a>.</p>
+
+<p>Written assignments will be created and submitted via shared Google Docs.</p>
+
+<p>Programming assignments and labs will be submitted using the server <a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a>. You will receive an email containing the username and password you should use for this server.</p>
+
+<h3 id="academic-integrity">Academic Integrity</h3>
+
+<p>The college catalog states the following:</p>
+
+<blockquote>
+  <p>Academic dishonesty will not be tolerated at York College. Academic dishonesty refers to actions such as, but not limited to, cheating, plagiarism, fabrication of research, falsification of academic documents, etc., and includes all situations where students make use of the work of others and claim such work as their own.</p>
+</blockquote>
+
+<p>Please refer to the college catalog for an explanation of the official college policies relating to academic integrity.</p>
+
+<p><strong>The following policy pertains to homework and graded (individual) programming assignments/labs in this course:</strong></p>
+
+<blockquote>
+  <p>All homework assignments and graded (individual) programming assignments/labs are to be completed individually. I encourage you to discuss high level concepts and strategies with other students, but any work you submit <strong>must be yours alone</strong>.</p>
+
+  <p>Because the individual assignments/labs are essential for working towards and demonstrating the achievement of the course outcomes, you must solve them on your own.  You may discuss the problem and high-level (pseudo-code) approaches to solving the problem with other students.  You may <em>not</em>, under any circumstances, discuss or share concrete implementation techniques or code.  Examples of forbidden types of collaboration include, but are not limited to: looking at another student’s code, allowing another student to see your code, viewing and/or using code from an external source such as a web page, discussing the use of specific API functions to solve a problem, giving or receiving help debugging specific code.</p>
+
+  <p>Direct copying of code or other work from other students, web sites, or other sources <strong>is absolutely forbidden under any circumstances</strong>.</p>
+
+  <p>Any sources (books, websites, articles, fellow students, etc.) that you consult in completing an assignment <strong>must be properly acknowledged</strong>. In general, I strongly discourage you from using any resource not explicitly listed in the course syllabus or on the course web page. When you work on a programming assignment, it must be <strong>your</strong> program, not your adaptation of someone else’s program.</p>
+</blockquote>
+
+<p>You are allowed to (and expected to) work with the members of your team on team project(s).  I will generally give you explicit permission to use the code supplied through examples, labs, and solutions for your team projects.  In fact, I will encourage you to use that code as a basis for starting your project, if you happen to be working in Java and Eclipse.</p>
+
+<p>All quizzes and exams must be completed individually.</p>
+
+<p>Any violation of the course’s academic integrity policy will be referred to the Dean of Academic Affairs, and could have consequences ranging from a 0 on an assignment to dismissal from the college.</p>
+
+<h3 id="late-assignment-policy">Late Assignment Policy</h3>
+
+<p>Late assignments will be marked down 10% per day late. <strong>No credit will be given for assignments that are more than two (2) days late.  However, you must still submit a good faith attempt for each assignment.  Failure to do so is grounds for receiving a reduced course grade.</strong></p>
+
+<h3 id="late-lab-policy">Late Lab Policy</h3>
+
+<p>The labs will be graded on a <strong>Pass / Fail</strong> basis.  Since satisfactory completion of all of the labs is so crucial to your ability to make significant (and timely) contributions to your team project, there will <strong>NOT</strong> be a late grace period for any of the labs.  Late submission of a lab will result in an automatic failure for that lab and up to a <strong>10% penalty will be assessed against your course grade for failing the lab.</strong></p>
+
+<h3 id="exams">Exams</h3>
+
+<p>No make-up exams will be given without approval of the instructor prior to class unless proof of extreme emergency or illness is provided. All exams will be open book.</p>
+
+<h3 id="attendance-and-participation">Attendance and Participation</h3>
+
+<p>We expect you to attend class and participate regularly in class activities. If you miss a class, please notify me in advance. You are responsible for all material covered in class, regardless of whether or not you were present. If you attend and participate in class regularly, you can expect to receive full credit for attendance and participation. Frequent absence and/or lack of participation will reduce the credit you receive for attendance and participation. You are responsible for keeping up with the reading assignments as described in the schedule below.</p>
+
+<h3 id="disability-accommodation">Disability accommodation</h3>
+
+<p>If you had an IEP or 504 plan in high school or if you have a disability or health condition that impacts you in the classroom, please contact Linda Miller, Director of Disability Support Services, at 815-1785 or <a href="mailto:lmille18@ycp.edu">lmille18@ycp.edu</a> to discuss obtaining the accommodations for which you may be eligible. If you already have an accommodation memo and wish to access your accommodations in this class, please see me confidentially to discuss.</p>
+
+<h3 id="use-of-personal-technology-in-the-classroom">Use of Personal Technology in the Classroom</h3>
+
+<p>While York College recognizes students’ need for educational and emergency-related technological devices such as laptops, PDA’s, cellular phones, etc., using them unethically or recreationally during class time is never appropriate. The college recognizes and supports faculty members’ authority to regulate in their classrooms student use of all electronic devices.</p>
+
+<h3 id="communication-standards">Communication Standards</h3>
+
+<p>York College recognizes the importance of effective communication in all disciplines and careers. Therefore, students are expected to competently analyze, synthesize, organize, and articulate course material in papers, examinations and presentations. In addition, students should know and use communication skills current to their field of study, recognize the need for revision as part of their writing process, and employ standard conventions of English usage in both writing and speaking. Students may be asked to further revise assignments that do not demonstrate effective use of these communication skills.</p>
+:ET

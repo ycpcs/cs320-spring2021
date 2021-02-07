@@ -1,0 +1,365 @@
+I":9<p>A <em>relational database</em> is a system for storing and accessing data organized into <em>relations</em>.</p>
+
+<p>A relation is a bag of <em>tuples</em>. Each tuple is an ordered sequence of <em>attributes</em>. Each attribute is a data value belonging to some data type. All of the tuples in a relation have the same number of attributes. In addition, the relation has a schema that is imposed on each tuple in the relation, specifying what the data type each attribute in each tuple will have. For example, the relation’s schema might specify that the first attribute in each tuple is an integer.</p>
+
+<p>The relation’s schema also gives a name to each attribute. The attribute names give us a convenient way of referring to tuple attributes without having to say “the first attribute”, “the fourth attribute”, etc.</p>
+
+<p>Typical relational databases support numeric and text data types as tuple attributes. Many relational databases also support “BLOBs” (Binary Large OBjects) as attributes. A BLOB is a large, uninterpreted chunk of data. BLOBs are useful for storing files, images, and other large chunks of data in a relational database.</p>
+
+<h1 id="example-relation">Example relation</h1>
+
+<p>Let’s say we are going to use a relational database to store information about books. We might define a relation called <strong>books</strong> to store information about each book:</p>
+
+<blockquote>
+  <table>
+    <thead>
+      <tr>
+        <th>lastname</th>
+        <th>firstname</th>
+        <th>title</th>
+        <th>ISBN</th>
+        <th>published</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Hawking</td>
+        <td>Stephen</td>
+        <td>A Brief History of Time</td>
+        <td>0-553-05340-X</td>
+        <td>1988</td>
+      </tr>
+      <tr>
+        <td>Hawking</td>
+        <td>Stephen</td>
+        <td>The Universe in a Nutshell</td>
+        <td>0-553-80202-3</td>
+        <td>2001</td>
+      </tr>
+      <tr>
+        <td>Hawking</td>
+        <td>Stephen</td>
+        <td>A Briefer History of Time</td>
+        <td>0-553-80436-7</td>
+        <td>2005</td>
+      </tr>
+      <tr>
+        <td>Mlodinow</td>
+        <td>Leonard</td>
+        <td>A Briefer History of Time</td>
+        <td>0-553-80436-7</td>
+        <td>2005</td>
+      </tr>
+      <tr>
+        <td>Hawking</td>
+        <td>Stephen</td>
+        <td>The Grand Design</td>
+        <td>0-553-80537-1</td>
+        <td>2010</td>
+      </tr>
+      <tr>
+        <td>Mlodinow</td>
+        <td>Leonard</td>
+        <td>The Grand Design</td>
+        <td>0-553-80537-1</td>
+        <td>2010</td>
+      </tr>
+      <tr>
+        <td>Adams</td>
+        <td>Douglas</td>
+        <td>The Hitchhiker’s Guide to the Galaxy</td>
+        <td>0-345-39180-3</td>
+        <td>1979</td>
+      </tr>
+      <tr>
+        <td>Adams</td>
+        <td>Douglas</td>
+        <td>The Restaurant at the End of the Universe</td>
+        <td>0-345-39181-0</td>
+        <td>1980</td>
+      </tr>
+      <tr>
+        <td>Adams</td>
+        <td>Douglas</td>
+        <td>Life, The Universe and Everything</td>
+        <td>0-345-39182-9</td>
+        <td>1982</td>
+      </tr>
+      <tr>
+        <td>Adams</td>
+        <td>Douglas</td>
+        <td>So Long, and Thanks for all the Fish</td>
+        <td>0-345-39183-7</td>
+        <td>1984</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>In this relation, there are five attributes called <strong>lastname</strong>, <strong>firstname</strong>, <strong>title</strong>, <strong>ISBN</strong>, and <strong>published</strong>. The first four attributes are strings, the last is an integer.</p>
+
+<h1 id="databases-with-multiple-relations">Databases with multiple relations</h1>
+
+<p>Databases will typically have many relations. One motivation for allowing multiple relations in a database is to avoid storing redundant information. For example, in the relation above, there are four tuples representing books by the same author, <strong>Stephen Hawking</strong>. Because the author name is represented four times, there is the possibility that this information might not be recorded consistently if the relation were modified.</p>
+
+<p>We can avoid this redundancy by splitting the database into two relations, <strong>books</strong> and <strong>authors</strong>:</p>
+
+<blockquote>
+  <p>The <strong>books</strong> relation:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>book_id</th>
+        <th>author_id</th>
+        <th>title</th>
+        <th>ISBN</th>
+        <th>published</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>7</td>
+        <td>A Brief History of Time</td>
+        <td>0-553-05340-X</td>
+        <td>1988</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>7</td>
+        <td>The Universe in a Nutshell</td>
+        <td>0-553-80202-3</td>
+        <td>2001</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>7</td>
+        <td>A Briefer History of Time</td>
+        <td>0-553-80436-7</td>
+        <td>2005</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>11</td>
+        <td>A Briefer History of Time</td>
+        <td>0-553-80436-7</td>
+        <td>2005</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>7</td>
+        <td>The Grand Design</td>
+        <td>0-553-80537-1</td>
+        <td>2010</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>11</td>
+        <td>The Grand Design</td>
+        <td>0-553-80537-1</td>
+        <td>2010</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>1</td>
+        <td>The Hitchhiker’s Guide to the Galaxy</td>
+        <td>0-345-39180-3</td>
+        <td>1979</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>1</td>
+        <td>The Restaurant at the End of the Universe</td>
+        <td>0-345-39181-0</td>
+        <td>1980</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>1</td>
+        <td>Life, The Universe and Everything</td>
+        <td>0-345-39182-9</td>
+        <td>1982</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>1</td>
+        <td>So Long, and Thanks for all the Fish</td>
+        <td>0-345-39183-7</td>
+        <td>1984</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>The <strong>authors</strong> relation:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>author_id</th>
+        <th>lastname</th>
+        <th>firstname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Adams</td>
+        <td>Douglas</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Adams</td>
+        <td>Scott</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Breathed</td>
+        <td>Berkeley</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Chapman</td>
+        <td>Graham</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Cleese</td>
+        <td>John</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Gilliam</td>
+        <td>Terry</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Hawking</td>
+        <td>Stephen</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Idle</td>
+        <td>Eric</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Jones</td>
+        <td>Terry</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Kahneman</td>
+        <td>Daniel</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>Mlodinow</td>
+        <td>Leonard</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Newton</td>
+        <td>Isaac</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Palin</td>
+        <td>Michael</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Watterson</td>
+        <td>Bill</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<p>The <strong>books</strong> relation has been changed so that the author of each book is represented by a unique integer identifier, the <strong>author_id</strong> attribute. This attribute also exists in the <strong>authors</strong> relation. So, the author of each book tuple in the <strong>books</strong> relation is represented indirectly, by reference to a matching author tuple in the <strong>authors</strong> relation.</p>
+
+<h1 id="queries-sql">Queries, SQL</h1>
+
+<p>A <em>query</em> is a request to retrieve information from a database.</p>
+
+<p><strong>SQL</strong>, the <strong>Structured Query Language</strong>, is a standard language for describing queries in relational databases. SQL is an interesting language because it is <em>declarative</em>: it describes <em>what</em> information is desired, but does not specify <em>how</em> that information is to be retrieved. It is the job of the database to figure out how to find the information requested by a query.</p>
+
+<p>Example: let’s say we want to find the titles of all books written by <strong>Stephen Hawking</strong>. In our original database, in which only the <strong>books</strong> relation exists, we could express that query as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select title
+    from books
+    where lastname = 'Hawking' and firstname = 'Stephen'
+</code></pre></div></div>
+
+<p>A SQL <strong>select</strong> statement specifies a query, and has three parts:</p>
+
+<ul>
+  <li>Which attribute values to retrieve. In the example above, only the <strong>title</strong> attribute is requested.</li>
+  <li>Which relations are involved in the query. In the example above, only the <strong>books</strong> relation is queried.</li>
+  <li>A <em>condition</em> describing which tuples contain the desired information. In the example above, the condition requires that tuples were <strong>lastname = ‘Hawking’</strong> and <strong>firstname = ‘Stephen’</strong> are desired.</li>
+</ul>
+
+<p>This query will match multiple tuples in the <strong>books</strong> relation, and return the following <strong>title</strong> values:</p>
+
+<blockquote>
+  <p><strong>A Brief History of Time</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>The Universe in a Nutshell</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>A Briefer History of Time</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>The Grand Design</strong></p>
+</blockquote>
+
+<h1 id="joins">Joins</h1>
+
+<p>A <em>join</em> is a query which retrieves information from multiple relations. Joins are a powerful way to exploit <em>associations</em> between tuples in different relations. The idea is that a query retrieving information from multiple relations will specify a <em>join condition</em> which links attribute values in tuples of two relations.</p>
+
+<p>Let’s consider how to find the titles of all books by <strong>Stephen Hawking</strong> in the second version of the database, where we have two relations, <strong>books</strong> and <strong>authors</strong>. We will need to do a join of both relations in order to connect the author name and book title, which are now stored in different relations:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select books.title
+    from books, authors
+    where books.author_id = authors.author_id and
+          authors.lastname = 'Hawking' and authors.firstname = 'Stephen'
+</code></pre></div></div>
+
+<p>Note several interesting details of this query:</p>
+
+<ul>
+  <li>We are selecting <strong>books.title</strong> as the attribute to retrieve, explicitly noting that this attribute exists in the <strong>books</strong> relation</li>
+  <li>The <strong>from</strong> clause now specifies two relations, <strong>books</strong> and <strong>authors</strong></li>
+  <li>The first part of the <strong>where</strong> clause, <strong>books.author_id = authors.author_id</strong>, is the join condition. It states that when considering pairs of tuples in the <strong>books</strong> and <strong>authors</strong> relations as candidates for retrieval, each tuple must contain the same value for the respective <strong>author_id</strong> attributes.</li>
+  <li>In the <strong>where</strong> clause, each attribute is qualified by the name of the relation it is a part of. This is especially important when two relations have identically-named attributes, as is the case with the <strong>author_id</strong> attributes of the <strong>books</strong> and <strong>authors</strong> relations.</li>
+</ul>
+
+<h1 id="indices">Indices</h1>
+
+<p>Obviously, a database system must be able to answer all queries by returning the requested information.</p>
+
+<p>An important additional characteristic that database systems should have is that queries are answered <em>efficiently</em>, even if the database contains a large amount of data.</p>
+
+<p>An <em>index</em> is an auxiliary data structure associated with a relation to increase the efficiency of queries on that relation. Specifically, an index is an auxiliary data structure which, given an attribute value or range of attribute values, quickly locates the tuple or tuples which match that value or range. An index may be applied to a single attribute, or to multiple attributes.</p>
+
+<p>The idea is that an index helps the database focus the search for data matching a query by narrowing the number of tuples that must be checked.</p>
+
+<h2 id="sequential-scans">Sequential scans</h2>
+
+<p>Consider queries involving a single relation. Any such query can be answered by performing a <em>sequential scan</em> over the tuples in the relation: checking each tuple to see if it matches the condition(s) specified in the <strong>where</strong> clause, and if so, returning the values of the selected attributes.</p>
+
+<p>For very large relations, a sequential scan may do much more work than necessary. In particular, the <strong>where</strong> clause may have sub-conditions that are met by only a very small number of tuples: we say that a condition matched by only a small number of tuples has high <em>selectivity</em>.</p>
+
+<p>To answer queries as efficiently as possible, the database should limit its scan to as small a subset of tuples as possible. This can be done using an <em>index</em>.</p>
+
+<p>For example: let’s say that in the book database, we will frequently need to search for authors by last name. To make those queries more efficient, we can build an index on the <strong>lastname</strong> attribute. Queries such as</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>select author_id from authors where lastname = 'Hawking';
+</code></pre></div></div>
+
+<p>can be answered efficiently because the index on <strong>lastname</strong> will allow the database to ignore tuples in which the value of that attribute is not ‘Hawking’.</p>
+:ET

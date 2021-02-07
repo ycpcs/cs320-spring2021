@@ -1,0 +1,98 @@
+I"�<p>In the <a href="../schedule.html">Schedule</a> you will notice days designated as team project milestones.  These are opportunities for your group to demonstrate progress on your team project.</p>
+
+<p>This document describes the expectations for each milestone.</p>
+
+<blockquote>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Milestone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday, 3-16-20</td>
+        <td>Milestone 1: Minimal Working System</td>
+      </tr>
+      <tr>
+        <td>Wednesday, 4-1-20</td>
+        <td>Milestone 2: Progress on Features</td>
+      </tr>
+      <tr>
+        <td>Wednesday, 4-22-20</td>
+        <td>Milestone 3: “75%” Working System (operational persistent SQL database)</td>
+      </tr>
+      <tr>
+        <td>Saturday, 5-9-20</td>
+        <td>Final Technical Report: due by 7:00am (Marmoset)</td>
+      </tr>
+      <tr>
+        <td>Monday, 5-11-20</td>
+        <td>Final Presentation &amp; Demo (section 103), during final exam period</td>
+      </tr>
+      <tr>
+        <td>Wednesday, 5-13-20</td>
+        <td>Final Presentation &amp; Demo (sections 101 &amp; 102), during final exam period</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="expectations">Expectations</h2>
+<p>Each milestone will be a <strong>formal</strong> presentation, where your team should be assembling a collection of 5-10 PowerPoint slides, along with a demonstration of your working code, and a run of the complete set of test cases that you have developed to that point.  Bear in mind that it is acceptable for <strong>some</strong> of your test cases to fail, as you will not have implemented all of your code - at least for the aboce 3 milestones.</p>
+
+<p>Slides to consider (you may include others, as you see fit):</p>
+<ul>
+  <li>Project title slide that also includes all of the names of the team members.</li>
+  <li>Brief description of you project.</li>
+  <li>List of major features, with the status of each feature.</li>
+  <li>Task assignments for the team members.</li>
+  <li>Challenges you have encountered, and how you have dealt with them.</li>
+  <li>Goals for the next milestone.</li>
+  <li>Updated version of your UML diagram.</li>
+  <li>Updated version of your database schema - all DB tables with all attributes and their respective data types for each table.</li>
+</ul>
+
+<p><strong>Milestone 1: Minimal Working System</strong>. Your team should demonstrate</p>
+
+<ul>
+  <li>Model classes, controllers, and unit tests associated with a small number of “essential” requirements</li>
+  <li>A persistence interface and a “fake” in-memory implementation of the persistence interface (e.g., using array lists to store model objects rather than database tables)</li>
+  <li>A minimal web-based user interface (e.g., JSPs and servlets) that implements a small number of essential features in some minimal form</li>
+</ul>
+
+<p>The idea of a minimal working system is to create a working foundation early in the project’s development.  Subsequent iterations of the development process will build upon this foundation to implement additional features.</p>
+
+<p><strong>NOTE: In order to hit the first milestone, and place your team in a good position to achieve success, you should consider putting in a good deal of initial development work on your web front-end over Winter Break.</strong></p>
+
+<p><strong>Milestone 2: Progress on features</strong>.  In this milestone, your team should demonstrate some progress on features, such that at least some use cases are fully or partially implemented.  It is fine if your system is using the “fake” database at this point.</p>
+
+<p><strong>Milestone 3: “75%” Working System, Persistence using SQL database</strong>. Your team should demonstrate a working system that implements most of the major system requirements.  Also, Your team should demonstrate that there is a working implementation of the persistence interface that uses an SQL database to store and retrieve data (e.g., using Derby).  Note that it is not expected that the system has a high degree of “polish”: the UI doesn’t have to be beautiful, for example.  However, the features that are implemented should be functional and free of bugs.  Make sure to include the following slide in your presentation (in addition to your other slides):</p>
+
+<ul>
+  <li>
+    <p>A slide on your SQL database schema, which should include your tables, the attributes in each table and their data types, and any relationships between the tables.  You can use the format shown in <a href="../lectures/lecture13.html">Lecture 13</a> for your tables.  You do NOT need to include any actual data in the tables, unless it is for explantory purposes.</p>
+  </li>
+  <li>
+    <p>A slide that lists the names of your SQL database methods (queries, inserts, updates, etc.)  Note that this should NOT include the SQL code, but rather method names, such as “getAllBooksByAuthor()”, along with a short description of each method.  This will be a list of the DB methods that you have included in your IDatabase interface.</p>
+  </li>
+  <li>
+    <p>A slide summarizing the current progress on your project, i.e., a list of features that have been implemented.</p>
+  </li>
+  <li>
+    <p>A slide summarizing the major technical challenges that your team faced, and how you overcame them.</p>
+  </li>
+  <li>
+    <p>A slide summarizing what you plan to accomplish before your final presentation and demo.</p>
+  </li>
+</ul>
+
+<h2 id="evaluation">Evaluation</h2>
+
+<p>For each of these milestones, I will give your team one of the following grades: <em>below expectations</em>, <em>meets expectations</em>, or <em>exceeds expectations</em>. Below expectations means that I am concerned that your team is not making sufficient progress.  At all 3 milestones, I expect that there will be sufficient effort put towards automated unit test case development.</p>
+
+<div class="callout">
+<b>DO NOT LEAVE TEST CASES AS AN AFTER-THOUGHT.  YOUR TEAM WILL RECEIVE "BELOW EXPECTATIONS" IF YOU DO NOT HAVE SUFFICIENT TEST CASES DEVELOPED FOR EACH MILESTONE.</b>
+</div>
+:ET

@@ -1,0 +1,57 @@
+I"<p><strong>Due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>This is a <strong>team</strong> assignment</p>
+
+<h1 id="your-task">Your Task</h1>
+
+<p>Your task is to write use cases which document the requirements for the system your team will implement.</p>
+
+<h2 id="use-cases">Use cases</h2>
+
+<p>A use case describes a scenario in which one or more actors (agents external to the system) use the system to accomplish a goal. One of the actors involved in the use case must be an initiator of the use case.</p>
+
+<p>Each use case should have a name. The name should indicate which actor is the initiator of the use case, and what goal is accomplished. For example, in the TicTacToe system, we might have a use case called “Player takes a turn.”</p>
+
+<p>The use case should list a sequence of steps which accomplish the goal. If there are important options that might be encountered, such as error conditions, these can be listed in “nested” steps.</p>
+
+<p>So, our “Player takes a turn” use case for TicTacToe might look like this:</p>
+
+<blockquote>
+  <p><strong>Player takes a turn</strong></p>
+
+  <p><strong>Actor</strong>: a human player</p>
+
+  <p><strong>0.</strong> Precondition: it is the player’s turn</p>
+
+  <p><strong>1.</strong> The player chooses a location on the board in which to place a piece</p>
+
+  <p><strong>2.</strong> System checks to see if the player has won the game, or if a draw has resulted</p>
+
+  <p>Extensions:</p>
+
+  <blockquote>
+    <p><strong>1a.</strong> If the location is already occupied by a piece, issue error message and go back to step 1</p>
+  </blockquote>
+
+  <blockquote>
+    <p><strong>2a.</strong> If a player has won, indicate which player</p>
+
+    <p><strong>2b.</strong> If a draw has occurred, inform players</p>
+  </blockquote>
+</blockquote>
+
+<p>Note that TicTacToe is a pretty simple example: for a more complex problem, a use case might be be more involved.</p>
+
+<p><strong>You should write <em>as many use cases as necessary</em> to document the important behaviors of your system, as experienced by the relevant actors.</strong></p>
+
+<p><strong>Use the example format given in the <a href="../lectures/lecture08.html">Use Case lecture</a> for the Use Cases you provide for this submission.</strong></p>
+
+<h1 id="submitting-your-work">Submitting your work</h1>
+
+<p>Create a Google Doc for your group’s Use Case document, and name it <strong>assign05-www-xxx-yyy-zzz</strong>, substituting the YCP user names of your project team members, <strong>in alphabetical order</strong>.  Place the Use Case document under your shared Google Drive Group Project folder.</p>
+
+<div class="callout">
+<b>Important</b>: Your submission <i>must</i> be a Google Doc, shared via your Group Project folder.
+Do not submit a file in any other format.
+</div>
+:ET

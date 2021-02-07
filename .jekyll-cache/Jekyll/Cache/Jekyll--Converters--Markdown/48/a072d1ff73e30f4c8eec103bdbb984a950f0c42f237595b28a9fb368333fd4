@@ -1,0 +1,118 @@
+I"�#<h1 id="orm">ORM</h1>
+
+<p>ORM is <em>Object-Relational Mapping</em>, meaning the use of relations in a relational database to store object data.  Since all data in an object-oriented system is represented as objects, having an effective approach for ORM is an important requirement.</p>
+
+<p>In this lecture we will go over some principles for implementing ORM.</p>
+
+<h1 id="principles">Principles</h1>
+
+<p>Implementing ORM does not need to be complicated.  Here are some principles to keep in mind.</p>
+
+<h2 id="principle-1-orm-is-for-storing-objects">Principle 1: ORM is for storing objects</h2>
+
+<p>The point of ORM is to store object data persistently. It is the <em>objects</em> that are important, not the database.   The database exists only to store object data.  The design of the database (the relations and the way they are connected to each other) follows the way the classes in the system are related to each other.</p>
+
+<p>Another way of looking at this is that your ORM approach should allow your system to be completely oblivious to the fact that the relational database is there.  It should just give the system a way to load and store object data.</p>
+
+<h2 id="princple-2-create-an-interface-for-your-persistence-operations">Princple 2: Create an interface for your persistence operations</h2>
+
+<p>Following from Principle 1, we don’t want the code in the system that performs persistence operations to be aware of what mechanism is being used to load and store object data.  So, you should define an interface to describe the <em>persistence operations</em>, which are the methods that load and store objects.</p>
+
+<p>Each persistence operation should</p>
+
+<ul>
+  <li>Load object data from the database (returning one or more objects), or</li>
+  <li>Store object data in the database (taking one or more objects and storing their data), or</li>
+  <li>Do both (load and store objects)</li>
+</ul>
+
+<h2 id="principle-3-create-a-fake-implementation-of-the-persistence-interface">Principle 3: Create a “fake” implementation of the persistence interface</h2>
+
+<p>One of the most important motivations for creating an interface to describe the persistence operations is that it allows you to define multiple implementations of your persistence operations.</p>
+
+<p>The first implementation you create should not actually use a database at all.  It should implement the persistence operations using in-memory containers such as <strong>ArrayList</strong>s.</p>
+
+<p>Having this “fake” persistence implementation yields the following benefits:</p>
+
+<ul>
+  <li>It allows you to make progress on the rest of the system: you are never held up because of difficulty integrating the actual relational database</li>
+  <li>It allows you to write unit tests for the controllers that perform persistence operations (unit testing with an actual database, especially one that requires a server, can be difficult)</li>
+</ul>
+
+<p>Eventually, you will want to create a “real” implementation of the persistence interface that uses a real database, but the “fake” implementation should be maintained alongside the real implementation.</p>
+
+<h2 id="princple-4-use-dependency-injection-to-access-the-persistence-interface">Princple 4: Use dependency injection to access the persistence interface</h2>
+
+<p>As noted earlier, your system should not know or care what implementation of the persistence interface it is using.  A technique called <em>dependency injection</em> allows the implementation of the persistence interface to be created dynamically (when the program runs).</p>
+
+<p>Here is a very simple approach to dependency injection.  Let’s say the persistence interface is called <strong>IDatabase</strong>.  A class called <strong>DatabaseProvider</strong> could be defined as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public class DatabaseProvider {
+    private static IDatabase theInstance;
+    
+    public static void setInstance(IDatabase db) {
+        theInstance = db;
+    }
+    
+    public static IDatabase getInstance() {
+        if (theInstance == null) {
+            throw new IllegalStateException("IDatabase instance has not been set!");
+        }
+        return theInstance;
+    }
+}
+</code></pre></div></div>
+
+<p>Sometime early in the initialization of your system (before any code that performs persistence operations is executed), a call to <strong>setInstance</strong> should be used to install an object that implements the <strong>IDatabase</strong> interface.</p>
+
+<p>All of the code in the system that needs to perform persistence operations should then use</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DatabaseProvider.getInstance()
+</code></pre></div></div>
+
+<p>to get a reference to the object that implements <strong>IDatabase</strong>.</p>
+
+<h1 id="practical-considerations">Practical considerations</h1>
+
+<p>There are many practical details that need to be worked out to implement ORM.  This is not an exhaustive list, but does highlight some things you should keep in mind.</p>
+
+<p><a href="../labs/lab06.html">Lab 6</a> has a small but realistic example of a database application with an ORM layer that should be useful as a reference.</p>
+
+<h2 id="make-your-model-objects-pojos">Make your model objects POJOs</h2>
+
+<p>A “Plain Old Java Object”, or <a href="http://en.wikipedia.org/wiki/POJO">POJO</a>, is an object belonging to a Java class that consists of fields and getter/setter methods.</p>
+
+<p>Using POJOs simplifies the task of mapping classes/objects to database relations/tuples because each field of the POJO class maps onto an attribute (column) of the corresponding relation (table).</p>
+
+<p>All of your model classes should have</p>
+
+<ul>
+  <li>a constructor that does not take any parameters</li>
+  <li>getter methods for each field</li>
+  <li>setter methods for each field</li>
+</ul>
+
+<p>You may implement some behavior in your model classes: however, it may be easier to move behavior as much as possible to controller classes, leaving the model classes as passive containers for data.</p>
+
+<h2 id="automate-the-creation-of-the-database-and-the-loading-of-initial-data">Automate the creation of the database and the loading of initial data</h2>
+
+<p>When you create your “real” implementation of the persistence interface, write code that will create the database and load any required initial data.</p>
+
+<h2 id="use-tryfinally-to-ensure-that-database-resources-are-cleaned-up">Use try/finally to ensure that database resources are cleaned up</h2>
+
+<p>In JDBC, all <strong>Connection</strong>, <strong>PreparedStatement</strong>, and <strong>ResultSet</strong> objects must be closed when they are no longer needed.  Always use the <strong>try/finally</strong> construct to ensure that these objects are cleaned up.  This is especially critical for web applications (and other server applications), where the system will run for an extended period of time, and resource leaks will degrade performance and possibly result in a crash.</p>
+
+<h2 id="use-transactions-to-guarantee-atomicity">Use transactions to guarantee atomicity</h2>
+
+<p>Sometimes, your persistence implementation may need to execute multiple SQL queries or statements to perform a persistence operation.  For example, before inserting a new book in the database, using a query to check whether or not the author already exists, and if not, adding a new tuple to the authors relation.</p>
+
+<p>Because web applications (and most other types of server applications) will support many clients concurrently, the persistence implementation needs to ensure that data remains consistent.  For example, the system should guarantee that if two clients are attempting to add different books written by the same author to the database, only a single tuple will be added to the authors relation for that author.</p>
+
+<p>A <a href="http://en.wikipedia.org/wiki/Database_transaction">database transaction</a> is a technique that allows the database application to group a sequence of database operations into a single transaction that will either succeed or fail in its entirety.  So, if two transactions attempt to add the same author, only one will succeed.</p>
+
+<p>Executing transactions in JDBC is relatively straightforward: call <strong>setAutoCommit(false)</strong> on the <strong>Connection</strong> object, and then call the <strong>commit()</strong> method on the connection after executing all queries/statements that are part of the transaction.  Note that if two transactions interfere with each other, one will fail, typically with an exception indicating deadlock.   So, it may be necessary to retry a transaction several times until it can be committed successfully.  Creating objects to represent transactions can help, since you can create an “execute transaction” method that will attempt to execute the transaction as many times as required until it suceeds, avoiding the need to replicate the retry code in many places.</p>
+
+<!-- vim:set wrap: ­-->
+<!-- vim:set linebreak: -->
+<!-- vim:set nolist: -->
+:ET

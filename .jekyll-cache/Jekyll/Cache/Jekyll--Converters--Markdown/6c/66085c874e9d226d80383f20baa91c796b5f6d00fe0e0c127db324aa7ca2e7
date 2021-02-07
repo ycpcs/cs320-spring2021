@@ -1,0 +1,279 @@
+I"�g<h1 id="web-applications">Web Applications</h1>
+
+<p>A <em>web application</em> is an application whose user interface is a web browser.</p>
+
+<p>There are two basic approaches to developing web applications.</p>
+
+<p>The “traditional” approach is that the web application runs entirely on the server, and dynamically generates HTML to be displayed in the client web browser. The user interacts with the application by submitting form data, which is sent to the web server as an HTTP POST request. The server handles the request by decoding the form parameters, deciding how to handle the request, and then generating another HTML document as a response.</p>
+
+<p>The “modern” approach is that the web application runs both within the client web browser (as Javascript) and also on the server. The Javascript code can call code on the server using AJAX, which is a means of asynchronous communication with the server. (We will NOT be investigating Javascript and AJAX in this course, as you are likely already feeling overwhelmed with the additional languages and technologies to learn for this course.  :-)</p>
+
+<p>Today we will discuss the “traditional” approach.</p>
+
+<h1 id="java-web-applications">Java Web Applications</h1>
+
+<p>Java defines an API called J2EE, part of which specifies standard interfaces for developing web applications.</p>
+
+<p>A Java web application consists of <em>servlets</em>, which allow the application to handle HTTP requests.</p>
+
+<p>We could implement a traditional web application by having our servlets generate HTML directly. For example:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="kn">package</span> <span class="nn">edu.ycp.cs320.lab11.servlet</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">IndexServlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+      <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">req</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">resp</span><span class="o">)</span>
+          <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+
+        <span class="n">resp</span><span class="o">.</span><span class="na">setContentType</span><span class="o">(</span><span class="s">"text/html"</span><span class="o">);</span>
+        <span class="n">resp</span><span class="o">.</span><span class="na">getWriter</span><span class="o">().</span><span class="na">print</span><span class="o">(</span>
+            <span class="s">"&lt;html&gt;"</span> <span class="o">+</span>
+            <span class="s">"  &lt;head&gt;"</span> <span class="o">+</span>
+            <span class="s">"    &lt;title&gt;Index page&lt;/title&gt;"</span> <span class="o">+</span>
+            <span class="s">"  &lt;/head&gt;"</span> <span class="o">+</span>
+            <span class="s">"  &lt;body&gt;"</span> <span class="o">+</span>
+            <span class="s">"    This is the index page"</span> <span class="o">+</span>
+            <span class="s">"  &lt;/body&gt;"</span> <span class="o">+</span>
+            <span class="s">"&lt;/html&gt;"</span><span class="o">);</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+	
+</code></pre></div></div>
+
+<p>Generating HTML embedded in Java string constants is both tedious and error-prone. Fortunately, J2EE gives us a better way to generate HTML, called Java Server Pages (JSPs).</p>
+
+<h2 id="java-server-pages-jsps">Java Server Pages (JSPs)</h2>
+
+<p>The idea behind JSPs is very simple: rather than embedding HTML in Java code, embed the Java code in HTML. The idea is that when generating an HTML page, most of the page is static HTML, but some of the page is generated dynamically. So, the HTML text in a JSP is simply sent verbatim to the client web browser. Through the use of the JSP <em>expression language</em> and JSP <em>tag libraries</em>, dynamic Java code can also be used to generate portions of the HTML document.</p>
+
+<h2 id="model-view-controller-using-servlets-and-jsps">Model-View-Controller using servlets and JSPs</h2>
+
+<p>Before we dive into JSPs, let’s first consider how we want to <em>design</em> a web application. As with all user interfaces, we want to keep the model classes separate from the user interface classes. In a traditional GUI, we can use the model-view-controller (MVC) design pattern to do this. There is an analogue of MVC for web applications called (not very creatively) MVC2.</p>
+
+<p>Here is the basic idea of how a request is handled in MVC2:</p>
+
+<ol>
+  <li>The request parameters and/or form data is decoded and translated into one or more model objects which form the request. These request objects are then sent to a controller.</li>
+  <li>The controller processes the request and produces one or more model objects as the result of the request.</li>
+  <li>A view renders the request and result model objects as HTML that is sent back to the client.</li>
+</ol>
+
+<p>The nice feature of MVC2 is that the application logic is implemented entirely in the controller, and the controllers depend only on model classes. This means that you can write unit tests for the controllers and execute them completely independently of the web application.</p>
+
+<p>In a Java web application, the JSPs are ideal for implementing views: they make it easy to render HTML and include dynamic content (from the result model objects) where necessary.</p>
+
+<h2 id="an-example-mvc2-application-using-servlets-and-jsps">An example MVC2 application using servlets and JSPs</h2>
+
+<p>Here is a web application that uses MVC2 to allow the user to add two numbers and see the result.</p>
+
+<p>The model classes are very simple: they will simply be instances of <strong>java.lang.Double</strong> representing the numbers to be added (the request objects) and the result (the result object).</p>
+
+<p>The controller will take the two request objects (the values to be added), add them, and produce a double result object which is the sum of the values of the request objects.</p>
+
+<p>The view is a JSP which:</p>
+
+<ul>
+  <li>displays a form allowing the user to enter two numbers, along with a submit button</li>
+  <li>generates an HTTP POST request when the submit button is pressed</li>
+  <li>displays the result of the computation (if a result was computed by the controller)</li>
+</ul>
+
+<p>Here is the code. First, the view JSP:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+    <span class="nt">&lt;</span><span class="err">%@</span> <span class="na">taglib</span> <span class="na">uri=</span><span class="s">"http://java.sun.com/jsp/jstl/core"</span> <span class="na">prefix=</span><span class="s">"c"</span> <span class="err">%</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;</span><span class="err">%@</span> <span class="na">taglib</span> <span class="na">uri=</span><span class="s">"http://java.sun.com/jsp/jstl/functions"</span> <span class="na">prefix=</span><span class="s">"fn"</span> <span class="err">%</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Add Numbers<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nc">.error</span> <span class="p">{</span>
+          <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nt">td</span><span class="nc">.label</span> <span class="p">{</span>
+          <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nt">&lt;/style&gt;</span>
+      <span class="nt">&lt;/head&gt;</span>
+
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;c:if</span> <span class="na">test=</span><span class="s">"${! empty errorMessage}"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"error"</span><span class="nt">&gt;</span>${errorMessage}<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/c:if&gt;</span>
+
+        <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"${pageContext.servletContext.contextPath}/addNumbers"</span> <span class="na">method=</span><span class="s">"post"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;table&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+              <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>First number:<span class="nt">&lt;/td&gt;</span>
+              <span class="nt">&lt;td&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"first"</span> <span class="na">size=</span><span class="s">"12"</span> <span class="na">value=</span><span class="s">"${first}"</span> <span class="nt">/&gt;&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+              <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Second number:<span class="nt">&lt;/td&gt;</span>
+              <span class="nt">&lt;td&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"second"</span> <span class="na">size=</span><span class="s">"12"</span> <span class="na">value=</span><span class="s">"${second}"</span> <span class="nt">/&gt;&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+            <span class="nt">&lt;tr&gt;</span>
+              <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Result:<span class="nt">&lt;/td&gt;</span>
+              <span class="nt">&lt;td&gt;</span>${result}<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;/tr&gt;</span>
+          <span class="nt">&lt;/table&gt;</span>
+          <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"Submit"</span> <span class="na">name=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Add Numbers!"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+	
+</code></pre></div></div>
+
+<p>Mostly, the view is just HTML that creates a table of the two numbers to be entered. However, there are a couple of JSP-specific details to notice:</p>
+
+<ul>
+  <li>The directive <strong>&lt;%@ taglib uri=”<a href="http://java.sun.com/jsp/jstl/core">http://java.sun.com/jsp/jstl/core</a>” prefix=”c” %&gt;</strong> specifies that we want to use the JSTL core tag library. This allows us to use special tags for things like conditionals and loops. You will notice that we use the <strong>&lt;c:if&gt;</strong> tag to conditionally display an error message if the servlet has specified one.</li>
+  <li>The syntax <strong>${</strong> <em>…</em> <strong>}</strong> specifies a JSTL expression. JSTL expressions can be used to include dynamic content into the HTML document. The JSP above uses this syntax to substitute the values for the first and second input number, the result, and (if there is one) an error message.</li>
+</ul>
+
+<p>Next, here is the servlet code which handles the requests:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="kn">package</span> <span class="nn">edu.ycp.cs320.lab11.servlet</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">javax.servlet.ServletException</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServlet</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletRequest</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">javax.servlet.http.HttpServletResponse</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">edu.ycp.cs320.lab11.controller.AddNumbersController</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AddNumbersServlet</span> <span class="kd">extends</span> <span class="nc">HttpServlet</span> <span class="o">{</span>
+      <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">serialVersionUID</span> <span class="o">=</span> <span class="mi">1L</span><span class="o">;</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doGet</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">req</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">resp</span><span class="o">)</span>
+          <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">"/_view/addNumbers.jsp"</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">req</span><span class="o">,</span> <span class="n">resp</span><span class="o">);</span>
+      <span class="o">}</span>
+
+      <span class="nd">@Override</span>
+      <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">doPost</span><span class="o">(</span><span class="nc">HttpServletRequest</span> <span class="n">req</span><span class="o">,</span> <span class="nc">HttpServletResponse</span> <span class="n">resp</span><span class="o">)</span>
+          <span class="kd">throws</span> <span class="nc">ServletException</span><span class="o">,</span> <span class="nc">IOException</span> <span class="o">{</span>
+
+        <span class="c1">// Decode form parameters and dispatch to controller</span>
+        <span class="nc">String</span> <span class="n">errorMessage</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="nc">Double</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="k">try</span> <span class="o">{</span>
+          <span class="nc">Double</span> <span class="n">first</span> <span class="o">=</span> <span class="n">getDoubleFromParameter</span><span class="o">(</span><span class="n">req</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"first"</span><span class="o">));</span>
+          <span class="nc">Double</span> <span class="n">second</span> <span class="o">=</span> <span class="n">getDoubleFromParameter</span><span class="o">(</span><span class="n">req</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"second"</span><span class="o">));</span>
+
+          <span class="k">if</span> <span class="o">(</span><span class="n">first</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">second</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">errorMessage</span> <span class="o">=</span> <span class="s">"Please specify two numbers"</span><span class="o">;</span>
+          <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+            <span class="nc">AddNumbersController</span> <span class="n">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AddNumbersController</span><span class="o">();</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">);</span>
+          <span class="o">}</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="nc">NumberFormatException</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+          <span class="n">errorMessage</span> <span class="o">=</span> <span class="s">"Invalid double"</span><span class="o">;</span>
+        <span class="o">}</span>
+
+        <span class="c1">// Add parameters as request attributes</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"first"</span><span class="o">,</span> <span class="n">req</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"first"</span><span class="o">));</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"second"</span><span class="o">,</span> <span class="n">req</span><span class="o">.</span><span class="na">getParameter</span><span class="o">(</span><span class="s">"second"</span><span class="o">));</span>
+
+        <span class="c1">// Add result objects as request attributes</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"errorMessage"</span><span class="o">,</span> <span class="n">errorMessage</span><span class="o">);</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">setAttribute</span><span class="o">(</span><span class="s">"result"</span><span class="o">,</span> <span class="n">result</span><span class="o">);</span>
+
+        <span class="c1">// Forward to view to render the result HTML document</span>
+        <span class="n">req</span><span class="o">.</span><span class="na">getRequestDispatcher</span><span class="o">(</span><span class="s">"/_view/addNumbers.jsp"</span><span class="o">).</span><span class="na">forward</span><span class="o">(</span><span class="n">req</span><span class="o">,</span> <span class="n">resp</span><span class="o">);</span>
+      <span class="o">}</span>
+
+      <span class="kd">private</span> <span class="nc">Double</span> <span class="nf">getDoubleFromParameter</span><span class="o">(</span><span class="nc">String</span> <span class="n">s</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">s</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">s</span><span class="o">.</span><span class="na">equals</span><span class="o">(</span><span class="s">""</span><span class="o">))</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="kc">null</span><span class="o">;</span>
+        <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+          <span class="k">return</span> <span class="nc">Double</span><span class="o">.</span><span class="na">parseDouble</span><span class="o">(</span><span class="n">s</span><span class="o">);</span>
+        <span class="o">}</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+	
+</code></pre></div></div>
+
+<p>Most of the code is just parsing request parameters (the input numbers), setting request attributes (the data to be displayed by the view), and forwarding the request to the view JSP. However, the most important part is where the request is dispatched to the controller:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="nc">AddNumbersController</span> <span class="n">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AddNumbersController</span><span class="o">();</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">controller</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">first</span><span class="o">,</span> <span class="n">second</span><span class="o">);</span>
+	
+</code></pre></div></div>
+
+<p>Because only model objects are involved, it would be easy to test the behavior of the controller using a JUnit test.</p>
+
+<p>Finally, the controller:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="kn">package</span> <span class="nn">edu.ycp.cs320.lab11.controller</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AddNumbersController</span> <span class="o">{</span>
+      <span class="kd">public</span> <span class="nc">Double</span> <span class="nf">add</span><span class="o">(</span><span class="nc">Double</span> <span class="n">first</span><span class="o">,</span> <span class="nc">Double</span> <span class="n">second</span><span class="o">)</span> <span class="o">{</span>
+        <span class="k">return</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span><span class="o">;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+
+</code></pre></div></div>
+
+<p>Although this controller is trivial, in general a controller can be used to implement arbitrary application logic.</p>
+
+<p>A good test that you have abstracted the controller well is that it is relatively easy to write JUnit tests:</p>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">package</span> <span class="nn">edu.ycp.cs320.lab11.controller</span><span class="o">;</span>
+
+    <span class="kn">import</span> <span class="nn">static</span> <span class="n">org</span><span class="o">.</span><span class="na">junit</span><span class="o">.</span><span class="na">Assert</span><span class="o">.*;</span>
+
+    <span class="kn">import</span> <span class="nn">org.junit.Before</span><span class="o">;</span>
+    <span class="kn">import</span> <span class="nn">org.junit.Test</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="kd">class</span> <span class="nc">AddNumbersControllerTest</span> <span class="o">{</span>
+      <span class="kd">private</span> <span class="nc">AddNumbersController</span> <span class="n">controller</span><span class="o">;</span>
+
+      <span class="nd">@Before</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUp</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">controller</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">AddNumbersController</span><span class="o">();</span>
+      <span class="o">}</span>
+
+      <span class="nd">@Test</span>
+      <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testAddNumbers</span><span class="o">()</span> <span class="o">{</span>
+        <span class="n">assertEquals</span><span class="o">((</span><span class="nc">Double</span><span class="o">)</span> <span class="mf">7.0</span><span class="o">,</span> <span class="n">controller</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mf">3.0</span><span class="o">,</span> <span class="mf">4.0</span><span class="o">));</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+	
+</code></pre></div></div>
+
+<h1 id="web-applications-vs-web-services">Web Applications vs. Web Services</h1>
+
+<p>It is worth considering the distinction between web applications and web services.</p>
+
+<ul>
+  <li>A (RESTful) web service provides access to resources to <em>programs</em>, which communicate with the web service via HTTP requests (GET, PUT, POST, DELETE), returning the resource data in an easily-parsed format such as XML or JSON</li>
+  <li>A web application provides access to resources to <em>human beings</em> who communicate with the web application using a web browser, accepting HTTP GET and POST requests and returning the resource data in a format intended to be displayed visually (HTML, CSS, images.)</li>
+</ul>
+
+<p>Web services and web applications are thus closely related to each other, but provide access to resources for different kinds of clients.</p>
+
+<p>There is no reason why you can’t implement a system which is <em>both</em> a web application and a web service. One approach: write your controllers and model classes so that they can be used by web application servlets/views and also by web service servlets:</p>
+
+<blockquote>
+  <p><img src="figures/webappAndWebserviceArch.png" alt="image" /></p>
+</blockquote>
+:ET

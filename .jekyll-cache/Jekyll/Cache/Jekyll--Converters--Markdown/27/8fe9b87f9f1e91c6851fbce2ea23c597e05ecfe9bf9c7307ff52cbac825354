@@ -1,0 +1,280 @@
+I"g<h1 id="dynamic-html">Dynamic HTML</h1>
+
+<p>An HTML document is a tree. Each node of the tree is an element or a chunk of text. The visual appearance of the tree nodes can be specified using CSS. The data structure representing the tree of nodes is called the <strong>DOM</strong>, for <strong>D</strong>ocument <strong>O</strong>bject <strong>M</strong>odel.</p>
+
+<p>In a static HTML document, the tree is fixed.</p>
+
+<p>In a <em>dynamic</em> HTML document, the tree changes in response to events (including user input events): nodes can be added or removed, and CSS properties can be changed. Dynamic HTML allows a full GUI to be implemented in a web page!</p>
+
+<p>Because dynamic HTML supports arbitrary runtime behavior, it needs a programming language to specify the behavior. This language is JavaScript.</p>
+
+<h1 id="javascript">JavaScript</h1>
+
+<p>Features:</p>
+
+<ul>
+  <li>Dynamically typed</li>
+  <li>Object-oriented (every value is an object)</li>
+  <li>Syntax is superficially similar to Java</li>
+  <li>Supports closures (anonymous functions which can access/modify variables in their lexical scope)</li>
+</ul>
+
+<p>When using JavaScript to implement dynamic HTML, the general idea is to use JavaScript to access elements in the DOM tree and call methods on them to change their properties, register event handlers, etc.</p>
+
+<h1 id="jquery">jQuery</h1>
+
+<p>Because doing operations on elements of the DOM tree is so important in JavaScript, various libraries have been implemented to make it easy to do this. One of the most important and widely-used libraries is <a href="http://jquery.com">jQuery</a>.</p>
+
+<p>Using jQuery typically involves selecting one or more nodes in the DOM tree: this is the “query” part of jQuery. Then, you perform some operation on the selected nodes.</p>
+
+<h1 id="examples">Examples</h1>
+
+<p>Here are some examples of fun things you can do with jQuery.</p>
+
+<h2 id="showinghiding-elements">Showing/Hiding Elements</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nf">#clickhere</span> <span class="p">{</span>
+          <span class="nl">width</span><span class="p">:</span> <span class="m">120px</span><span class="p">;</span>
+          <span class="nl">background-color</span><span class="p">:</span> <span class="m">#80ff80</span><span class="p">;</span>
+          <span class="nl">color</span><span class="p">:</span> <span class="m">#000080</span><span class="p">;</span>
+          <span class="nl">font-size</span><span class="p">:</span> <span class="m">150%</span><span class="p">;</span>
+          <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+          <span class="nl">border</span><span class="p">:</span> <span class="m">4px</span> <span class="nb">solid</span> <span class="m">#000080</span><span class="p">;</span>
+          <span class="nl">margin-bottom</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="nf">#sometext</span> <span class="p">{</span>
+          <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span> <span class="c">/* hide this div initially */</span>
+          <span class="nl">background-color</span><span class="p">:</span> <span class="m">#FAFAD2</span><span class="p">;</span>
+          <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+          <span class="nl">padding</span><span class="p">:</span> <span class="m">6px</span><span class="p">;</span>
+          <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nt">&lt;/style&gt;</span>
+
+        <span class="c">&lt;!-- Get jQuery from google CDN --&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+          <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#clickhere</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+              <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#sometext</span><span class="dl">"</span><span class="p">).</span><span class="nx">slideToggle</span><span class="p">();</span>
+            <span class="p">});</span>
+          <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+      <span class="nt">&lt;/head&gt;</span>
+
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"clickhere"</span><span class="nt">&gt;</span>
+          Click here!
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sometext"</span><span class="nt">&gt;</span>
+          Oh freddled gruntbuggly<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+          thy micturations are to me<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+          As plurdled gabbleblotchits on a lurgid bee.<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+          Groop I implore thee, my foonting turlingdromes.<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+          And hooptiously drangle me with crinkly bindlewurdles,<span class="nt">&lt;br</span> <span class="nt">/&gt;</span>
+          Or I will rend thee in the gobberwarts with my blurglecruncheon, see if I don't!
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+	
+</code></pre></div></div>
+
+<p><a href="lecture03/showhide.html">Link</a></p>
+
+<p>Some things to notice:</p>
+
+<p>The <strong>&lt;script&gt;</strong> tag references some JavaScript code, either in a separate document or inline</p>
+
+<p>jQuery operations involve calling a function called “$”.</p>
+
+<p><strong>$(document).ready(…)</strong> executes some code when the web page is fully loaded, meaning that the entire DOM tree is in place and all JavaScript code has been loaded.</p>
+
+<p>JavaScript of the form <strong>function() { … }</strong> is a <em>closure</em>. A closure is an anonymous function which can use variables defined in the current scope.</p>
+
+<p>A jQuery call of the form <strong>$(“</strong><em>selector</em><strong>”)</strong> selects all DOM elements matching the given selector. The selector syntax is the same as for selectors in CSS rules. So, for example, <strong>$(“#clickhere”)</strong> selects the element with the id <strong>clickhere</strong>. Note that the call does not return a DOM element (or a list of DOM elements): it returns a “jQuery object” which represents the results of the search. The idea is that when you call a method on a jQuery object, you are effectively performing an operation on all DOM elements that matched the query.</p>
+
+<p>For example, the <strong>slideToggle()</strong> method on a jQuery object performs an animation that shows or hides the matched element(s).</p>
+
+<h2 id="client-side-data-processing">Client-side data processing</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span>
+        <span class="nt">td</span><span class="nc">.label</span> <span class="p">{</span>
+          <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+          <span class="nl">text-align</span><span class="p">:</span> <span class="nb">right</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nt">&lt;/style&gt;</span>
+
+        <span class="c">&lt;!-- Get jQuery from google CDN --&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+          <span class="kd">function</span> <span class="nx">getFirstNumber</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#firstNumber</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>
+          <span class="p">}</span>
+
+          <span class="kd">function</span> <span class="nx">getSecondNumber</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#secondNumber</span><span class="dl">"</span><span class="p">).</span><span class="nx">val</span><span class="p">());</span>
+          <span class="p">}</span>
+
+          <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#addButton</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+              <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#result</span><span class="dl">"</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">getFirstNumber</span><span class="p">()</span> <span class="o">+</span> <span class="nx">getSecondNumber</span><span class="p">());</span>
+            <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#subtractButton</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+              <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#result</span><span class="dl">"</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">getFirstNumber</span><span class="p">()</span> <span class="o">-</span> <span class="nx">getSecondNumber</span><span class="p">());</span>
+            <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#multiplyButton</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+              <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#result</span><span class="dl">"</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">getFirstNumber</span><span class="p">()</span> <span class="o">*</span> <span class="nx">getSecondNumber</span><span class="p">());</span>
+            <span class="p">});</span>
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#divideButton</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+              <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#result</span><span class="dl">"</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">getFirstNumber</span><span class="p">()</span> <span class="o">/</span> <span class="nx">getSecondNumber</span><span class="p">());</span>
+            <span class="p">});</span>
+          <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+      <span class="nt">&lt;/head&gt;</span>
+
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;table&gt;</span>
+          <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+              First number:
+            <span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"firstNumber"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">size=</span><span class="s">"15"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;/tr&gt;</span>
+          <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+              Second number:
+            <span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>
+              <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"secondNumber"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">size=</span><span class="s">"15"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;/tr&gt;</span>
+          <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>
+              Result:
+            <span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"result"</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/td&gt;</span>
+          <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;/table&gt;</span>
+
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"addButton"</span><span class="nt">&gt;</span>Add<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"subtractButton"</span><span class="nt">&gt;</span>Subtract<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"multiplyButton"</span><span class="nt">&gt;</span>Multiply<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"divideButton"</span><span class="nt">&gt;</span>Divide<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+
+<p><a href="lecture03/data.html">Link</a></p>
+
+<p>Some things to notice:</p>
+
+<p>Standalone functions can be defined using <strong>function</strong> <em>funcName</em> <strong>(</strong> <em>params</em> <strong>)</strong>.</p>
+
+<p><strong>input</strong> elements with attribute <strong>type=”text”</strong> can be used as textboxes.</p>
+
+<p><strong>button</strong> elements are buttons: the jQuery <strong>click(…)</strong> method can be used to install a click handler.</p>
+
+<p>The javascript <strong>parseFloat(…)</strong> function converts a string to a (floating-point) number.</p>
+
+<p>The jQuery <strong>val()</strong> method gets the value of an input element (such as a text box.)</p>
+
+<p>The jQuery <strong>text(…)</strong> method sets the text of an element. The code above uses it to change the text of a <strong>span</strong> element to the result of an arithmetic operation.</p>
+
+<h2 id="drawing-on-a-canvas">Drawing on a canvas</h2>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    <span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+    <span class="nt">&lt;html&gt;</span>
+      <span class="nt">&lt;head&gt;</span>
+        <span class="c">&lt;!-- Get jQuery from google CDN --&gt;</span>
+        <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"</span> <span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;&lt;/script&gt;</span>
+
+        <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
+          <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">colors</span> <span class="o">=</span> <span class="p">[</span> <span class="dl">'</span><span class="s1">#FF0000</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#00FF00</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">#0000FF</span><span class="dl">'</span> <span class="p">];</span>
+
+            <span class="kd">var</span> <span class="nx">circles</span> <span class="o">=</span> <span class="p">[];</span>
+
+            <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#makeCircle</span><span class="dl">"</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+              <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">640</span><span class="p">);</span>
+              <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">480</span><span class="p">);</span>
+
+              <span class="nx">circles</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="na">x</span><span class="p">:</span> <span class="nx">x</span><span class="p">,</span> <span class="na">y</span><span class="p">:</span> <span class="nx">y</span><span class="p">,</span> <span class="na">color</span><span class="p">:</span> <span class="nx">colors</span><span class="p">[</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)]</span> <span class="p">});</span>
+            <span class="p">});</span>
+
+            <span class="nb">window</span><span class="p">.</span><span class="nx">tick</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+              <span class="kd">var</span> <span class="nx">ctx</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">"</span><span class="s2">#canvas</span><span class="dl">"</span><span class="p">).</span><span class="kd">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">getContext</span><span class="p">(</span><span class="dl">"</span><span class="s2">2d</span><span class="dl">"</span><span class="p">);</span>
+              <span class="nx">ctx</span><span class="p">.</span><span class="nx">clearRect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">);</span>
+
+              <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">circles</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">circles</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+
+                <span class="nx">ctx</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">c</span><span class="p">.</span><span class="nx">color</span><span class="p">;</span>
+                <span class="nx">ctx</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
+                <span class="nx">ctx</span><span class="p">.</span><span class="nx">arc</span><span class="p">(</span><span class="nx">c</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span> <span class="nx">c</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+                <span class="nx">ctx</span><span class="p">.</span><span class="nx">closePath</span><span class="p">();</span>
+                <span class="nx">ctx</span><span class="p">.</span><span class="nx">fill</span><span class="p">();</span>
+
+                <span class="nx">c</span><span class="p">.</span><span class="nx">y</span> <span class="o">+=</span> <span class="mi">5</span><span class="p">;</span>
+              <span class="p">}</span>
+
+              <span class="nx">setTimeout</span><span class="p">(</span><span class="dl">"</span><span class="s2">tick()</span><span class="dl">"</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+            <span class="p">};</span>
+
+            <span class="nx">setTimeout</span><span class="p">(</span><span class="dl">"</span><span class="s2">tick()</span><span class="dl">"</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+          <span class="p">});</span>
+        <span class="nt">&lt;/script&gt;</span>
+      <span class="nt">&lt;/head&gt;</span>
+
+      <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+          <span class="nt">&lt;canvas</span> <span class="na">id=</span><span class="s">"canvas"</span> <span class="na">width=</span><span class="s">"640"</span> <span class="na">height=</span><span class="s">"480"</span><span class="nt">&gt;&lt;/canvas&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;button</span> <span class="na">id=</span><span class="s">"makeCircle"</span><span class="nt">&gt;</span>Make circle<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/body&gt;</span>
+    <span class="nt">&lt;/html&gt;</span>
+
+</code></pre></div></div>
+
+<p><a href="lecture03/canvas.html">Link</a></p>
+
+<p>Some things to notice:</p>
+
+<p>JavaScript variables are introduced using the <strong>var</strong> keyword. Notice that they have no type.</p>
+
+<p>A <strong>canvas</strong> element can be used as a 2-D drawing surface.</p>
+
+<p>The <strong>circles</strong> array contains objects created as:</p>
+
+<blockquote>
+  <p>{ x: <em>value</em>, y: <em>value</em>, color: <em>value</em> }</p>
+</blockquote>
+
+<p>where <strong>x</strong>, <strong>y</strong>, and <strong>color</strong> are the fields. These objects represent circles that will be rendered in the canvas.</p>
+
+<p>The <strong>setTimeout</strong> method schedules a function to be called after a specified timeout (in this case, 100 milliseconds).</p>
+
+<p>By increasing the values of the <strong>y</strong> fields of the circle objects on each timer tick, an animation is created.</p>
+:ET

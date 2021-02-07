@@ -1,0 +1,47 @@
+I"�<h1 id="getting-started">Getting Started</h1>
+
+<p>Download <a href="CS320_Lab05.zip">CS320_Lab05.zip</a>. Import it into your Eclipse workspace (<strong>File→Import…→General→Existing projects into workspace→Archive File</strong>). You will see a project called <strong>CS320_Lab05</strong> in the Package Explorer.  (You will also need to have the <strong>CS320_Derby</strong> project in your workspace, which should already be there from <a href="lab04.html">Lab 4</a>.)</p>
+
+<p>The lab contains a database called <strong>test.db</strong>, which is the <a href="../lectures/lecture13.html">books database from Lecture 13</a>.</p>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to construct SQL queries, to establish a connection between a Java program and a SQL database, and to write SQL queries embedded in Java code.  This <strong>WILL</strong> come up on the exam.</p>
+
+<h1 id="task">Task</h1>
+<p><strong>NOTE:</strong> You MUST refactor the name of the <strong>CS320_Lab05</strong> project to include your username - BEFORE YOU EXPORT IT AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.</p>
+
+<p>Example: If I was submitting this lab, I would refactor the <strong>CS320_Lab05</strong> project to <strong>CS320_Lab05_djhake2</strong> as soon as I imported the project into Eclipse.</p>
+
+<p>In the lab skeleton you will find a program called <strong>TitleQuery</strong> which demonstrates basic JDBC tasks such as loading a driver, connecting to a database, creating and executing a prepared statement, and iterating through results returned from a query.</p>
+
+<p>Using <strong>TitleQuery</strong> as a model, write your own programs (separate classes with main() methods) to do the following:</p>
+
+<ol>
+  <li>
+    <p>Create class <strong>BooksByAuthorLastNameQuery</strong> that finds all books written by the author whose last name is specified by the user. Return the books in the same form as the <strong>TitleQuery</strong> program, but sorted in ascending order by <strong>Title</strong>.</p>
+  </li>
+  <li>
+    <p>Create class <strong>InsertNewBookWithAuthor</strong>: For an existing author, given the full (first and last) name of an author, a title, an ISBN, and the year that the book was published, insert the new book into the database.  Your program must first retrieve the existing author’s <strong>author_id</strong> before inserting the new book entry into the <strong>books</strong> table.</p>
+  </li>
+  <li>
+    <p>Modify <strong>InsertNewBookWithAuthor</strong> to allow insertion of a new book for an author that is not already in the database.  In this case, the program must first add the new author to the <strong>authors</strong> table, and then retrieve the auto-generated <strong>author_id</strong> for the new author, before inserting the new book into the <strong>books</strong> table.  Hint: This requires multiple steps: attempt to retrieve the <strong>author_id</strong>.  If the result set is empty, add the new author to the <strong>authors</strong> table.  Then, retrieve the <strong>author_id</strong> that was automatically assigned for the new author.  Now you can insert the new book into the <strong>books</strong> table.  Use the SQL <strong>insert</strong> statement to insert the new tuple(s).</p>
+  </li>
+</ol>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>When you are done, submit the lab to the Marmoset server using the method below.</p>
+
+<h2 id="from-a-web-browser">From a web browser</h2>
+
+<p>Save your project (<strong>CS320_lab05_username</strong>) to a zip file by right-clicking it and choosing</p>
+
+<blockquote>
+  <p><strong>Export…→Archive File</strong></p>
+</blockquote>
+
+<p>Upload the saved zip file to the <strong>Lab05</strong> project on the Marmoset server. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+:ET

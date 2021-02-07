@@ -1,0 +1,60 @@
+I"�<p><strong>Due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>This is an <strong>individual</strong> assignment</p>
+
+<p>Important: late submissions will <strong>not</strong> be accepted</p>
+
+<h1 id="your-task">Your Task</h1>
+
+<p>Your task is to document your contributions to you team project, and to reflect on the development process. There are three sub-tasks.</p>
+
+<h2 id="task-1---what-is-your-teams-official-repository">Task 1 - What is your team’s “official” repository</h2>
+
+<p>Your team must designate a single repository as the “official” repository for the project. This should be the repository that has the final version of your team’s source code, as well as the issue tracker. State the URL of this repository.</p>
+
+<p>Example:</p>
+
+<blockquote>
+  <p>https://github.com/cloudcoderdotorg/CloudCoder</p>
+</blockquote>
+
+<h2 id="task-2---document-your-contributions">Task 2 - Document your contributions</h2>
+
+<p>Choose what you consider to be your three most important technical contributions. Describe each briefly in words (1-3 sentences is fine), and give URLs of all of the commits associated with this contribution. <em>Important</em>: if these commits were committed by a different user, explain why (for example, you were pair programming with one of your team members.)</p>
+
+<p>Example (this is an example of <em>one</em> technical contribution, remember that you need to document three contributions):</p>
+
+<blockquote>
+  <p><strong>Contibution</strong>: I added support for viewing the source code and test results for all of a student’s submissions for a given problem.</p>
+
+  <p>Commits:</p>
+
+  <ul>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/2b1adfd150e62ca0f58fe47bceeb75f24c642106">https://github.com/cloudcoderdotorg/CloudCoder/commit/2b1adfd150e62ca0f58fe47bceeb75f24c642106</a></li>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/d9750603b4d0cd847fc938b8b438d6c4997e3f65">https://github.com/cloudcoderdotorg/CloudCoder/commit/d9750603b4d0cd847fc938b8b438d6c4997e3f65</a></li>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/172bf9703b369d358d4d2c22d0bcf9d23a168a37">https://github.com/cloudcoderdotorg/CloudCoder/commit/172bf9703b369d358d4d2c22d0bcf9d23a168a37</a></li>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/733816f476dfe01080d5d1559b166862f711042d">https://github.com/cloudcoderdotorg/CloudCoder/commit/733816f476dfe01080d5d1559b166862f711042d</a></li>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/fc464563555dd606a362810fb14c6addc5e00666">https://github.com/cloudcoderdotorg/CloudCoder/commit/fc464563555dd606a362810fb14c6addc5e00666</a></li>
+    <li><a href="https://github.com/cloudcoderdotorg/CloudCoder/commit/28a1a37ec0a462bfecd5b2ef929134b2278e0613">https://github.com/cloudcoderdotorg/CloudCoder/commit/28a1a37ec0a462bfecd5b2ef929134b2278e0613</a></li>
+  </ul>
+</blockquote>
+
+<h2 id="task-3---reflect-on-process">Task 3 - Reflect on process</h2>
+
+<p>In an essay of 2-3 paragraphs, reflect on the process of working on your team project. Include the following:</p>
+
+<ul>
+  <li>What practices did your team use?</li>
+  <li>Which practices worked well?</li>
+  <li>Which practices did not work as well as you had hoped?</li>
+  <li>Based on your experiences this semester, what do you plan to do differently in your next team project, and why?</li>
+</ul>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>Upload your reflection in <strong>PDF</strong> format to Marmoset as <strong>assign10-reflection</strong>.</p>
+
+<div class="callout">
+Your reflection <em>must</em> be submitted in PDF format.  Submissions in any other format may receive a grade of 0.
+</div>
+:ET

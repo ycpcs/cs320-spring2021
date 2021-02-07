@@ -1,0 +1,43 @@
+I"y<p><strong>Due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>This is a <strong>Team</strong> assignment.</p>
+
+<h1 id="project-proposal">Project Proposal</h1>
+
+<p>Your main task this semester is to complete a semester-long team software project. Your task in this assignment is to form your team and decide what your project will be.</p>
+
+<p>In a 3-4 page document, describe the following:</p>
+
+<p><strong>Who are your team members?</strong> You must have at least 3 but not more than 4.</p>
+
+<p><strong>Briefly describe the system your team will create.</strong> Please note the following important requirements:</p>
+
+<ol>
+  <li>The system must be a web application, meaning that the user interface must be web-based.</li>
+  <li>The system must store persistent data in a database.</li>
+  <li>The system must be awesome when it is completed.</li>
+</ol>
+
+<p><em>Be ambitious</em>. The goal of this course is to learn how to design and build complex software. I do not expect that you will necessarily complete 100% of what you propose.</p>
+
+<p>In your description of the system, include sketches of what the user interface will look like.</p>
+
+<p><strong>What language(s) and programming environment will you use?</strong> My <strong>strong</strong> recommendation is to use Java and Eclipse, using Java servlets and Java Server Pages (JSPs).  Although you may use client-side JavaScript (JS), I do <strong>not</strong> recommend taking that on, as we will not be covering it in this class, and you will already be inundated with several other new languages and technologies. Also do <strong>not</strong> try to implement a game, as previous history has shown that game development for this class has a low-rate (&lt;5% chance) of success (creating an interesting, playable game).</p>
+
+<p>I <strong>strongly</strong> recommend that you discuss your idea with me before you submit your proposal.</p>
+
+<p>Here is the template for your <a href="CS320_Team_Project_Proposal_Template.pdf">Team Project Proposal</a>.  Download the <a href="CS320_Team_Project_Proposal_Template.docx">template document</a>, modify it, as necessary, and follow the submission instructions below.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>Have one team member create a Google Team Drive folder named “CS320-Sp20-Team-www-xxx-yyy-zzz”, replacing “www-xxx-yyy-zzz” with the YCP user names of the members of your project team, <strong>in alphabetical order</strong>.  Share the Team Drive with your team members and with me.</p>
+
+<p>This folder will be your means of submission for all <strong>non-programming-related team</strong> assignments.</p>
+
+<p>Then create your Team Project Proposal in that folder, using Google Docs.  Name your Project Proposal document <strong>assign01-www-xxx-yyy-zzz</strong>, again substituting the YCP user names of your project team members, <strong>in alphabetical order</strong>.  Share the Team Drive with your team members and with me.  Share the folder and its contents with all team members and with me.</p>
+
+<div class="callout">
+<b>Important</b>: Only submissions in Google Docs will be accepted.
+Do not submit a document in any other format!
+</div>
+:ET

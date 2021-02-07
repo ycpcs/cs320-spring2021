@@ -1,0 +1,74 @@
+I"5<h1 id="your-task">Your Task</h1>
+
+<p>Use HTML and CSS to create your own personal resume, using the following example as a template (click for full-size):</p>
+
+<blockquote>
+  <p><a href="images/lab01/resume.png"><img style="width: 500px;" src="images/lab01/resume.png" /></a></p>
+</blockquote>
+
+<p>The text in the page title should be rendered in small caps.</p>
+
+<p>The page title and the text of section headers should be dark blue.</p>
+
+<p>The resume should have a title running across the top (with dark blue bars above and below).</p>
+
+<p>The content area should be to the left and the sidebar (contact info) should be to the right.</p>
+
+<p>Use <strong>div</strong> and <strong>span</strong> elements with id and class attributes to specify the body of the HTML document. All visual styling should be done separately in CSS rules.</p>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to develop web page layouts using HTML and CSS.  This <strong>WILL</strong> come up on the exam.</p>
+
+<h2 id="hints">Hints</h2>
+
+<p>For additional information, I highly recommend this <a href="http://www.w3schools.com">great tutorial site for HTML, CSS, Java Script, SQL, PHP</a>.</p>
+
+<p>Try floating the content and sidebar divs to the left.</p>
+
+<p>Use <strong>width</strong> properties to set the widths of the content and sidebar divs. For example, I have</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>width: 540px;
+</code></pre></div></div>
+
+<p>on my content div, and</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>width: 240px;
+</code></pre></div></div>
+
+<p>on my sidebar div.</p>
+
+<p>You can use an unordered list for experience section: something like</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<p>Use the <strong>border</strong> property to draw a solid border around the sidebar.</p>
+
+<p>Use the <strong>border-top</strong> and <strong>border-bottom</strong> properties to draw the horizontal lines above and below the title.</p>
+
+<p>You can use the tag</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;br /&gt;
+</code></pre></div></div>
+
+<p>to end a line of text.</p>
+
+<p>You will need to use margins to spread things out a bit. (For example, you should have some vertical space between resume sections.)</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>When you are done, submit the lab to the Marmoset server using the method below.</p>
+
+<h2 id="from-a-web-browser">From a web browser</h2>
+
+<p>Save your HTML and CSS files to a zip file named <strong>CS320_Lab01.zip</strong>.</p>
+
+<p>Upload the saved zip file to the Marmoset server as <strong>lab01</strong>. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+
+:ET

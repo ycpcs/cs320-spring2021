@@ -1,0 +1,117 @@
+I"X<h1 id="getting-started">Getting Started</h1>
+
+<p>Download <a href="../resources/CS320_Derby.zip">CS320_Derby.zip</a> and <a href="CS320_Lab04.zip">CS320_Lab04.zip</a>. Import them into your Eclipse workspace<br /> (<strong>File-&gt;Import…-&gt;General-&gt;Existing projects into workspace-&gt;Archive File</strong>). You will see a projects called <strong>CS320_Derby</strong> and <strong>CS320_Lab04</strong> in the Package Explorer.  You will be running the <strong>SQLDemo</strong> class in the <strong>CS320_Lab04</strong> project.</p>
+
+<h1 id="setting-up-the-database">Setting up the database</h1>
+
+<p>Execute the <strong>SQLDemo</strong> class as a Java application.</p>
+
+<p>Use <strong>create table</strong> commands to create <strong>books</strong> and <strong>authors</strong> tables. From the <strong>SQL&gt;</strong> prompt, enter the following commands.  Rather than typing them, you can actually copy each command from this page and paste it into the SQL prompt - then press “Enter” to execute the command.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>create table books (
+    book_id int
+        primary key generated always as identity (start with 1, increment by 1),
+    author_id int,
+    title varchar(70),
+    isbn varchar(15),
+    published int
+);
+
+create table authors (
+    author_id int
+        primary key generated always as identity (start with 1, increment by 1),
+    lastname varchar(40),
+    firstname varchar(40)
+);
+</code></pre></div></div>
+
+<p>Next, use <strong>import</strong> commands to load data into these tables:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import books books.csv;
+
+import authors authors.csv;
+</code></pre></div></div>
+
+<p>Your database is now populated with data.</p>
+
+<p>Now, use the <strong>alter table</strong> command to establish <strong>author_id</strong> as a foreign key in the <strong>books</strong> table.  Enter the following command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alter table books
+    add foreign key (author_id)
+    references authors (author_id);
+</code></pre></div></div>
+
+<p>The schemas of the database tables are described in the notes for <a href="../lectures/lecture13.html">Lecture 13</a>.</p>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to construct SQL queries, to establish a connection between a Java program and a SQL database, and to write SQL queries embedded in Java code.  This <strong>WILL</strong> come up on the exam.</p>
+
+<h1 id="task">Task</h1>
+
+<p>Compose and execute SQL queries that retrieve the following information.  For the later queries, you will have to do some research at <strong><a href="http://www.w3schools.com/sql/default.asp">w3schools</a></strong> in order to learn the proper SQL commands to complete the query.  This is intended as an exercise to familiarize you with the w3schools website, as well as reinforce researching for new information on your own.</p>
+
+<p>Each query should be terminated with a semicolon (<strong>;</strong>). For example, here is asession showing a query to select all of the tuples in the <strong>authors</strong> table (user input in <strong>bold</strong>):</p>
+
+<pre>
+SQL&gt; <b>select * from authors;</b>
+AUTHOR_ID    LASTNAME FIRSTNAME
+--------- ----------- ---------
+        1       Adams   Douglas
+        2       Adams     Scott
+        3    Breathed  Berkeley
+        4     Chapman    Graham
+        5      Cleese      John
+        6     Gilliam     Terry
+        7     Hawking   Stephen
+        8        Idle      Eric
+        9       Jones     Terry
+       10    Kahneman    Daniel
+       11    Mlodinow   Leonard
+       12      Newton     Isaac
+       13       Palin   Michael
+       14   Watterson      Bill
+OK (14 rows(s))
+</pre>
+
+<p>Make sure to verify that the results of each query are correct by comparing against the  database tables themselves.</p>
+
+<p>1) The title for each book written by Stephen Hawking</p>
+
+<p>2) The title and year of publishing for each book written by Douglas Adams</p>
+
+<p>3) The author’s name (first and last), the ISBN, and the year published for the book with the title “Something Under the Bed is Drooling”</p>
+
+<p>4) All of the authors for “The Complete Monty Python’s Flying Circus; All the Words, Volume 1”</p>
+
+<p>5) The title and author for each of Berkeley Breathed’s and Bill Watterson’s books, sorted in ascending order by title</p>
+
+<p>6) The author(s) and title for each book with the word “Time” or “Universe” in the title, sorted in ascending order by lastname, and then ascending by title.</p>
+
+<p>7) Attempt to insert a new book into the <strong>books</strong> table, with an <strong>author_id</strong> that does not appear in the <strong>authors</strong> table (this attempt should fail, due to specifying an invalid <strong>foreign key</strong> for <strong>author_id</strong>)</p>
+
+<p>8) Insert yourself as a new author in the <strong>authors</strong> table (do not specify an author_id, Derby will do that for you, since <strong>author_id</strong> is the auto-generated primary key for the <strong>authors</strong> table)</p>
+
+<p>9) Retrieve the <strong>author_id</strong> from the <strong>authors</strong> table for your entry and insert a new book into the <strong>books</strong> table, using your <strong>author_id</strong></p>
+
+<p>10) Now retrieve all of the information for your book (title, ISBN, published, lastname, firstname)</p>
+
+<h1 id="what-to-submit">What to submit</h1>
+
+<p>Download the <a href="lab04-template.txt">template text file</a> and rename it <strong>lab04-username.txt</strong> (replace “username” with your YCP username).  For each query listed above, copy and paste the following information into your text file:</p>
+
+<ul>
+  <li>The exact query you came up with (including the “SQL&gt;” prompt</li>
+  <li>The exact result of the query (including the last line that starts with “OK”).</li>
+</ul>
+
+<p>Copy and paste the final working query and the results of the query from the Eclipse console underneath its respective question in the supplied template file.  I recommend that you develop each query in the template file, and then copy and paste it to the “SQL&gt;” prompt in the Eclipse console, and then execute it.  That way, you can easily iterate editing and executing the SQL queries.</p>
+
+<p><strong>NOTE:</strong> You may NOT use specific <strong>author_id</strong>’s or <strong>book_id</strong>’s directly in your queries (except for problems 7 and 9, which specifically state to enter an <strong>author_id</strong>).  You <strong>must</strong> join the tables using the method given in the lecture and lab, and demonstrated in class.</p>
+
+<p><strong>NOTE:</strong> Look out for the “traps” of not specifying a semi-colon at the end of your SQL statement in SQLDemo, and for having an odd number of single quotes in a query.  Also, you will have to figure out how to specify a single quote as part of a text string, and you will also have to figure out how to insert a new row into a table (hint: w3schools).</p>
+
+<p>Upload your solution text file to the <strong>Lab04</strong> project on the Marmoset server. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+:ET

@@ -1,0 +1,129 @@
+I"J<h1 id="determining-the-jre-system-library">Determining the JRE System Library</h1>
+
+<p>These instructions are for <strong>Eclipse Oxygen.3</strong> (which is installed on the PCs in KEC 119 and KEC 123).  The instructions will be similar for other versions of Eclipse - but there might be some slight differences.</p>
+
+<p>All of the labs have been reconfigured to use <strong>JRE System Library[JavaSE-1.8]</strong>, which is installed on the PC’s in both KEC 119 and KEC 123.  It is possible that the configuration you are using on your own PC, or even on a lab PC could vary such that no suitable version of Java JRE 1.8 can be found.  The instructions below will help you establish the proper JRE System Libraries for the labs for CS320.</p>
+
+<p>If you are using an older version of the <strong>JRE System Library</strong>, you might need to change the default <strong>JRE System Library</strong> version to a later version in order to get <strong>CS320_Lab02</strong> to work.  A <strong>JRE System Library</strong> version of <strong>jre1.8.0_91</strong> or later should work fine - choose the latest version available.</p>
+
+<p>In KEC 119 and KEC 123, the latest version of the <strong>JRE System Library</strong> is <strong>1.8.0_181</strong>.  I recommend using the same versions as installed on the lab PCs.</p>
+
+<ul>
+  <li>
+    <p>Create a folder on your home drive <strong>(H:)</strong> named <strong>cs320-spring2019</strong>.</p>
+  </li>
+  <li>
+    <p>Set the default workspace for Eclipse to that location.</p>
+  </li>
+  <li>
+    <p>Download <strong>CS320_Jetty9.zip</strong> and <strong>CS320_Lab02.zip</strong>.</p>
+  </li>
+  <li>
+    <p>Open Eclipse, switch the <strong>Workspace</strong> to <strong>H:/cs320-spring2019</strong>.</p>
+  </li>
+  <li>
+    <p>Import <strong>CS320_Jetty9.zip</strong>.</p>
+  </li>
+  <li>
+    <p>Import <strong>CS320_Lab02.zip</strong>.</p>
+  </li>
+  <li>
+    <p>Expand the <strong>CS320_Lab02</strong> project.</p>
+  </li>
+  <li>
+    <p>If it shows the <strong>JRE System Library</strong> either as <strong>JRE System Library[JavaSE-1.8]</strong> or <strong>jdk1.8.0_91</strong> or later, then you likely have no further steps to take.</p>
+  </li>
+</ul>
+
+<h1 id="changing-the-jre-system-library">Changing the JRE System Library</h1>
+
+<p>On the other hand, if the <strong>JRE System Library</strong> is shown as “unbound”, you will likely need to switch to a compatible library.</p>
+
+<p>Go to <strong>C:/Program Files/Java</strong> and look for a JDK folder labelled <strong>jdk1.8.0_xxx</strong>.  Hopefully, you have one of those installed in the Java folder.  For the lab PCs, there could be multiple versions installed - choose the latest version.  If a compatible version is present, then do the following:</p>
+
+<ul>
+  <li>
+    <p>Go into Eclipse, right-click on the <strong>CS320_Lab02</strong> project.</p>
+  </li>
+  <li>
+    <p>Go to the the bottom, select <strong>Properties</strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong>Java Build Path</strong> on the left.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Libraries</strong> tab.</p>
+  </li>
+  <li>
+    <p>Select the <strong>JRE System Library</strong> entry.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Edit…</strong> button on the right.</p>
+  </li>
+  <li>
+    <p>Select the <strong>Installed JREs…</strong> button on the right.</p>
+  </li>
+  <li>
+    <p>That will pop up a list of installed JRE’s.</p>
+  </li>
+  <li>
+    <p>If you see one for <strong>jdk1.8.0_91</strong> (or later), select whichever one you want, and hit <strong>Apply</strong>, followed by <strong>OK</strong>.</p>
+  </li>
+  <li>
+    <p>You should now see that the <strong>Workspace default JRE</strong> has changed to the one you just selected.</p>
+  </li>
+  <li>
+    <p>Hit <strong>Finish</strong>, and then <strong>OK</strong>, and you are ready to roll.  The <strong>JRE System Library</strong> for <strong>CS320_Lab02</strong> should also have been updated.</p>
+  </li>
+  <li>
+    <p>If you do not see an acceptable JDK version, then  select <strong>search</strong>, and browse to the <strong>C:/Program File/Java</strong> folder under <strong>Computer</strong>, and hit <strong>OK</strong>.</p>
+  </li>
+  <li>
+    <p>Now, all of the currently installed JDKs and JREs that are included in that folder will show up, and you can select an appropriate one. (<strong>Apply</strong>, <strong>OK</strong>, <strong>Finish</strong>, <strong>OK</strong>).</p>
+  </li>
+  <li>
+    <p>You should now be able to run the lab.</p>
+  </li>
+</ul>
+
+<h1 id="installing-a-new-jdk-from-oracle">Installing a new JDK from Oracle</h1>
+
+<p>If you do not find an acceptable JDK installed on your computer, you’ll have to install one from this location:</p>
+
+<p><a href="http://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html">Oracle Java SE 8 Downloads</a></p>
+
+<p>Create a free Oracle account and then download and install the appropriate version for your Eclipse/java installation - the 64-bit version will show up in <strong>C:/Program Files/Java</strong>, and then you can select it as described above.</p>
+
+<ul>
+  <li>
+    <p>Select <strong>Java SE Development Kit 8u91</strong> or later - select the latest one available.</p>
+  </li>
+  <li>
+    <p>Now select the appropriate file to download - you want the SDK.  For Windows 64-bit, that will be <strong>jdk-8591-windows-x64.exe</strong> or <strong>later</strong>.</p>
+  </li>
+  <li>
+    <p>Download the file - it is 180MB, it could take a while to download.</p>
+  </li>
+  <li>
+    <p>Run the executable - it will bring up the installer.  By default, it will install to the <strong>C:/Program Files/Java</strong> folder.  It will install both the JDK and the JRE at that location.</p>
+  </li>
+  <li>
+    <p>After it is installed, you can then follow the above instructions to set the <strong>JRE System Library</strong> to the JDK you just installed.</p>
+  </li>
+</ul>
+
+<h1 id="other-issues">Other Issues</h1>
+<p>There are some other issues that have been popping up with <strong>CS320_Lab02</strong>.</p>
+
+<ul>
+  <li>
+    <p>For some unknown reason, the <strong>CS320_Lab02.zip</strong> file might be protected, and Eclipse won’t let you import it.  Let me know if this continues to happen - I think this is fixed with the latest ZIP file.</p>
+  </li>
+  <li>
+    <p>When you start Eclipse on the lab PCs, Windows will likely warn you about running a program that was downloaded from the Internet.  You can ignore this and move on.</p>
+  </li>
+  <li>
+    <p>When you go to run <strong>main()</strong> in the <strong>CS320_Lab02</strong> project, you may get a Windows Firewall warning.  You can hit <strong>Cancel</strong> and the lab will work.</p>
+  </li>
+</ul>
+:ET

@@ -1,0 +1,235 @@
+I"j1<h1 id="oo-design">OO Design</h1>
+
+<p>Basic idea: take our analysis model and turn it into a detailed blueprint for our implementation, the <em>design model</em>.</p>
+
+<p>Goals for the design model:</p>
+
+<blockquote>
+  <ol>
+    <li>
+      <p>Design a system that will solve the problem (with enough detail that the implementation should flow easily from the design).</p>
+    </li>
+    <li>
+      <p>Design a system that is easy to change.</p>
+    </li>
+  </ol>
+</blockquote>
+
+<p>Goal #1 should be fairly obvious - there’s no point in building incorrect software.</p>
+
+<blockquote>
+  <p><strong>True, but what are some other reasons to invest time in “designing” the system?</strong></p>
+</blockquote>
+
+<p>Goal #2 has several important motivations:</p>
+
+<blockquote>
+  <p>We know the requirements will change as the system evolves.</p>
+
+  <p>We know that we will learn more about the problem and revisit earlier decisions.</p>
+
+  <p>Designs that accommodate change tend to be easy to understand - which is very important when we’re dealing with a complex system.</p>
+</blockquote>
+
+<p>As always in software development, there are an infinite number of ways we could design a system to solve any particular problem.</p>
+
+<blockquote>
+  <p><strong>So, what do we need to do in order to design a system that best achieves our goals?  And how should we interpret “best”?</strong></p>
+</blockquote>
+
+<p>Having a good analysis model generally gives us a very good place to start in constructing a design model. So, if we simply <strong>elaborate the analysis model</strong> (adding methods, method parameters and return types, fields, etc.) we will most likely get a reasonably good design. However, as we build the design model, we will have many opportunities to <em>improve</em> the design.</p>
+
+<blockquote>
+  <p><strong>So, the question becomes, “what makes a good design?”</strong></p>
+</blockquote>
+
+<p>There is one ultimate principle that describes good design, in software as well as almost any other kind of system:</p>
+
+<blockquote>
+  <p>The simplest solution that solves the problem is generally the best one.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Can you think of situations when the above statement might not apply?</strong></p>
+</blockquote>
+
+<p>Simplicity has many benefits:</p>
+
+<blockquote>
+  <p>less code to write, debug, maintain</p>
+
+  <p>the system is easier to understand</p>
+
+  <p>the system is easier to modify</p>
+</blockquote>
+
+<p>As we discuss design, we will discuss a number of more specific design principles to help achieve simplicity.</p>
+
+<h1 id="design-principles">Design Principles</h1>
+
+<p>The essential problem of software is that there are an infinite number of ways that we could build a system that works and correctly solves the problem we want to solve. However, many possible designs are <strong>needlessly complex, fragile, difficult to understand, etc.</strong>   I will present some examples - at times, it is helpful to understand how to do something wrong, in order to understand how to do something better.</p>
+
+<p>Given the challenging environment in which software is developed (limited time/money/resources, changing requirements, changing business needs, etc.), we need to make sure that we design simple, flexible systems.</p>
+
+<p>There is no automatic way to come up with a “perfect” design.</p>
+
+<p>Instead, what we can do is take an existing design and judge it according to the <em>principles</em> of object-oriented design. By doing so, we may find ways to improve the design.</p>
+
+<p>Today, we will talk about some of the important OO design principles. These principles are the product of many years of experience building object-oriented software.</p>
+
+<p>The following is excerpted from your reading for today: <a href="lecture11/Principles_and_Patterns.pdf">Design Principles and Design Patterns</a> by <a href="https://sites.google.com/site/unclebobconsultingllc/">Robert C. Martin</a>.</p>
+
+<h2 id="openclosed-principle-ocp">Open/Closed Principle (OCP)</h2>
+
+<p>“A module should be open for extension but closed for modification.” (from [Martin])</p>
+
+<p>It should be possible to extend the functionality of a module (a component of the system) without changing the implementation of that module.</p>
+
+<blockquote>
+  <p><strong>How is this possible?</strong></p>
+</blockquote>
+
+<p>The idea is that we try to design and implement modules (classes) so that they <em>use</em> (call methods on) objects through <em>abstract classes</em> and <em>interfaces</em>. That way, we can extend the functionality of the module by simply adding new subclasses which add new behavior, instantiating objects which are instances of those subclasses, and passing the objects to the module which uses them <strong>through the abstract superclass or interface</strong>.</p>
+
+<p>Example:</p>
+
+<p>A video game. The game supports player ship, enemy ship, missile, and power up objects:</p>
+
+<blockquote>
+  <p><img src="figures/ocpExample1.png" alt="image" /></p>
+</blockquote>
+
+<p>If we want to add a new type of visual object to the game, we have to add a new class (not a big problem) and then modify the game module to use it (not so great).</p>
+
+<p>We can observe that there are important commonalities in the way that the game <em>uses</em> the visual objects:</p>
+
+<blockquote>
+  <p>it draws them</p>
+
+  <p>it allows them to take turns (one turn per animation frame)</p>
+
+  <p>etc.</p>
+</blockquote>
+
+<p>This suggests a better design:</p>
+
+<blockquote>
+  <p><img src="figures/ocpExample2.png" alt="image" /></p>
+</blockquote>
+
+<p>Now, adding new visual objects to the game is as simple as adding a new subclass of Sprite.</p>
+
+<p>Interestingly, there is an important consideration if we are truly to satisfy the Open/Closed Principle. How are the various Sprite objects created? Specifically, can the Game class (or module) create instances of Sprite (or subclasses of Sprite)?</p>
+
+<p>The answer is NO: if the Game module creates subclasses of Sprite directly, then code changes are required to extend Game.</p>
+
+<blockquote>
+  <p><strong>What is the exact violation of OCP?</strong></p>
+</blockquote>
+
+<p>This seems like a dilemma, but we can get around it by observing that we only have a problem if Game <em>directly</em> creates Sprites. There is no problem if Game <em>indirectly</em> creates Sprites.</p>
+
+<blockquote>
+  <p><strong>So, how could Game <em>indirectly</em> create Sprites?</strong></p>
+</blockquote>
+
+<p>Game can create <em>indirectly</em> if it <em>delegates</em> the creation of the Sprites to another object:</p>
+
+<blockquote>
+  <p><img src="figures/spriteFactory.png" alt="image" /></p>
+</blockquote>
+
+<p>The SpriteFactory class is responsible for creating the Sprites for each level. It is also not a problem for one Sprite object to create another: for example, a PlayerShip object might create a Missile object when the user fires a Missile.</p>
+
+<blockquote>
+  <p><strong>But, how does SpriteFactory know which Sprites to create for each level?</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>What if we want to add new Sprites to a level, how does SpriteFactory know to create those new Sprites for that level?  Don’t we still have to change SpriteFactory so that it creates those Sprites for that level?</strong></p>
+</blockquote>
+
+<blockquote>
+  <p><strong>What if we want to add a new level, then how does SpriteFactory know how to create Sprites for a level it has never seen before?</strong></p>
+</blockquote>
+
+<p>The idea of using a <em>factory class</em> to indirectly create instances of subclasses of an abstract superclass is an example of a <em>design pattern</em>. Design patterns are good ideas that help improve designs to more closely follow OO design principles. We will discuss many design patterns as we discuss OO design.</p>
+
+<blockquote>
+  <p><strong>What interfaces might be applicable for some of the subclasses of the Sprite super class?</strong></p>
+</blockquote>
+
+<h1 id="liskov-substitution-principle-lsp">Liskov Substitution Principle (LSP)</h1>
+
+<p>“Subclasses should be substitutable for their base classes.” (from [Martin]) Another way of stating this principle is that anywhere in a program that an instance of a superclass may be used, an instance of a subclass is allowed.</p>
+
+<p>This principle is named for Barbara Liskov of MIT, an important researcher in programming languages (particularly OO languages).</p>
+
+<p>This principle is related to the Open/Closed Principle. Specifically, if it is <em>not</em> possible to freely use instances of subclasses in modules which use the superclass, then we have not achieved the Open/Closed principle.</p>
+
+<p>Example: is a Square a Rectangle?</p>
+
+<p>In a geometric sense, a square is certainly a rectangle.</p>
+
+<p>However, in an OO sense, it is not necessarily the case that a Square <em>behaves like</em> a Rectangle. Consider:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Rectangle</span> <span class="o">{</span>
+   <span class="o">...</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getWidth</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getHeight</span><span class="o">()</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setWidth</span><span class="o">(</span><span class="kt">int</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setHeight</span><span class="o">(</span><span class="kt">int</span> <span class="n">h</span><span class="o">)</span> <span class="o">{</span> <span class="o">...</span> <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>If we make Square a subclass of Rectangle, how will it implement setWidth and setHeight?</p>
+
+<blockquote>
+  <p>we could have changes to width be reflected in the Square’s height, and vice versa, but that violates the contract of the setHeight and setWidth methods (which should only change one dimension of the Rectangle)</p>
+</blockquote>
+
+<blockquote>
+  <p>we could leave setWidth and setHeight unimplemented for Square objects (i.e., throw an exception when called), but that will certainly surprise clients of the Rectangle class</p>
+</blockquote>
+
+<p>What this example shows is that we cannot make one class a subclass of another class unless it can truly behave in a way that is consistent with the expectations established by the superclass.</p>
+
+<p>Note that in the case of Rectangle/Square, there is no problem if Rectangles and Squares are <em>immutable</em>, meaning their properties are fixed (no setter methods).</p>
+
+<p>LSP can be restated as <strong>Design by Contract</strong>.  In order for a derived class to be substitutable for its base class, the derived class must <em>honor the contract</em> of the base class.</p>
+
+<p>The contract for each method in a class is based on <em>pre-conditions</em> and <em>post-conditions</em>:</p>
+
+<blockquote>
+  <p>Pre-condition: that which must be true before a method is called.  If the pre-conditions for a method are not met, that method should not be called.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Who is responsible for enforcing the pre-conditions?</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>Post-condition: that which is guaranteed to be true after the method is called.  If the post-conditions for a method can not be met, the method should not return (assertion).</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Who is responsible for enforcing the post-conditions?</strong></p>
+</blockquote>
+
+<p>We can restate the LSP in terms of the contracts.  A derived class is substitutable for its base class if:</p>
+<blockquote>
+  <ol>
+    <li>Its pre-conditions are no stronger than the base class method(s).</li>
+    <li>Its post-conditions are no weaker than the base class method(s).</li>
+  </ol>
+</blockquote>
+
+<p>Derived methods should <em>expect no more and provide no less</em> than there base class methods.</p>
+
+<blockquote>
+  <p><strong>Just like a Square is a Rectangle, a Circle is an Ellipse.  How might a Circle subclass derived from an Ellipse base class violate the Ellipse contract?</strong></p>
+</blockquote>
+:ET

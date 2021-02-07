@@ -1,0 +1,72 @@
+I"�<p><strong>Due: <a href="index.html">See Assignment Schedule</a></strong></p>
+
+<p>This is an <strong>Individual</strong> assignment.</p>
+
+<h1 id="individual-project">Individual Project</h1>
+
+<p>Software development is a vast and rapidly-changing field.
+Almost any substantial project will require you to learn about
+new technologies, which could include programming languages,
+libraries, databases, etc.  Being able to learn
+new technologies on your own
+and use them effectively in a project is an essential skill
+for a software developer.</p>
+
+<p>Your task in this assignment is to propose an individual project
+you will work on this semester that involves one or more technologies
+related to software development that will be a new learning experience
+for you.</p>
+
+<p>Some possible examples:</p>
+
+<ul>
+  <li>Learn a new programming environment, e.g. C#, .NET, and MS Visual Studio; Android and IntelliJ; Python, PyCharm, and Pygame</li>
+  <li>Learn a new programming language, e.g., Clojure, Scala, Erlang
+and write a non-trivial program in that language</li>
+  <li>Learn about JavaScript (JS) and AJAX for rich web client interfaces,
+develop a web application.  Thee are many forms of JS from which to choose</li>
+  <li>Try developing your own website using Grails or Ruby on Rails</li>
+  <li>Learn about programming embedded systems and hardware interfacing, 
+e.g., AVR, Arduino, and then use it in a hardware project (a data logger,
+robot, etc.)</li>
+  <li>Contact the <strong>Radio Telescope team</strong> and learn how to develop in the languages, platforms, and tools they are using for that project.  This would prepare you to work on that project when you reach CS481/CS482 - Senior Design I and II.</li>
+  <li>Learn how to deploy and host a website through Amazon Web Services (AWS)</li>
+</ul>
+
+<p>These are just examples: I encourage you to be creative and
+think of something that interests you personally.  The most important
+requirement is that you should learn something new!</p>
+
+<h2 id="scope">Scope</h2>
+
+<p>The project should be smaller in scope than your team project:
+the purpose is more to learn something new than to create a substantial
+software system.  However, your project must be non-trivial: the
+system you create should do something interesting.</p>
+
+<h1 id="proposal-format">Proposal Format</h1>
+
+<p>Your proposal should be 2-3 pages, and contain the following information:</p>
+
+<ul>
+  <li>Description of your project</li>
+  <li>List one or more technologies related to software development that you
+will learn about</li>
+  <li>Briefly discuss your plan for the project: list what sources of information you plan to use, and provide a list of steps/intermediate goals that will allow you to make progress towards completing the project.  Keep in mind that I expect you to make steady progress, and that there will be regular in-class progress reports/demos, as specified in <a href="assign04.html">Assignment 4</a>.</li>
+</ul>
+
+<p>Here is the template for your <a href="CS320_Individual_Project_Proposal_Template.pdf">Individual Project Proposal</a>.  Download the <a href="CS320_Individual_Project_Proposal_Template.docx">template document</a>, modify it, as necessary, and follow the submission instructions below.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>Create a folder in Google Drive named “CS320-IndProject-username”, replacing “username” with your YCP user name, and place it in the shared Google <strong>CS320-Spring2020 [students]</strong> folder under your section of CS320 that I previously shared with you.</p>
+
+<p>This folder will be your means of submission for all <strong>non-programming-related individual</strong> assignments.</p>
+
+<p>Then create your Individual Project Proposal in that folder, using Google Docs.  Name your Project Proposal document <strong>assign02-username</strong>, again substituting your YCP user name.  Share the folder and its contents with me.</p>
+
+<div class="callout">
+<b>Important</b>: Only submissions in Google Docs will be accepted.
+Do not submit a document in any other format!
+</div>
+:ET

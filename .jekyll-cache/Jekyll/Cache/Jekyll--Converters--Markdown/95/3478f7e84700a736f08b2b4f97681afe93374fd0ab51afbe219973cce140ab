@@ -1,0 +1,254 @@
+I"X#<p>This is the schedule for the course.  It may be updated from time to time.  Updates will be announced in class.</p>
+
+<p><strong>Important</strong>: Do the reading AND start the labs <strong>before</strong> you come to class!</p>
+
+<ul>
+  <li>SG is <em>Scrum Guide, 2016</em></li>
+  <li>UD is <em>UML Distilled, 3rd ed.</em></li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Topic/Activity</th>
+      <th>Reading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Feb 01</td>
+      <td>Course Introduction</td>
+      <td><a href="lectures/lecture01.html">Lecture 1: Course Overview, OOP</a></td>
+    </tr>
+    <tr>
+      <td>Feb 03</td>
+      <td>HTML (content) and CSS (styling) <br /> HTML and CSS Lab Assigned</td>
+      <td><a href="lectures/lecture02.html">Lecture 2: HTML and CSS</a><br /> <a href="./labs/lab01.html">Lab 1: HTML and CSS Lab</a></td>
+    </tr>
+    <tr>
+      <td>Feb 05</td>
+      <td>Version Control (Git)</td>
+      <td><a href="lectures/lecture03.html">Lecture 3: Git and Version Control</a><br />  <a href="./labs/lab03.html">Lab 3: Git Lab Part I</a></td>
+    </tr>
+    <tr>
+      <td>Feb 08</td>
+      <td>Introduction to Web Applications <br /> Lab 2 Assigned</td>
+      <td><a href="lectures/lecture04.html">Lecture 4: Web Applications</a> <br />  <a href="./labs/lab02.html">Lab 2: Web Applications I</a></td>
+    </tr>
+    <tr>
+      <td>Feb 10</td>
+      <td>Web Applications I <br /> Lab 2a Assigned</td>
+      <td><a href="./labs/lab02a.html">Lab 2a: Web Applications II</a></td>
+    </tr>
+    <tr>
+      <td>Feb 12</td>
+      <td>Web Applications II <br /> Web Applications Labs Review</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Feb 15</td>
+      <td>Version Control: Git &amp; eGit (in class)</td>
+      <td><a href="./labs/lab03.html">Lab 3: Git Lab Part II</a></td>
+    </tr>
+    <tr>
+      <td>Feb 17</td>
+      <td>Development Processes &amp; Waterfall Model</td>
+      <td>UD: Chapter 2 <br /> <a href="lectures/lecture06.html">Lecture 6: Development Process</a></td>
+    </tr>
+    <tr>
+      <td>Feb 19</td>
+      <td>Agile Process &amp; Scrum</td>
+      <td>SG: <a href="lectures/lecture07/2016_Scrum_Guide_US.pdf">2016 Scrum Guide</a> <br /> <a href="lectures/lecture07.html">Lecture 7: Agile &amp; Scrum</a> <br /> <a href="http://www.agilemanifesto.org/">Manifesto for Agile Software Development</a></td>
+    </tr>
+    <tr>
+      <td>Feb 22</td>
+      <td>User Requirements Exercise and <br /> Brainstorming Session (in-class)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Feb 24</td>
+      <td>Requirements &amp; Use Cases<br />Use Case Exercise (in-class)</td>
+      <td>UD: Chapter 9 <br /> <a href="lectures/lecture08.html">Lecture 8: Requirements, Use Cases</a></td>
+    </tr>
+    <tr>
+      <td>Feb 26</td>
+      <td>Individual Project Milestone 1:<br /> <strong>Baseline Prototype</strong></td>
+      <td><a href="assign/assign04.html">Assignment 4: Individual Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Mar 1</td>
+      <td>Team Project Session: Use Cases</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mar 3</td>
+      <td>Unified Modeling Language (UML) and <br /> Object-Oriented Analysis (OOA)<br />Textual Analysis Exercise (in-class)</td>
+      <td>UD: Chapter 3 <br /> <a href="lectures/lecture09.html">Lecture 9: UML Class Diagrams</a> <br /> <a href="lectures/lecture10.html">Lecture 10: OO Analysis</a></td>
+    </tr>
+    <tr>
+      <td>Mar 05</td>
+      <td>Team Project Session: Textual Analysis</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mar 08</td>
+      <td>Team Project Session: Project Analysis Model - UML</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mar 10</td>
+      <td>Object-Oriented Design (OOD)</td>
+      <td><a href="lectures/lecture11.html">Lecture 11: OO Design, OCP, LSP</a><br /> <a href="lectures/lecture11/Principles_and_Patterns.pdf">Design Principles and Design Patterns</a>, Robert Martin, pages 1-12</td>
+    </tr>
+    <tr>
+      <td>Mar 12</td>
+      <td>Individual Project Milestone 2:<br /> <strong>50% Progress</strong></td>
+      <td><a href="assign/assign04.html">Assignment 4: Individual Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Mar 15</td>
+      <td>Relational Databases<br /> SQL Lab Assigned</td>
+      <td><a href="lectures/lecture13.html">Lecture 13: Relational Databases</a><br /> <a href="./labs/lab04.html">Lab 4: SQL Lab</a></td>
+    </tr>
+    <tr>
+      <td>Mar 17</td>
+      <td>Database Applications - JDBC<br /> JDBC Lab Assigned</td>
+      <td><a href="lectures/lecture14.html">Lecture 14: Database Applications, JDBC</a><br /> <a href="./labs/lab05.html">Lab 5: JDBC Lab</a></td>
+    </tr>
+    <tr>
+      <td>Mar 19</td>
+      <td>Team Project Milestone 1:<br /> <strong>Minimal Working System</strong></td>
+      <td><a href="assign/assign03.html">Assignment 3: Team Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Mar 22</td>
+      <td>Database Applications - ORM <br /> ORM Lab Assigned</td>
+      <td><a href="lectures/lecture15.html">Lecture 15: ORM, Designing a Persistence Layer</a><br /> <a href="./labs/lab06.html">Lab 6: ORM Lab</a></td>
+    </tr>
+    <tr>
+      <td>Mar 24</td>
+      <td>SQL / JDBC / ORM Labs Review</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Mar 26</td>
+      <td>Testing and Code Coverage</td>
+      <td><a href="lectures/lecture16.html">Lecture 16: Testing</a></td>
+    </tr>
+    <tr>
+      <td>Mar 29</td>
+      <td>Ensuring Code Quality</td>
+      <td><a href="lectures/lecture17.html">Lecture 17: Ensuring Code Quality</a></td>
+    </tr>
+    <tr>
+      <td>Mar 31</td>
+      <td>Library Project Example Analysis and Review</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 2</td>
+      <td>Team Project Milestone 2:<br /> <strong>Progress on Navigation &amp; Features</strong></td>
+      <td><a href="assign/assign03.html">Assignment 3: Team Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Apr 4</td>
+      <td>Team Project Mid-Semester Self / Peer Evaluations Due</td>
+      <td><a href="assign/assign11.html">Assignment 11: Team Project Self / Peer Evaluation</a></td>
+    </tr>
+    <tr>
+      <td>Apr 5</td>
+      <td>Mid-Term Exam Review <br /> Library Project Example Review</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 7</td>
+      <td><strong>MID-TERM EXAM</strong> (online)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 9</td>
+      <td>Individual Project Milestone 3:<br /> <strong>FINAL PROJECT DEMOS</strong></td>
+      <td><a href="assign/assign04.html">Assignment 4: Individual Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Apr 13</td>
+      <td>Individual Project Report Due</td>
+      <td><a href="assign/assign09.html">Assignment 9: Individual Project Deliverables</a></td>
+    </tr>
+    <tr>
+      <td>Apr 14</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 16</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 21</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 19</td>
+      <td>Team Project Milestone 3:<br /> <strong>75% Working System</strong></td>
+      <td><a href="assign/assign03.html">Assignment 3: Team Project Milestones</a></td>
+    </tr>
+    <tr>
+      <td>Apr 23</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 26</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 28</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Apr 30</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>May 3</td>
+      <td>Team Project Work Session</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>May 5</td>
+      <td>Team Project Work Session (last class session of semester)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>May 7</td>
+      <td>Team Project Report Due</td>
+      <td><a href="assign/assign08.html">Assignment 8: Team Project Deliverables</a></td>
+    </tr>
+    <tr>
+      <td>May 9</td>
+      <td>Team Project Reflection Due<br />Team Project Final Self / Peer Evaluations Due</td>
+      <td><a href="assign/assign10.html">Assignment 10: Team Project Reflection</a><br /> <a href="assign/assign11.html">Assignment 11: Team Project Self / Peer Evaluation</a></td>
+    </tr>
+    <tr>
+      <td>May 10</td>
+      <td><strong>TEAM PROJECT FINAL PRESENTATIONS (Section 103)</strong><br />Final Exam Period (3:00 to 5:00)</td>
+      <td><a href="assign/assign08.html">Assignment 8: Team Project Deliverables</a></td>
+    </tr>
+    <tr>
+      <td>May 12</td>
+      <td><strong>TEAM PROJECT FINAL PRESENTATIONS (Sections 101)</strong><br />Final Exam Periods (10:15 to 12:15)</td>
+      <td><a href="assign/assign08.html">Assignment 8: Team Project Deliverables</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Commenting out rest of schedule until it's needed - and the dates will change, anyway
+-->
+:ET

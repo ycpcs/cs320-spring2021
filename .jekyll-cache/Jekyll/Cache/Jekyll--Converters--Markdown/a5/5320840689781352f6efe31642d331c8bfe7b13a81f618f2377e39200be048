@@ -1,0 +1,69 @@
+I"u<h1 id="getting-started">Getting Started</h1>
+
+<p>Download <a href="CS320_Lab06.zip">CS320_Lab06.zip</a>. Import it into your Eclipse workspace (<strong>File→Import…→General→Existing projects into workspace→Archive File</strong>). You will see a project called <strong>CS320_Lab06</strong> in the Package Explorer.   (You will also need to have the <strong>CS320_Derby</strong> project in your workspace, which should already be there from <a href="lab04.html">Lab 4</a>.)</p>
+
+<p><strong>NOTE:</strong> You MUST refactor the name of the <strong>CS320_Lab06</strong> project to include your username - BEFORE YOU EXPORT IT AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.</p>
+
+<p>Example: If I was submitting Lab06, I would refactor the <strong>CS320_Lab06</strong> project to <strong>CS320_Lab06_djhake2</strong> as soon as I imported the project into Eclipse.</p>
+
+<p>Start by creating <strong>test.db</strong>, which is the <a href="../lectures/lecture13.html">books database from Lecture 13</a>.  Execute the <strong>DerbyDatabase</strong> class as a Java application: you should see the following output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Creating tables...
+Loading initial data...
+Success!
+</code></pre></div></div>
+
+<p>If you refresh your <strong>CS320_Lab06</strong> project, you should see the <strong>test.db</strong> directory.</p>
+
+<p><strong>NOTE:</strong> You must work individually on this lab.  It is imperative that everyone on your team be able to construct SQL queries, to establish a connection between a Java program and a SQL database, and to write SQL queries embedded in Java code.  This <strong>WILL</strong> come up on the exam.</p>
+
+<p><strong>You will also automatically fail the course, as well as receive an Academic Integrity Violation, if you submit work that was completed by someone else, and/or submit any portion of code taken from the Library Example Project that I provide as part of the course.</strong></p>
+
+<h1 id="task">Task</h1>
+
+<p>In the lab skeleton you will find a program called <strong>TitleQuery</strong> which demonstrates using an ORM interface to find all books that have the title entered by the user (along with the author information).</p>
+
+<p>Your task is very similar to <a href="lab05.html">Lab 5</a>, except that rather than directly executing database queries/statements, you will add methods to the <strong>IDatabase</strong> interface and implement them in <strong>BOTH</strong> <strong>FakeDatabase</strong> and <strong>DerbyDatabase</strong>.</p>
+
+<p>Tasks:</p>
+
+<p>Using <strong>TitleQuery</strong> as a model, write your own programs (separate classes with main() methods) to do the following:</p>
+
+<ol>
+  <li>
+    <p>Create class <strong>BooksByAuthorLastNameQuery</strong> that finds all books written by the author whose last name is specified by the user. Return the books in the same form as the <strong>TitleQuery</strong> program, but sorted in ascending order by <strong>Title</strong>.  This is the same SQL query as <strong>problem 1</strong> from <a href="lab05.html">Lab 5</a>.  You are welcome to reuse your code from that solution.</p>
+  </li>
+  <li>
+    <p>Create class <strong>InsertNewBookWithAuthor</strong>: Given the full (first and last) name of an author, a title, an ISBN, and a publish year, insert the book into the database. The program should add a new tuple to the <strong>authors</strong> table if the author doesn’t already exist. If the author already exists, the program should use that author’s <strong>author_id</strong>.  Use the SQL <strong>insert</strong> statement to insert the new tuple(s).  <strong>NOTE:</strong>  This is the same set of SQL queries as <strong>problem 3</strong> from <a href="lab05.html">Lab 5</a>.  You are welcome to reuse your code from that solution.</p>
+  </li>
+</ol>
+
+<h2 id="hints">Hints</h2>
+
+<p>For the first task, add the following method to <strong>IDatabase</strong>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public List&lt;Pair&lt;Author, Book&gt;&gt; findAuthorAndBookByAuthorLastName(String lastname);
+</code></pre></div></div>
+
+<p>Implement it in <strong>FakeDatabase</strong> and <strong>DerbyDatabase</strong>.  Start by implementing the method in <strong>FakeDatabase</strong> (just have the method in <strong>DerbyDatabase</strong> throw an <strong>UnsupportedOperationException</strong>.)</p>
+
+<p>For the second task, first do a query to see if the author exists.  If the author doesn’t exist, insert the new author into the <strong>authors</strong> table.  (Note: you will want to allow the database to automatically assign an <strong>author_id</strong>).  Then, retrieve the <strong>author_id</strong> so that you can insert a new tuple into the <strong>books</strong> relation (again, the database will automatically assign a <strong>book_id</strong>).  Note that the entire operation should be executed as part of a <strong>single transaction</strong>.</p>
+
+<h1 id="submitting">Submitting</h1>
+
+<p>When you are done, submit the lab to the Marmoset server using the method below.</p>
+
+<h2 id="from-a-web-browser">From a web browser</h2>
+
+<p>Save your project (<strong>CS320_lab06_username</strong>) to a zip file by right-clicking it and choosing</p>
+
+<blockquote>
+  <p><strong>Export…→Archive File</strong></p>
+</blockquote>
+
+<p>Upload the saved zip file to the <strong>Lab06</strong> project on the Marmoset server. The server URL is</p>
+
+<blockquote>
+  <p><a href="https://cs.ycp.edu/marmoset/">https://cs.ycp.edu/marmoset/</a></p>
+</blockquote>
+:ET
