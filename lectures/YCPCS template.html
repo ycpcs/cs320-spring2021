@@ -1,0 +1,186 @@
+vscodeterm<!DOCTYPE html>
+<!-- saved from url=(0064)https://ycpcs.github.io/cs320-spring2021/lectures/lecture04.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>CS 320: Git, Github, GitKraken </title>
+		<link rel="stylesheet" type="text/css" href="./YCPCS template_files/site.css">
+		<link rel="stylesheet" type="text/css" href="./YCPCS template_files/syntax.css">
+	<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script></head>
+	<body>
+		<div id="content">
+      <div id="header"><a href="https://ycpcs.github.io/cs320-spring2021/">CS 320</a>: Lecture 4: Version Control</div>
+
+<h1 id="version-control">git set up</h1>
+
+<h2 id="version-control">Part 1: Create a GitHub account</h2>
+<ul>
+  <li>Go to <a href="https://github.com">https://github.com</a> and sign up</li>
+  <li>Verify your e-mail</li>
+  <ul>
+    <li>If you did not use a .edu email, go to your account settings and add your .edu email as an alternate email: Profile (top right corner) > Settings > Email</li>
+  </ul>
+  <li>You can then go to https://education.github.com/pack and get the Student Developer pack. This will give you access to thousands of dollars of free credits and materials on tons of platforms</li>
+</ul>
+
+<h2 id="version-control">Part 2: Pick a Git Client</h2>
+<ul>
+	<p> Git Clients are a visual alternative to doing git through command line. There are many different options for Git Clients. This page walks you through using two free choices: GitHub Desktop and GitKraken.
+		GitHub Desktop is bare bones and very easy to use, but doesn't have many extra features.
+		GitKraken has more features (and a pro version), and also has a visual display of your repository's branches. (more on branches later) </p>
+
+<h3 id="version-control">Downloading GitHub Desktop</h3>
+	<ul>
+	  <li>Go to <a href="https://desktop.github.com">https://desktop.github.com</a></li>
+	  <li>Make sure you move it from downloads, as it will run in your downloads folder if you let it.</li>
+	  <li>Sign in to GitHub.com</li>
+	  <li>You will then be directed to "Configure Git"</li>
+	  <li>Enter the Name/Email you want to be associated with your commits</li>
+	  <li>Click continue</li>
+	  <li>It will ask for usage stats. </li>
+		<li>Click Finish</li>
+	</ul>
+<h3 id="version-control">Downloading GitKraken</h3>
+	<ul>
+	  <li>Go to <a href="https://www.gitkraken.com">https://www.gitkraken.com</a></li>
+	  <li>Enjoy the adorable loading animation</li>
+	  <li>Sign in with GitHub</li>
+	  <ul>
+	    <li>If you are already logged in to GitHub this is as easy as clicking authorize App</li>
+	  </ul>
+  	<li>Fill out your profile name, and then your name and email that will be associated with your commits</li>
+	  <li>Click okay</li>
+	</ul>
+</ul>
+
+<h2 id="version-control">Part 3: Create a Repository</h2>
+<ul>
+	<p> A repository (or repo) is where your code is stored. You have a remote repository, that is located on a service like GitHub, and a local repository, on your machine.
+		You work on the code on your local repository, and then commit your changes and push them to your remote repository.
+		When you are starting a new repository it is always easier to create your remote repository first, and then bring it to your machine. </p>
+	<h3>On GitHub</h3>
+<img src="./YCPCS template_files/newButton.png"  alt="image">
+<img src="./YCPCS template_files/plusButton.png" alt="image">
+<ul>
+  <p> To create a new repository on GitHub, you can either hit the green "New" button next to "Repositories" on the left of the home page, or click the "+" menu by your profile in the upper right and select "New Repository." This will take you to a new page: </p>
+	<img src="./YCPCS template_files/newRepo.png" width="600px" height="600px" alt="image">
+	<p><b>In this form:</b></p>
+	<ul>
+	<li>Enter a repository name </li>
+  <li>Select public or private.</li>
+	<ul>
+		<li>Public repositories can be seen by everyone, private repositories can only be seen by added collaborators</li>
+	</ul>
+	</ul>
+	<p><b>Optional:</b></p>
+	<ul>
+	  <li>Add a README - This is a long description of your repository and what it's about (this is highly recommended)</li>
+	  <li>Add .gitignore - This file tells git which files in your repo not to track. It is very useful for Java because you do not want to commit .class files (a repository is only for source code)</li>
+	  <ul>
+	    <li>GitHub is nice and has template .gitignore files based on the language you are using.</li>
+	  </ul>
+	  <li>Add a License - GitHub is dedicated to supporting open source, but an important part of open source is letting people know what can and cannot be done with your code. A license is a document that states those rules. GitHub has <a href="https://choosealicense.com">https://choosealicense.com</a> to help you pick one.</li>
+	</ul>
+</ul>
+
+
+<p></p>
+<b>Click the green "Create Repository" Button when you are ready</b>
+</ul>
+
+<h2 id="version-control">Part 4: Clone the Repository</h2>
+<ul>
+<p>The process of bringing a remote (online) repository to your computer is called cloning.
+  On your preferred git client select the option for cloning your repository</p>
+
+<h3>Github Desktop</h3>
+<img src="./YCPCS template_files/GitHubClone.png" width="600px" height="600px" alt="image">
+<ul>
+  <li>Click "Clone a Repository from the Internet..."</li>
+  <ul>
+    <li>You will be able to search the repositories connected to your GitHub account and select the one you want to clone. It will show you the "Local Path" where it will put the repository. Select "Choose" to change this.</li>
+    <li><b>IF YOU ARE USING ECLIPSE SELECT YOUR ECLIPSE WORKSPACE FOLDER AS THE LOCATION</b></li>
+  </ul>
+  <li>Click "Clone"</li>
+</ul>
+
+<h3>GitKraken</h3>
+<img src="./YCPCS template_files/GitKrakenClone.png" width="600px" height="600px" alt="image">
+<ul>
+  <li>Click "Clone a repo"</li>
+  <li>Select GitHub.com as the source</li>
+  <li>Select the location where GitKraken will put the repository beside "Where to clone to"</li>
+  <ul>
+    <li><b>IF YOU ARE USING ECLIPSE SELECT YOUR ECLIPSE WORKSPACE FOLDER AS THE LOCATION</b></li>
+  </ul>
+  <li>Select the Repository you want to clone from the "Repository to clone" drop down</li>
+  <li>Click "Clone the repo!"</li>
+</ul>
+</ul>
+
+<h2 id="version-control">Part 5: Repositories and Eclipse</h2>
+<h2>No Existing Eclipse Project</h2>
+<img src="./YCPCS template_files/eclipseNew.png" width="600px" height="600px" alt="image">
+<ul>
+  <li>Click "Create a Java Project"</li>
+  <li>UNCHECK "Use Default Location"</li>
+  <li>Name your Project</li>
+  <li>For Location select "Browse"</li>
+  <li>Navigate to your repository folder in your Eclipse Workspace. In your repository, make a new folder. Select this as the location for your Project</li>
+  <li>Click "Finish"</li>
+</ul>
+
+<h2>Existing Eclipse Project</h2>
+<img src="./YCPCS template_files/eclipseImport.png" width="600px" height="600px" alt="image">
+<ul>
+  <li>File > Open Projects from File System</li>
+  <li>Click Directory</li>
+  <li>In your repository folder, in the Eclipse workspace, select the Eclipse Project folder, click "Open"</li>
+  <li>Click "Finish"</li>
+</ul>
+
+<h2 id="version-control">Git</h2>
+<p>Git saves your work, but only when you tell it to.</p>
+<p>The process for telling it what to save to your repository is called committing.</p>
+<p>The repository on your machine is called your local repository. The repository on GitHub is called your remote or upstream repository.</p>
+<p>To save changes to your local repository you do "git add" and then "git commit". To move changes from your local repository to your remote repository you must do a "git push"</p>
+<p>git tracks any and all changes made to the repository. These changes, until you tell git otherwise, are "unstaged," which means that git will not record them.
+  To stage these changes you must do a "git add". To add these to your local repository you must do a "git commit"</p>
+
+<h2>GitKraken</h2>
+<p>The panel on the right shows you all the files that have been changed under "Unstaged Files".</p>
+<p>You can click on any of the file names and GitKraken will show you any changes made between versions. (This is called a "git diff")</p>
+<p>To stage these files click "Stage all changes"</p>
+<p>You can also stage files individually by hovering over the file name and selecting "Stage File"</p>
+<p>Once files are staged they will appear under "Staged Files"</p>
+<p>To commit these files to your repository you MUST add a commit message in the "Summary" field. The message should explain what you did in this commit.</p>
+<p>If you want to be more detailed you can add more information in the "Description" field.</p>
+<p>When you are ready to commit, click the green "Commit changes" Button</p>
+<img src="./YCPCS template_files/GitKrakenPush.png" width="80%" height="80%" alt="image">
+<p>To push these changes to your remote repository, click the "Push" button at the top of the window.</p>
+
+<h2>GitHub Desktop</h2>
+<img src="./YCPCS template_files/GitHubGitAdd.png" alt="image">
+<p>The Panel on the left shows you all the files that have been changed. GitHub Desktop automatically stages (adds) these for you, which is indicated by a check mark. If you DO NOT want to add a file, you can uncheck it to unstage it.</p>
+<p>You can click on any of the file names and GitHub Desktop will show you the changes made in the file between versions (This is called a "git diff")</p>
+<img src="./YCPCS template_files/GitHubClone.png" width="600px" height="600px" alt="image">
+<p>To commit these files to your repository you MUST add a commit message in the "Summary" field. The message should explain what you did in this commit.</p>
+<p>If you want to be more detailed you can add more information in the "Description" field.</p>
+<p>When you are ready to commit, click the blue "Commit" button at the bottom of the right panel.</p>
+<p>Once you have committed your changes, the main section will offer "some friendly suggestions on what to do next" (If it doesn't, select the "changes" tab on the left panel)</p>
+<img src="./YCPCS template_files/GitHubpushh.15.55 AM.png" width="90%" height="90%" alt="image">
+<p>Here, you can click "Push origin" and push your changes to GitHub. (Origin is another name for remote)</p>
+<p>There is also a "Push origin" button on the top bar of the window, with a number indicating how many commits you are pushing.</p>
+
+			<div id="footer">
+				<a href="https://ycpcs.github.io/cs320-spring2021/README.html">Copyright (c) 2006–2021</a> |
+				Unless indicated otherwise, content is freely redistributable |
+				<a class="cc-img" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./YCPCS template_files/cc-by-sa-80x15.png"></a>
+			</div>
+		</div>
+
+
+
+<!--
+vim:ts=2:
+-->
+</body></html>

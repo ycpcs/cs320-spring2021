@@ -1,0 +1,69 @@
+Create a GitHub account
+Go to GitHub.com and sign up
+verify your Email
+If you did not use a .edu email, go to your account settings and add your .edu email as an alternate email
+Profile top right corner > Settings > Email
+You can then go to https://education.github.com/pack and get the Student Developer pack
+This will give you access to thousands of dollars of free credits and materials on tons of platforms
+
+https://desktop.github.com
+Make sure you move it from downloads, as it will run in your downloads folder if you let it
+sign in to github.com
+"Configure Git"
+Name/Email associated with your commits
+click continue
+Asks for Usage Stats, Hit Finish
+
+https://www.gitkraken.com
+enjoy the adorable loading animation
+Sign in with GitHub
+If you are already logged in this is as easy as clicking authorize App
+Fill out your profile Name, and then your name and email that will be associated with your commits
+Click okay
+
+Creating a repository
+On GitHub -
+Either hit the green "New" button next to "Repositories" on the left or click the "+" menu by your profile in the upper right and select "New Repository"
+enter a repository name
+select public or private. public repositories can be seen by everyone, private repositories can only be seen by added collaborators
+Optional -
+Add a README - this is a long description of your repository and what it's about
+This is highly reccomended
+Add .gitignore - This file tells git which files in your repo not to track. It is very useful for Java because you do not want to commit .class files. A repository is only for source code
+GitHub is nice and has template .gitignore files based on the language you are using.
+Add a License - GitHub is dedicated to supporting open source, but an important part of open source is letting people know what can and cannot be done with your code.
+A license is a document that states those rules. GitHub has https://choosealicense.com to help you pick one.
+
+Click the green "Create Repository" Button when you are ready
+
+Bringing the repository to your computer
+The process of bringing a remote (online) repository to your computer is called cloning
+On your preferred git client select the option for cloning your repository
+
+GitHub Desktop  click "Clone a Repository from the Internet..."
+You will be able to search the repositories connected to your github account and select the one you want to clone
+It will show you the "Local Path" where it will put the repository. Select "Choose" to change this.
+IF YOU ARE USING ECLIPSE SELECT YOUR ECLIPSE WORKSPACE FOLDER AS THE LOCATION
+Click "Clone"
+
+GitKraken click "Clone a repo"
+Select GitHub.com as the source
+Select the location where GitKraken will put the repository beside "Where to clone to"
+IF YOU ARE USING ECLIPSE SELECT YOUR ECLIPSE WORKSPACE FOLDER AS THE LOCATION
+Select the Repository you want to clone from the "Repository to clone" drop down
+Click "Clone the repo!"
+
+Bringing your Repository into Eclipse
+No Existing Eclipse Project
+Click "Create a Java Project"
+UNCHECK "Use Default Location"
+Name your Project
+For Location select "Browse"
+Navigate to your repository folder in your Eclipse Workspace. In your repository, make a new folder. Select this as the location for your Project
+Click "Finish"
+
+Existing Eclipse Project
+File > Open Projects from File System
+Click Directory
+In your repository folder, in the Eclipse workspace, select the Eclipse Project folder, click "Open"
+Click "Finish"

@@ -14,7 +14,7 @@ Date   | Topic/Activity | Reading
 ------ | -------------- | -------
 Feb 01 | Course Introduction | [Lecture 1: Course Overview, OOP](lectures/lecture01.html)
 Feb 03 | HTML (content) and CSS (styling) <br> HTML and CSS Lab Assigned | [Lecture 2: HTML and CSS](lectures/lecture02.html)<br> [Lab 1: HTML and CSS Lab](./labs/lab01.html)
-Feb 05 | Version Control (Git) | [Lecture 12: Git for Designers](https://web.archive.org/web/20150301060509/http://hoth.entp.com/output/git_for_designers.html)<br>  [Lab 3: Git Lab Part I](./labs/lab03.html)
+Feb 05 | Version Control (Git) | [Lecture 12: Git for Designers](https://web.archive.org/web/20150301060509/http://hoth.entp.com/output/git_for_designers.html)<br>  [Lab 3: Git Lab Part I](./labs/lab03.html)<br>  [Lecture: Git Version Control](./lectures/lecture12.html)
 Feb 08 | Introduction to Web Applications <br> Lab 2 Assigned | [Lecture 4: Web Applications](lectures/lecture04.html) <br>  [Lab 2: Web Applications I](./labs/lab02.html)
 Feb 10 | Web Applications I <br> Lab 2a Assigned | [Lab 2a: Web Applications II](./labs/lab02a.html)
 Feb 12 | Web Applications II <br> Web Applications Labs Review |

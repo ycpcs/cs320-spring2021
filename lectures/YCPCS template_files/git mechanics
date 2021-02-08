@@ -1,0 +1,29 @@
+git saves your work, but only when you tell it to.
+The process for telling it what to save to your repository is called committing.
+The repository on your machine is called your local repository. The repository on GitHub is called your remote or upstream repository.
+To save changes to your local repository you do "git add" and then "git commit". To move changes from your local repository to your remote repository you must do a "git push"
+
+git add, git commit, git push
+git tracks any and all changes made to the repository. these changes, until you tell git otherwise, are "unstaged," which means that git will not record them.
+To stage these changes you must do a "git add". To add these to your local repository you must do a "git commit"
+
+GitKraken
+The panel on the right shows you all the files that have been changed under "Unstaged Files".
+You can click on any of the file names and GitKraken will show you any changes made between versions. (This is called a "git diff")
+To stage these files click "Stage all changes"
+You can also stage files individually by hovering over the file name and selecting "Stage File"
+Once files are staged they will appear under "Staged Files"
+To commit these files to your repository you MUST add a commit message in the "Summary" field. The message should explain what you did in this commit.
+If you want to be more detailed you can add more information in the "Description" field.
+When you are ready to commit, click the green "Commit changes" Button
+To push these changes to your remote repository, click the "Push" button at the top of the window.
+
+GitHub Desktop
+The Panel on the left shows you all the files that have been changed. GitHub Desktop automatically stages (adds) these for you, which is indicated by a check mark. If you DO NOT want to add a file, you can uncheck it to unstage it.
+You can click on any of the file names and GitHub Desktop will show you the changes made in the file between versions (This is called a "git diff")
+To commit these files to your repository you MUST add a commit message in the "Summary" field. The message should explain what you did in this commit.
+If you want to be more detailed you can add more information in the "Description" field.
+When you are ready to commit, click the blue "Commit" button at the bottom of the right panel.
+Once you have committed your changes, the main section will offer "some friendly suggestions on what to do next" (If it doesn't, select the "changes" tab on the left panel)
+Here, you can click "Push origin" and push your changes to GitHub. (Origin is another name for remote)
+There is also a "Push origin" button on the top bar of the window, with a number indicating how many commits you are pushing.
