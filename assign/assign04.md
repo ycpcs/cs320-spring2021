@@ -13,8 +13,8 @@ This document describes the expectations for each milestone.
 
 > Date | Milestone
 > ---- | ---------
-> Friday,    2-26-21 | Milestone 1: Baseline Prototype (in-class)
-> Friday,    3-12-21 | Milestone 2: 50% Working Progress (in-class)
+> Monday,    3-01-21 | Milestone 1: Baseline Prototype (in-class)
+> Monday,    3-15-21 | Milestone 2: 50% Working Progress (in-class)
 > Friday, 	 4-9-21  | Milestone 3: Final Project Demo (in-class)
 > Tuesday,  4-13-21  | Final Project Report: due by 7:00pm (Marmoset)
 

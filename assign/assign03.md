@@ -9,12 +9,12 @@ This document describes the expectations for each milestone.
 
 > Date | Milestone
 > ---- | ---------
-> Monday, 3-16-20    | Milestone 1: Minimal Working System
-> Wednesday, 4-1-20  | Milestone 2: Progress on Features
-> Wednesday, 4-22-20 | Milestone 3: "75%" Working System (operational persistent SQL database)
-> Saturday, 5-9-20   | Final Technical Report: due by 7:00am (Marmoset)
-> Monday, 5-11-20    | Final Presentation & Demo (section 103), during final exam period
-> Wednesday, 5-13-20 | Final Presentation & Demo (sections 101 & 102), during final exam period
+> Monday, 3-22-21    | Milestone 1: Minimal Working System
+> Friday, 4-2-21  | Milestone 2: Progress on Navigation & Features
+> Monday, 4-19-21 | Milestone 3: "75%" Working System (operational persistent SQL database)
+> Friday, 5-7-21   | Final Technical Report: due by 9:00am (Marmoset)
+> Monday, 5-10-21    | Final Presentation & Demo (section 103), during final exam period
+> Wednesday, 5-12-21 | Final Presentation & Demo (sections 101), during final exam period
 
 ## Expectations
 Each milestone will be a **formal** presentation, where your team should be assembling a collection of 5-10 PowerPoint slides, along with a demonstration of your working code, and a run of the complete set of test cases that you have developed to that point.  Bear in mind that it is acceptable for **some** of your test cases to fail, as you will not have implemented all of your code - at least for the aboce 3 milestones.
