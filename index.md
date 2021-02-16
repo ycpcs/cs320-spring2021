@@ -13,7 +13,7 @@ All information about the course will be posted here.
 * [Syllabus](syllabus.html)
 * [Schedule](schedule.html)
 *  Calendar
-	* [Feb Calendar](CS320-Spring-Feb-2021-Calendar-1.3.pdf)
+	* [Feb Calendar](CS320-Spring-Feb-2021-Calendar-1.4.pdf)
 	* [Mar Calendar](CS320-Spring-March-2021-Calendar-1.3.pdf)
 	* [Apr Calendar](CS320-Spring-April-2021-Calendar-1.1.pdf)
 	* [May Calendar](CS320-Spring-May-2021-Calendar-1.1.pdf)
