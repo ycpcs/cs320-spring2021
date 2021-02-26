@@ -13,7 +13,7 @@ Assignment | Type | Due
 [Assignment 2: Individual Project Proposal](assign02.html) | Individual | Sunday, 2-14-21, by 7:00pm
 [Assignment 3: Team Project Milestones](assign03.html) | Team | Multiple (see description)
 [Assignment 4: Individual Project Milestones](assign04.html) | Individual | Multiple (see description)
-[Assignment 5: Use Cases](assign05.html) | Team | Friday, 3-05-21, by 7:00pm
+[Assignment 5: Use Cases](assign05.html) | Team | Saturday, 3-06-21, by 7:00pm
 [Assignment 6: Problem Domain Analysis](assign06.html) | Team | Saturday, 3-13-21, by 7:00pm
 [Assignment 11: Team Project Midterm Self / Peer Evaluation](assign11.html) | Individual | Sunday, 4-4-21, by 7:00pm
 [Assignment 4: Individual Project Final Demo](assign04.html) | Individual | Friday, 4-9-21 (during class)
