@@ -20,8 +20,9 @@ This document describes the expectations for each milestone.
 
 ## Expectations
 
-**Milestone 1: Baseline Prototype**.  You should be ready to demonstrate some concrete progress on your project in the form of a basic prototype.  The prototype should support some of the functionality described in your proposal, but it can be in a very basic form.
+**Milestone 1: Baseline Prototype**.  You should be ready to demonstrate some concrete progress on your project in the form of a basic prototype.  The prototype should support some of the functionality described in your proposal, but it can be in a very basic form. Include a one-two page document which describes what you have done for the first Milestone. You could include screenshots etc. in the document.
 
-**Milestone 2: 50% Progress**: For this milestone, you should be about half of the way towards completion of the project.  There should be some substantial progress towards completing the proposed work.
+**Milestone 2: 50% Progress**: For this milestone, you should be about half of the way towards completion of the project.  There should be some substantial progress towards completing the proposed work.Include a one-two page document which describes what you have done for the second Milestone.
+
 
 **Milestone 3: Final Project Demo**. This is the completed project.
