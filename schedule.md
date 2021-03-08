@@ -28,20 +28,20 @@ Mar 01 | Individual Project Milestone 1:<br> **Baseline Prototype** | [Assignmen
 Mar 03  | Team Project Session: Use Cases  | 
 Mar 05  | Unified Modeling Language (UML) and <br> Object-Oriented Analysis (OOA)<br>Textual Analysis Exercise (in-class) | UD: Chapter 3 <br> [Lecture 9: UML Class Diagrams](lectures/lecture09.html) <br> [Lecture 10: OO Analysis](lectures/lecture10.html)
 Mar 08 | Team Project Session: Textual Analysis  | 
-Mar 10 | No Class
-Mar 12 | Team Project Session: Project Analysis Model - UML 
-Mar 15 | Object-Oriented Design (OOD) | [Lecture 11: OO Design, OCP, LSP](lectures/lecture11.html)<br> [Design Principles and Design Patterns](lectures/lecture11/Principles_and_Patterns.pdf), Robert Martin, pages 1-12
-Mar 17 | Individual Project Milestone 2:<br> **50% Progress** | [Assignment 4: Individual Project Milestones](assign/assign04.html)
+Mar 10 | **No Class**
+Mar 12 | Team Project Session: Project Analysis Model - UML
+Mar 15 | Individual Project Milestone 2:<br> **50% Progress** | [Assignment 4: Individual Project Milestones](assign/assign04.html) 
+Mar 17 | Object-Oriented Design (OOD) | [Lecture 11: OO Design, OCP, LSP](lectures/lecture11.html)<br> [Design Principles and Design Patterns](lectures/lecture11/Principles_and_Patterns.pdf), Robert Martin, pages 1-12
 Mar 19 | Relational Databases<br> SQL Lab Assigned | [Lecture 13: Relational Databases](lectures/lecture13.html)<br> [Lab 4: SQL Lab](./labs/lab04.html)
-Mar 22 | Database Applications - JDBC<br> JDBC Lab Assigned | [Lecture 14: Database Applications, JDBC](lectures/lecture14.html)<br> [Lab 5: JDBC Lab](./labs/lab05.html)
-Mar 24 | Team Project Milestone 1:<br> **Minimal Working System** | [Assignment 3: Team Project Milestones](assign/assign03.html)
+Mar 22 | Team Project Milestone 1:<br> **Minimal Working System** | [Assignment 3: Team Project Milestones](assign/assign03.html)
+Mar 24 | Database Applications - JDBC<br> JDBC Lab Assigned | [Lecture 14: Database Applications, JDBC](lectures/lecture14.html)<br> [Lab 5: JDBC Lab](./labs/lab05.html)
 Mar 24 | Database Applications - ORM <br> ORM Lab Assigned | [Lecture 15: ORM, Designing a Persistence Layer](lectures/lecture15.html)<br> [Lab 6: ORM Lab](./labs/lab06.html)
 Mar 26 | SQL / JDBC / ORM Labs Review
 Mar 29 | Testing and Code Coverage | [Lecture 16: Testing](lectures/lecture16.html)
 Mar 31 | Ensuring Code Quality | [Lecture 17: Ensuring Code Quality](lectures/lecture17.html) 
-Apr 2  | No Class
-Apr 02 | Library Project Example Analysis and Review
-Apr 2  | Team Project Milestone 2:<br> **Progress on Navigation & Features** | [Assignment 3: Team Project Milestones](assign/assign03.html)
+Apr 2  | **No Class**
+Apr 5 | Library Project Example Analysis and Review
+Apr 7  | Team Project Milestone 2:<br> **Progress on Navigation & Features** | [Assignment 3: Team Project Milestones](assign/assign03.html)
 Apr 4  | Team Project Mid-Semester Self / Peer Evaluations Due | [Assignment 11: Team Project Self / Peer Evaluation](assign/assign11.html)
 Apr 5  | Mid-Term Exam Review <br> Library Project Example Review 
 Apr 7  | **MID-TERM EXAM** (online)
