@@ -18,9 +18,9 @@ Due Date | Lab | File
 Monday, 2-08-21, by 7:00pm | [Lab 1: HTML and CSS](lab01.html) | n/a
 Monday, 2-08-21 (by 7:00pm | [Lab 3: Git Part I](lab03.html) | n/a
 Monday, 2-22-21, by 7:00pm | [Lab 2a: Web Applications II](lab02a.html) | [CS320\_Lab02.zip](CS320_Lab02.zip), [CS320\_Jetty9.zip](CS320_Jetty9.zip)
-Wednesday, 3-17-21, by 7:00pm | [Lab 4: SQL, Queries, Joins](lab04.html) |  [CS320\_Lab04.zip](CS320_Lab04.zip), [CS320\_Derby.zip](CS320_Derby.zip)
-Tuesday, 3-23-20, by 7:00pm | [Lab 5: JDBC](lab05.html) | [CS320\_Lab05.zip](CS320_Lab05.zip)
-Tuesday, 3-30-21, by 7:00pm | [Lab 6: ORM](lab06.html) | [CS320\_Lab06.zip](CS320_Lab06.zip)
+Tuesday, 3-23-21, by 7:00pm | [Lab 4: SQL, Queries, Joins](lab04.html) |  [CS320\_Lab04.zip](CS320_Lab04.zip), [CS320\_Derby.zip](CS320_Derby.zip)
+Saturday, 3-27-20, by 7:00pm | [Lab 5: JDBC](lab05.html) | [CS320\_Lab05.zip](CS320_Lab05.zip)
+Saturday, 4-03-21, by 7:00pm | [Lab 6: ORM](lab06.html) | [CS320\_Lab06.zip](CS320_Lab06.zip)
 
 All of the above labs, with the exception of Lab03 (Git Lab) are to be completed individually. I encourage you to discuss high level concepts and strategies with other students, but any work you submit **must be yours alone**.
 
