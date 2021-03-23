@@ -9,7 +9,7 @@ Download [CS320\_Lab06.zip](CS320_Lab06.zip). Import it into your Eclipse worksp
 
 **NOTE:** You MUST refactor the name of the **CS320\_Lab06** project to include your username - BEFORE YOU EXPORT IT AND SUBMIT IT TO MARMOSET.  Submissions that DO NOT adhere to that guideline will not be graded until they are refactored and resubmitted.
 
-Example: If I was submitting Lab06, I would refactor the **CS320\_Lab06** project to **CS320\_Lab06\_djhake2** as soon as I imported the project into Eclipse.
+Example: If I was submitting Lab06, I would refactor the **CS320\_Lab06** project to **CS320\_Lab06\_kkambhampaty** as soon as I imported the project into Eclipse.
 
 Start by creating **test.db**, which is the [books database from Lecture 13](../lectures/lecture13.html).  Execute the **DerbyDatabase** class as a Java application: you should see the following output:
 
