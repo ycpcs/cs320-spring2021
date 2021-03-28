@@ -37,20 +37,18 @@ Mar 22 | Team Project Milestone 1:<br> **Minimal Working System** | [Assignment 
 Mar 24 | Database Applications - JDBC<br> JDBC Lab Assigned | [Lecture 14: Database Applications, JDBC](lectures/lecture14.html)<br> [Lab 5: JDBC Lab](./labs/lab05.html)
 Mar 26 | Database Applications - ORM <br> ORM Lab Assigned | [Lecture 15: ORM, Designing a Persistence Layer](lectures/lecture15.html)<br> [Lab 6: ORM Lab](./labs/lab06.html)
 Mar 29 | Testing and Code Coverage | [Lecture 16: Testing](lectures/lecture16.html)
-Mar 31 | SQL / JDBC / ORM Labs Review
+Mar 31 | Ensuring Code Quality | [Lecture 17: Ensuring Code Quality](lectures/lecture17.html) 
 Apr 2  | **No Class**
-Apr 4  | Team Project Mid-Semester Self / Peer Evaluations Due | [Assignment 11: Team Project Self / Peer Evaluation](assign/assign11.html)
-Apr 5 | Ensuring Code Quality | [Lecture 17: Ensuring Code Quality](lectures/lecture17.html) 
 Apr 5 | Library Project Example Analysis and Review
-Apr 5  | Mid-Term Exam Review <br> Library Project Example Review 
 Apr 7  | Team Project Milestone 2:<br> **Progress on Navigation & Features** | [Assignment 3: Team Project Milestones](assign/assign03.html)
-Apr 7  | **MID-TERM EXAM** (online)
-Apr 9  | Individual Project Milestone 3:<br> **FINAL PROJECT DEMOS** | [Assignment 4: Individual Project Milestones](assign/assign04.html)
-Apr 13 | Individual Project Report Due | [Assignment 9: Individual Project Deliverables](assign/assign09.html)
-Apr 14 | Team Project Work Session
+Apr 9  | Mid-Term Exam Review <br> Library Project Example Review 
+Apr 10  | Team Project Mid-Semester Self / Peer Evaluations Due | [Assignment 11: Team Project Self / Peer Evaluation](assign/assign11.html)
+Apr 12  | **MID-TERM EXAM** (online)
+Apr 14  | Individual Project Milestone 3:<br> **FINAL PROJECT DEMOS** | [Assignment 4: Individual Project Milestones](assign/assign04.html)
 Apr 16 | Team Project Work Session
-Apr 21 | Team Project Work Session
+Apr 17 | Individual Project Report Due | [Assignment 9: Individual Project Deliverables](assign/assign09.html)
 Apr 19 | Team Project Milestone 3:<br> **75% Working System** | [Assignment 3: Team Project Milestones](assign/assign03.html)
+Apr 21 | Team Project Work Session
 Apr 23 | Team Project Work Session
 Apr 26 | Team Project Work Session
 Apr 28 | Team Project Work Session
