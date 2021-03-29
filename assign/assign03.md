@@ -10,7 +10,7 @@ This document describes the expectations for each milestone.
 > Date | Milestone
 > ---- | ---------
 > Monday, 3-22-21    | Milestone 1: Minimal Working System
-> Friday, 4-2-21  | Milestone 2: Progress on Navigation & Features
+> Wednesday, 4-7-21  | Milestone 2: Progress on Navigation & Features
 > Monday, 4-19-21 | Milestone 3: "75%" Working System (operational persistent SQL database)
 > Friday, 5-7-21   | Final Technical Report: due by 9:00am (Marmoset)
 > Monday, 5-10-21    | Final Presentation & Demo (section 103), during final exam period
