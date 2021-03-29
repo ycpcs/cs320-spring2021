@@ -7,7 +7,7 @@ title: "Assignment 8: Team Project Deliverables"
 
 **Presentations: During Final Exam Time
 
--   Section 101 (9:00): Wednesday, 5-12-21, 9:00am &ndash; 10:00am <!--(moved to 9:00am since there are only 2 teams)-->
+-   Section 101 (9:00): Wednesday, 5-12-21, 8:00am &ndash; 10:00am 
 -   Section 103 (2:00): Monday, May 5-10-21, 3:00pm &ndash; 5:00pm
 
 This is a **team** assignment
