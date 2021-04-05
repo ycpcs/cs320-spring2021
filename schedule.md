@@ -39,9 +39,9 @@ Mar 26 | Database Applications - ORM <br> ORM Lab Assigned | [Lecture 15: ORM, D
 Mar 29 | Testing and Code Coverage | [Lecture 16: Testing](lectures/lecture16.html)
 Mar 31 | Ensuring Code Quality | [Lecture 17: Ensuring Code Quality](lectures/lecture17.html) 
 Apr 2  | **No Class**
-Apr 5 | Library Project Example Analysis and Review
+Apr 5 |  Team Project Work Session
 Apr 7  | Team Project Milestone 2:<br> **Progress on Navigation & Features** | [Assignment 3: Team Project Milestones](assign/assign03.html)
-Apr 9  | Mid-Term Exam Review <br> Library Project Example Review 
+Apr 9  | Mid-Term Exam Review <br> 
 Apr 10  | Team Project Mid-Semester Self / Peer Evaluations Due | [Assignment 11: Team Project Self / Peer Evaluation](assign/assign11.html)
 Apr 12  | **MID-TERM EXAM** (online)
 Apr 14  | Individual Project Milestone 3:<br> **FINAL PROJECT DEMOS** | [Assignment 4: Individual Project Milestones](assign/assign04.html)

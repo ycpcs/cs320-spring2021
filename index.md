@@ -15,7 +15,7 @@ All information about the course will be posted here.
 *  Calendar
 	* [Feb Calendar](CS320-Spring-Feb-2021-Calendar-1.4.pdf)
 	* [Mar Calendar](CS320-Spring-March-2021-Calendar-1.8.pdf)
-	* [Apr Calendar](CS320-Spring-April-2021-Calendar-1.8.pdf)
+	* [Apr Calendar](CS320-Spring-April-2021-Calendar-1.9.pdf)
 	* [May Calendar](CS320-Spring-May-2021-Calendar-1.8.pdf)
 * [Project Teams and Rosters](teams-and-rosters/index.html)
 * [Assignments](assign/index.html)
