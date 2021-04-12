@@ -47,8 +47,8 @@ Apr 12  | **MID-TERM EXAM** (online)
 Apr 14  | Individual Project Milestone 3:<br> **FINAL PROJECT DEMOS** | [Assignment 4: Individual Project Milestones](assign/assign04.html)
 Apr 16 | Team Project Work Session
 Apr 17 | Individual Project Report Due | [Assignment 9: Individual Project Deliverables](assign/assign09.html)
-Apr 19 | Team Project Milestone 3:<br> **75% Working System** | [Assignment 3: Team Project Milestones](assign/assign03.html)
-Apr 21 | Team Project Work Session
+Apr 19 | Team Project Work Session
+Apr 21 | Team Project Milestone 3:<br> **75% Working System** | [Assignment 3: Team Project Milestones](assign/assign03.html)
 Apr 23 | Team Project Work Session
 Apr 26 | Team Project Work Session
 Apr 28 | Team Project Work Session
