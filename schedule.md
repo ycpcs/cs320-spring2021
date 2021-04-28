@@ -57,8 +57,8 @@ May 3  | Team Project Work Session
 May 5  | Team Project Work Session (last class session of semester)
 May 7  | Team Project Report Due | [Assignment 8: Team Project Deliverables](assign/assign08.html)
 May 9 | Team Project Reflection Due<br>Team Project Final Self / Peer Evaluations Due | [Assignment 10: Team Project Reflection](assign/assign10.html)<br> [Assignment 11: Team Project Self / Peer Evaluation](assign/assign11.html)
-May 10 | **TEAM PROJECT FINAL PRESENTATIONS (Section 103)**<br>Final Exam Period (3:00 to 5:00) | [Assignment 8: Team Project Deliverables](assign/assign08.html)
-May 12 | **TEAM PROJECT FINAL PRESENTATIONS (Sections 101)**<br>Final Exam Periods (10:15 to 12:15) | [Assignment 8: Team Project Deliverables](assign/assign08.html)
+May 10 | **TEAM PROJECT FINAL PRESENTATIONS (Section 103)**<br>Final Exam Period (3:00 pm to 5:00 pm) | [Assignment 8: Team Project Deliverables](assign/assign08.html)
+May 12 | **TEAM PROJECT FINAL PRESENTATIONS (Sections 101)**<br>Final Exam Periods (08:00am to 10:00 am) | [Assignment 8: Team Project Deliverables](assign/assign08.html)
 
 <!-- Commenting out rest of schedule until it's needed - and the dates will change, anyway
 -->
